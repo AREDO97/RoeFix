@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+        a{
+            color: black;
+        }
+        a:hover{
+            color: orange;
+        }
+
+        .header {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: #000;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-link:hover {
+            color: #ff6b35;
+        }
+
+        .dropdown {
+            cursor: pointer;
+        }
+
+        .user-actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ff6b35;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* ===== DESKTOP MEGA MENU ===== */
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: none;
+            z-index: 999;
+            padding: 20px 40px;
+            border-top: 1px solid #eee;
+        }
+
+        .mega-menu.active {
+            display: flex;
+            gap: 30px;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #000;
+            color: white;
+            padding: 20px;
+            min-height: 300px;
+           
+        }
+
+        .sidebar-item {
+            padding: 12px 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            transition: background 0.2s;
+            border-radius: 4px;
+        }
+
+        .sidebar-item:hover,
+        .sidebar-item.active {
+            background: #4a4949;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            gap: 30px;
+            padding: 0 10px;
+        }
+
+        .column h4 {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .column a {
+            display: block;
+            color: #555;
+            text-decoration: none;
+            padding: 8px 0;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .column a:hover {
+            color: #ff6b35;
+        }
+
+        .promo-image {
+            width: 300px;
+            height: 300px;
+            background: url('Images/shoper.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            
+        }
+
+        .promo-text {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #333;
+        }
+
+        /* ===== MOBILE MENU ===== */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            height: 100vh;
+            background: white;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            transition: left 0.3s ease;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .mobile-menu-list {
+            list-style: none;
+        }
+
+        .mobile-menu-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-menu {
+            display: none;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .sub-menu.active {
+            display: block;
+        }
+
+        .sub-menu-item {
+            padding: 8px 0;
+            color: #555;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-menu-item:hover {
+            color: #ff6b35;
+        }
+
+        /* ===== PRODUCTS SECTION ===== */
+        .products-section {
+            padding: 30px 20px;
+            background: #fafafa;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #ff6b35;
+            font-weight: 600;
+        }
+
+        /* ===== RESPONSIVE BREAKPOINTS ===== */
+        @media (max-width: 768px) {
+
+            .nav-menu,
+            .user-actions {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .mega-menu {
+                display: none !important;
+                /* Hide desktop mega menu on mobile */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-menu {
+                display: none;
+            }
+
+            .products-section {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+
+        #products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        /* Add this inside your <style> tag */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+        <header class="header">
+            <div class="nav-container">
+                <div class="logo"><img src="Images/Log.png" alt="" width="70px" height="60px"></div>
+        
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link"> Home</a>
+                    <div class="nav-link dropdown" id="categories-toggle">
+                        Categories<i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                </nav>
+        
+        
+        
+                <!-- Mobile Toggle -->
+                <button class="mobile-toggle" id="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        
+            <!-- DESKTOP MEGA MENU -->
+            <div class="mega-menu" id="mega-menu">
+                <div class="sidebar">
+                    <div class="sidebar-item" data-category="clothes">
+                        <i class="fas fa-tshirt"></i> Clothes
+                    </div>
+                    <div class="sidebar-item active" data-category="shoes">
+                        <i class="fas fa-shoe-prints"></i> Shoes
+                    </div>
+                    <div class="sidebar-item" data-category="bags">
+                        <i class="fas fa-shopping-bag"></i> Bags
+                    </div>
+                    <div class="sidebar-item" data-category="accessories">
+                        <i class="fas fa-glasses"></i> Accessories
+                    </div>
+                </div>
+        
+                <div class="content">
+                    <div class="column" id="column1"></div>
+                    <div class="column" id="column2"></div>
+                </div>
+        
+                <div class="promo-image">
+                    <div class="promo-text">
+                        <i class="fas fa-tag"></i> Season Sale
+                    </div>
+                </div>
+            </div>
+        
+            <!-- MOBILE MENU -->
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="mobile-menu-header">
+                    <div class="logo"><img src="Images/Log.png" alt="" width="70px" height="60px"></div>
+                    <button class="close-btn" id="close-menu">×</button>
+                </div>
+                <ul class="mobile-menu-list">
+                    <li class="mobile-menu-item"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="mobile-menu-item" id="mobile-categories">
+                        <span><i class="fas fa-th"></i> Categories</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                    <div class="sub-menu" id="sub-menu">
+                        <div class="sub-menu-item" data-category="clothes">Clothes</div>
+                        <div class="sub-menu-item" data-category="shoes">Shoes</div>
+                        <div class="sub-menu-item" data-category="bags">Bags</div>
+                        <div class="sub-menu-item" data-category="accessories">Accessories</div>
+                    </div>
+                    <li class="mobile-menu-item"><a href="shop.html"><i class="fas fa-store"></i>Shop</a></li>
+                </ul>
+            </div>
+        </header>
+
+
+
+
+
+    
+    <section class="products-section">
+        <h1 id="category-title">All Products</h1>
+        <div id="products-grid">
+            <!-- Products will be loaded here -->
+        </div>
+    </section>
+
+
+
+
+<script src="script.js"></script>
+<script>
+
+
+      // ===== SHARED DATA =====
+        const categoryData = {
+            shoes: {
+                title1: "Men's Footwear",
+                items1: ["Running Shoes", "Basketball", "Sneakers", "Sandals", "Slippers", "Formal Shoes"],
+                title2: "Women's Footwear",
+                items2: ["Heels", "Flats", "Boots", "Athletic Shoes", "Espadrilles", "Loafers"]
+            },
+            clothes: {
+                title1: "Men's Clothing",
+                items1: ["T-Shirts", "Shirts", "Jeans", "Jackets", "Suits", "Shorts"],
+                title2: "Women's Clothing",
+                items2: ["Dresses", "Tops", "Skirts", "Jeans", "Blazers", "Loungewear"]
+            },
+            bags: {
+                title1: "Backpacks & Luggage",
+                items1: ["Laptop Backpacks", "Travel Bags", "Duffel Bags", "Suitcases", "Gym Bags"],
+                title2: "Handbags & Wallets",
+                items2: ["Tote Bags", "Clutches", "Crossbody Bags", "Wallets", "Evening Bags"]
+            },
+            accessories: {
+                title1: "Wearable Tech",
+                items1: ["Smartwatches", "Wireless Earbuds", "Fitness Trackers"],
+                title2: "Fashion Accessories",
+                items2: ["Sunglasses", "Hats", "Belts", "Scarves", "Jewelry", "Watches"]
+            }
+        };
+
+        const products = {
+            clothes: [
+                { name: "Cotton T-Shirt", price: "UGX 20000", img: "https://via.placeholder.com/200?text=T-Shirt" },
+                { name: "Denim Jacket", price: "UGX 25000", img: "https://via.placeholder.com/200?text=Jacket" },
+                { name: "Summer Dress", price: "UGX 15000", img: "https://via.placeholder.com/200?text=Dress" },
+                { name: "Formal Shirt", price: "UGX 10000", img: "https://via.placeholder.com/200?text=Shirt" },
+            ],
+            shoes: [
+                { name: "Running Sneakers", price: "$89.99", img: "https://via.placeholder.com/200?text=Sneakers" },
+                { name: "Leather Loafers", price: "$129.99", img: "https://via.placeholder.com/200?text=Loafers" },
+                { name: "Hiking Boots", price: "$149.99", img: "https://via.placeholder.com/200?text=Boots" },
+                { name: "Flip Flops", price: "$19.99", img: "https://via.placeholder.com/200?text=Flip+Flops" },
+            ],
+            bags: [
+                { name: "Leather Tote Bag", price: "$99.99", img: "https://via.placeholder.com/200?text=Tote+Bag" },
+                { name: "Backpack", price: "$69.99", img: "https://via.placeholder.com/200?text=Backpack" },
+                { name: "Crossbody Purse", price: "$59.99", img: "https://via.placeholder.com/200?text=Purse" },
+                { name: "Weekend Duffel", price: "$89.99", img: "https://via.placeholder.com/200?text=Duffel" },
+            ],
+            accessories: [
+                { name: "Sunglasses", price: "$39.99", img: "https://via.placeholder.com/200?text=Sunglasses" },
+                { name: "Smart Watch", price: "$199.99", img: "https://via.placeholder.com/200?text=Watch" },
+                { name: "Silk Scarf", price: "$29.99", img: "https://via.placeholder.com/200?text=Scarf" },
+                { name: "Leather Belt", price: "$24.99", img: "https://via.placeholder.com/200?text=Belt" },
+            ]
+        };
+
+        // ===== DESKTOP LOGIC =====
+        const categoriesToggle = document.getElementById('categories-toggle');
+        const megaMenu = document.getElementById('mega-menu');
+        const sidebarItems = document.querySelectorAll('.sidebar-item');
+        const col1 = document.getElementById('column1');
+        const col2 = document.getElementById('column2');
+
+        function renderCategoryContent(categoryKey) {
+            const data = categoryData[categoryKey];
+            if (!data) return;
+            col1.innerHTML = `<h4>${data.title1}</h4>` + data.items1.map(item => `<a href="/shop.html">${item}</a>`).join('');
+            col2.innerHTML = `<h4>${data.title2}</h4>` + data.items2.map(item => `<a href="/shop.html">${item}</a>`).join('');
+        }
+
+        // Initialize desktop
+        renderCategoryContent('shoes');
+
+        categoriesToggle.addEventListener('mouseenter', () => megaMenu.classList.add('active'));
+        categoriesToggle.addEventListener('mouseleave', () => setTimeout(() => {
+            if (!megaMenu.matches(':hover')) megaMenu.classList.remove('active');
+        }, 250));
+        megaMenu.addEventListener('mouseenter', () => megaMenu.classList.add('active'));
+        megaMenu.addEventListener('mouseleave', () => megaMenu.classList.remove('active'));
+
+        sidebarItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                sidebarItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                renderCategoryContent(item.dataset.category);
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-menu') && !e.target.closest('.mega-menu')) {
+                megaMenu.classList.remove('active');
+            }
+        });
+
+        // ===== MOBILE LOGIC =====
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileCategories = document.getElementById('mobile-categories');
+        const subMenu = document.getElementById('sub-menu');
+        const subMenuItems = document.querySelectorAll('.sub-menu-item');
+        const productsGrid = document.getElementById('products-grid');
+        const categoryTitle = document.getElementById('category-title');
+
+        mobileToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
+        closeMenu.addEventListener('click', () => mobileMenu.classList.remove('active'));
+
+        mobileCategories.addEventListener('click', () => {
+            subMenu.classList.toggle('active');
+        });
+
+        subMenuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const cat = item.dataset.category;
+                renderProducts(cat);
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        function renderProducts(category) {
+            const items = products[category] || [];
+            categoryTitle.textContent = `${category.charAt(0).toUpperCase() + category.slice(1)} Products`;
+            productsGrid.innerHTML = items.map(p => `
+        <div class="product-card">
+          <div class="product-image" style="background-image: url('${p.img}')"></div>
+          <div class="product-info">
+            <div class="product-title">${p.name}</div>
+            <div class="product-price">${p.price}</div>
+          </div>
+        </div>
+      `).join('');
+        }
+    
+
+
+        // Optional: Trigger animations on scroll (if you want it to animate when scrolled into view)
+            document.addEventListener('DOMContentLoaded', function () {
+                const heroSection = document.getElementById('hero');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                observer.observe(heroSection);
+            });
+
+
+
+            // Optional: Animate cards as they scroll into view
+                document.addEventListener('DOMContentLoaded', function () {
+                    const cards = document.querySelectorAll('.category-card');
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0)';
+                            }
+                        });
+                    }, { threshold: 0.1 });
+
+                    cards.forEach(card => observer.observe(card));
+                });
+
+
+        // ===== ANIMATE SECTION ON LOAD =====
+            document.addEventListener('DOMContentLoaded', () => {
+                const featuredSection = document.querySelector('.featured-products');
+                setTimeout(() => {
+                    featuredSection.classList.add('visible');
+                }, 300); // Delay for smoother page load
+            });
+
+
+
+
+
+
+
+        // Optional: Trigger animations on scroll (if you want it to animate when scrolled into view)
+        document.addEventListener('DOMContentLoaded', function () {
+            const heroSection = document.getElementById('hero');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(heroSection);
+        });
+    
+
+
+    // ===== FULL PRODUCT DATABASE BY SUBCATEGORY =====
+    const subcategoryProducts = {
+        // Clothes
+        't-shirts': [
+            { name: "Cotton T-Shirt", price: "UGX 20,000", img: "Images/GreenShirt.png" },
+            { name: "Cotton1 T-Shirt", price: "UGX 20,000", img: "Images/t-shirts.jpg" },
+            { name: "Cotton2 T-Shirt", price: "UGX 20,000", img: "Images/t-shirts1.jpg" },
+            { name: "Cotton3 T-Shirt", price: "UGX 20,000", img: "Images/t-shirts2.jpg" },
+            { name: "Cotton4 T-Shirt", price: "UGX 20,000", img: "Images/t-shirts3.jpg" },
+            { name: "Cotton5 T-Shirt", price: "UGX 20,000", img: "Images/t-shirts4.jpg" }
+        ],
+
+        'shirts': [
+            { name: "Formal Shirt", price: "UGX 10,000", img: "https://via.placeholder.com/200?text=Shirt" }
+        ],
+        'jeans': [
+            { name: "Slim Fit Jeans", price: "UGX 35,000", img: "https://via.placeholder.com/200?text=Jeans" }
+        ],
+        'jackets': [
+            { name: "Denim Jacket", price: "UGX 25,000", img: "https://via.placeholder.com/200?text=Jacket" }
+        ],
+        'suits': [
+            { name: "Business Suit", price: "UGX 150,000", img: "https://via.placeholder.com/200?text=Suit" }
+        ],
+        'shorts': [
+            { name: "Summer Shorts", price: "UGX 18,000", img: "https://via.placeholder.com/200?text=Shorts" }
+        ],
+        'dresses': [
+            { name: "Summer Dress", price: "UGX 15,000", img: "https://via.placeholder.com/200?text=Dress" }
+        ],
+        'tops': [
+            { name: "Casual Top", price: "UGX 12,000", img: "https://via.placeholder.com/200?text=Top" }
+        ],
+        'skirts': [
+            { name: "Pleated Skirt", price: "UGX 22,000", img: "https://via.placeholder.com/200?text=Skirt" }
+        ],
+        'blazers': [
+            { name: "Women's Blazer", price: "UGX 45,000", img: "https://via.placeholder.com/200?text=Blazer" }
+        ],
+        'loungewear': [
+            { name: "Cotton Loungewear Set", price: "UGX 30,000", img: "https://via.placeholder.com/200?text=Loungewear" }
+        ],
+
+        // Shoes
+        'running-shoes': [
+            { name: "Running Sneakers", price: "$89.99", img: "https://via.placeholder.com/200?text=Running+Shoes" }
+        ],
+        'basketball': [
+            { name: "High-Top Basketball Shoes", price: "$110.00", img: "https://via.placeholder.com/200?text=Basketball" }
+        ],
+        'sneakers': [
+            { name: "Casual Sneakers", price: "$75.00", img: "https://via.placeholder.com/200?text=Sneakers" }
+        ],
+        'sandals': [
+            { name: "Leather Sandals", price: "$40.00", img: "https://via.placeholder.com/200?text=Sandals" }
+        ],
+        'slippers': [
+            { name: "Memory Foam Slippers", price: "$25.00", img: "https://via.placeholder.com/200?text=Slippers" }
+        ],
+        'formal-shoes': [
+            { name: "Oxford Formal Shoes", price: "$120.00", img: "https://via.placeholder.com/200?text=Formal+Shoes" }
+        ],
+        'heels': [
+            { name: "Stiletto Heels", price: "$85.00", img: "https://via.placeholder.com/200?text=Heels" }
+        ],
+        'flats': [
+            { name: "Ballet Flats", price: "$50.00", img: "https://via.placeholder.com/200?text=Flats" }
+        ],
+        'boots': [
+            { name: "Winter Boots", price: "$130.00", img: "https://via.placeholder.com/200?text=Boots" }
+        ],
+        'athletic-shoes': [
+            { name: "Women's Athletic Shoes", price: "$95.00", img: "https://via.placeholder.com/200?text=Athletic+Shoes" }
+        ],
+        'espadrilles': [
+            { name: "Rope Espadrilles", price: "$60.00", img: "https://via.placeholder.com/200?text=Espadrilles" }
+        ],
+        'loafers': [
+            { name: "Leather Loafers", price: "$129.99", img: "https://via.placeholder.com/200?text=Loafers" }
+        ],
+
+        // Bags
+        'laptop-backpacks': [
+            { name: "15.6\" Laptop Backpack", price: "$69.99", img: "https://via.placeholder.com/200?text=Laptop+Backpack" }
+        ],
+        'travel-bags': [
+            { name: "Weekend Travel Bag", price: "$85.00", img: "https://via.placeholder.com/200?text=Travel+Bag" }
+        ],
+        'duffel-bags': [
+            { name: "Gym Duffel Bag", price: "$55.00", img: "https://via.placeholder.com/200?text=Duffel+Bag" }
+        ],
+        'suitcases': [
+            { name: "Hardshell Suitcase", price: "$150.00", img: "https://via.placeholder.com/200?text=Suitcase" }
+        ],
+        'gym-bags': [
+            { name: "Sports Gym Bag", price: "$45.00", img: "https://via.placeholder.com/200?text=Gym+Bag" }
+        ],
+        'tote-bags': [
+            { name: "Leather Tote Bag", price: "$99.99", img: "https://via.placeholder.com/200?text=Tote+Bag" }
+        ],
+        'clutches': [
+            { name: "Evening Clutch", price: "$40.00", img: "https://via.placeholder.com/200?text=Clutch" }
+        ],
+        'crossbody-bags': [
+            { name: "Crossbody Purse", price: "$59.99", img: "https://via.placeholder.com/200?text=Crossbody+Bag" }
+        ],
+        'wallets': [
+            { name: "Leather Wallet", price: "$35.00", img: "https://via.placeholder.com/200?text=Wallet" }
+        ],
+        'evening-bags': [
+            { name: "Sequin Evening Bag", price: "$70.00", img: "https://via.placeholder.com/200?text=Evening+Bag" }
+        ],
+
+        // Accessories
+        'smartwatches': [
+            { name: "Smart Watch", price: "$199.99", img: "Images/DESKTOPS.jpg" }
+        ],
+        'wireless-earbuds': [
+            { name: "True Wireless Earbuds", price: "$129.99", img: "https://via.placeholder.com/200?text=Earbuds" }
+        ],
+        'fitness-trackers': [
+            { name: "Fitness Tracker Band", price: "$89.99", img: "https://via.placeholder.com/200?text=Tracker" }
+        ],
+        'sunglasses': [
+            { name: "Polarized Sunglasses", price: "$39.99", img: "https://via.placeholder.com/200?text=Sunglasses" }
+        ],
+        'hats': [
+            { name: "Summer Sun Hat", price: "$25.00", img: "https://via.placeholder.com/200?text=Hat" }
+        ],
+        'belts': [
+            { name: "Leather Belt", price: "$24.99", img: "https://via.placeholder.com/200?text=Belt" }
+        ],
+        'scarves': [
+            { name: "Silk Scarf", price: "$29.99", img: "https://via.placeholder.com/200?text=Scarf" }
+        ],
+        'jewelry': [
+            { name: "Gold-Plated Necklace", price: "$45.00", img: "https://via.placeholder.com/200?text=Jewelry" }
+        ],
+        'watches': [
+            { name: "Analog Fashion Watch", price: "$65.00", img: "https://via.placeholder.com/200?text=Watch" }
+        ]
+    };
+
+    // ===== RENDER PRODUCTS BASED ON URL FRAGMENT =====
+    function renderProductsBySubcategory() {
+        const hash = window.location.hash.substring(1); // e.g., "t-shirts"
+        const titleEl = document.getElementById('category-title');
+        const gridEl = document.getElementById('products-grid');
+
+        if (!hash) {
+            // No subcategory: show all products (optional)
+            titleEl.textContent = "All Products";
+            gridEl.innerHTML = '<div class="no-products">Select a category from the homepage.</div>';
+            return;
+        }
+
+        // Convert kebab-case back to title case for display
+        const displayName = hash
+            .split('-')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+
+        const products = subcategoryProducts[hash] || [];
+
+        titleEl.textContent = `${displayName} Products`;
+
+        if (products.length === 0) {
+            gridEl.innerHTML = `<div class="no-products">No products found for "${displayName}".</div>`;
+            return;
+        }
+
+        gridEl.innerHTML = products.map(p => `
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('${p.img.trim()}')"></div>
+                    <div class="product-info">
+                        <div class="product-title">${p.name}</div>
+                        <div class="product-price">${p.price}</div>
+                    </div>
+                </div>
+            `).join('');
+    }
+
+    // Load on page load and when hash changes (e.g., back button)
+    window.addEventListener('DOMContentLoaded', renderProductsBySubcategory);
+    window.addEventListener('hashchange', renderProductsBySubcategory);
+
+
+</script>
+</body>
+</html>

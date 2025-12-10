@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,6 +20,7 @@
             font-family: 'Poppins', sans-serif;
             text-decoration: none;
         }
+        
         a{
             color: black;
         }
@@ -368,21 +368,19 @@
 
 .category-cards-section {
         background: #fff;
-        padding: 60px 20px;
-        position: relative;
+        padding: 30px 10px;
+        position: relative
     }
 
     .cards-container {
-        max-width: 1200px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
     }
 
     .category-card {
         background: #fafafa;
-       
         overflow: hidden;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -397,15 +395,15 @@
     }
 
     .card-image {
-        width: 100%;
-        height: 250px;
+        width: 90%;
+        height: 180px;
         overflow: hidden;
     }
 
     .card-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
         transition: transform 0.5s ease;
     }
 
@@ -414,7 +412,7 @@
     }
 
     .card-content {
-        padding: 20px;
+        padding: 10px;
     }
 
     .tag {
@@ -425,48 +423,26 @@
         font-weight: 600;
         letter-spacing: 1px;
         text-transform: uppercase;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
         border: 1px solid #eee;
     }
 
     .category-card h3 {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 700;
         color: #000;
-        margin: 0 0 12px 0;
+        margin: 0 0 10px 0;
         line-height: 1.3;
     }
 
     .category-card p {
-        font-size: 14px;
+        font-size: .8rem;
         color: #555;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         line-height: 1.5;
     }
 
-    .learn-more {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        background: #000;
-        color: white;
-        border-radius: 50%;
-        text-decoration: none;
-        transition: all 0.3s;
-    }
-
-    .learn-more:hover {
-        background: #333;
-        transform: scale(1.1);
-    }
-
-    .learn-more i {
-        font-size: 16px;
-    }
-
-
+   
 
 
 
@@ -492,6 +468,37 @@
 
         .category-card p {
             font-size: 13px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #B177DA;
+            height: 50px;
+            margin: 0 auto;
+            padding-right: 10px;
+            width: 100%;
+            
+        }
+
+        .section-header h1 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-left: 10px;
+            letter-spacing: 0.5px;
+            padding-bottom: 12px;
+            
+        }
+
+        .view-all {
+            position: relative;
+            margin-left: 10px;
+            font-weight: 200;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            
         }
     }
 
@@ -563,6 +570,36 @@
        display: grid;
        grid-template-columns: repeat(1,1fr);
     }
+     .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #B177DA;
+            height: 55px;
+            margin: 0 auto;
+            padding-right: 10px;
+            width: 100%;
+            padding-bottom: 20px;
+            
+        }
+
+        .section-header h1 {
+            color: #fff;
+            font-size: 1rem;
+            margin-left: 10px;
+            letter-spacing: 0.5px;
+            padding-bottom: 10px;
+            
+        }
+
+        .view-all {
+            position: relative;
+            margin-left: 10px;
+            font-weight: 200;
+            text-decoration: none;
+            color: #fff;
+            
+        }
 }
 
     /*FEATURED PRODUCTS*/
@@ -583,24 +620,30 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
+            background-color: #B177DA;
+            height: 50px;
+            margin: 0 auto;
+            padding-right: 10px;
+            width: 98%;
+            border-radius: 5px 5px 0 0;
         }
 
         .section-header h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            font-style: italic;
+            color: #fff;
+            font-size: 1.5rem;
             margin-left: 10px;
-            letter-spacing: -0.5px;
+            letter-spacing: 0.5px;
+            padding-bottom: 12px;
+            
         }
 
         .view-all {
+            position: relative;
+            margin-left: 10px;
             font-weight: 600;
             text-decoration: none;
-            color: #000;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            color: #fff;
+            
         }
 
         .view-all:hover {
@@ -622,14 +665,13 @@
 
         .product-card {
             background: #fafafa;
-            border-radius: 8px;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: all 0.1s ease;
             position: relative;
         }
 
         .product-card:hover {
-            transform: translateY(-5px) scale(1.02);
+            
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
@@ -650,7 +692,7 @@
         /* ===== SHOE IMAGE CONTAINER ===== */
         .shoe-image-container {
             width: 100%;
-            height: 200px;
+            height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -713,8 +755,8 @@
         }
 
         .size-btn {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             border: 1px solid #ddd;
             border-radius: 6px;
             display: flex;
@@ -747,13 +789,47 @@
             }
 
             .shoe-image-container {
-                height: 200px;
+                height: 120px;
             }
+            .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #B177DA;
+            height: 40px;
+            margin: 0 auto;
+            padding-right: 10px;
+            width: 98%;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .section-header h1 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-left: 10px;
+            letter-spacing: 0.5px;
+            padding-bottom: 10px;
+            
+        }
+
+        .view-all {
+            padding-top: 5px;
+            font-size: .7rem;
+            margin-left: 10px;
+            font-weight: 200;
+            text-decoration: none;
+            color: #fff;
+            
+        }
+        .view-all::before {
+            content: "→";
+            font-size: 0.5rem;
+        }
         }
 
         @media (max-width: 480px) {
             .section-header h1 {
-                font-size: 1.8rem;
+                font-size: 1rem;
             }
 
             .product-grid {
@@ -784,6 +860,41 @@
             font-size: 0.6rem;
             margin-right: 5px;
             font-weight: 500;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #B177DA;
+            height: 40px;
+            margin: 0 auto;
+            padding-right: 10px;
+            width: 98%;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .section-header h1 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-left: 10px;
+            letter-spacing: 0.5px;
+            padding-bottom: 5px;
+            
+        }
+
+        .view-all {
+            padding-top: 10px;
+            font-size: .7rem;
+            margin-left: 10px;
+            font-weight: 200;
+            text-decoration: none;
+            color: #fff;
+            
+        }
+        .view-all::before {
+            content: "→";
+            font-size: 0.5rem;
         }
         }
 
@@ -1099,7 +1210,7 @@
 /*FEATURED CLOTHES*/
     /* ===== FEATURED CLOTHES SECTION — SCOPED STYLES ===== */
     .fc-section {
-      padding: 20px 20px;
+      padding: 20px 5px;
       opacity: 0;
       /* Start hidden */
       transform: translateY(30px);
@@ -1169,7 +1280,7 @@
     /* ===== IMAGE CONTAINER ===== */
     .fc-image-container {
       width: 100%;
-      height: 200px;
+      height: 150px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1236,7 +1347,7 @@
       }
 
       .fc-image-container {
-        height: 180px;
+        height: 150px;
       }
     }
 
@@ -1462,9 +1573,9 @@
       gap: 40px;
       width: 100%;
       max-width: 1200px;
-   margin-top: 2%;
-   margin-bottom: 10%;
-   margin: 4% auto;
+        margin-top: 2%;
+        margin-bottom: 10%;
+        margin: 0 auto;
       
     }
 
@@ -1938,274 +2049,11 @@ hr{
             }
         }
 
-/*laptops*/
- .promo-section {
-    display: flex;
-    flex-wrap: wrap;
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    max-width: 1100px;
-    width: 100%;
-   
-    transition: all 0.4s ease;
- }
-
-  .promo-left {
-    flex: 1 1 50%;
-    position: relative;
-    background: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    height: 500px;
-     padding: 60px 40px;
-  }
-
-  .promo-left img {
-    max-width: 100%;
-    border-radius: 12px;
-    height: 400px;
-    transition: transform 0.8s ease;
-  }
-
-  .promo-left img:hover {
-    transform: scale(1.05);
-  }
-
-  .best-badge {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-   
-    background: rgb(221, 33, 133);
-    color: white;
-    font-size: 14px;
-    padding: 10px 25px;
-    font-weight: bold;
-    padding: 12px 18px;
-    border-radius: 50%;
-    transform: rotate(15deg);
-    z-index: 2;
-  }
-
-  .promo-right {
-    flex: 1 1 50%;
-    background: #fff;
-    padding: 60px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    animation: fadeIn 1.5s ease;
-  }
-
-  .promo-right h2 {
-    font-size: 18px;
-    color: #333;
-    font-weight: 600;
-  }
-
-  .promo-right h1 {
-    font-size: 64px;
-    color: #000;
-    margin: 10px 0;
-    line-height: 1.2;
-  }
-
-  .promo-right p {
-    color: #666;
-    font-size: 16px;
-    margin-bottom: 25px;
-  }
-
-  .promo-right .btn-shop {
-    background:  rgb(221, 33, 133);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 14px 35px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: fit-content;
-  }
-
-  .promo-right .btn-shop:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(123, 44, 191, 0.3);
-  }
-
-  /* Animations */
-  @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
-  }
-
-  /* Responsive Design */
-  @media (max-width: 900px) {
-    .promo-section {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .promo-right {
-      padding: 40px 25px;
-      align-items: center;
-    }
-
-    .promo-right h1 {
-      font-size: 48px;
-    }
-
-    .promo-left {
-      padding: 20px;
-    }
-
-    .best-badge {
-      top: 15px;
-      right: 15px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .promo-section {
-      margin: 15px;
-    }
- .promo-left {
-    flex: 1 1 50%;
-    position: relative;
-    background: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    height: 300px;
-  }
-  .promo-left img {
-    max-width: 100%;
-    border-radius: 12px;
-    height: 300px;
-    transition: transform 0.8s ease;
-  }
-
-    .promo-right h1 {
-      font-size: 38px;
-    }
-
-    .promo-right h2 {
-      font-size: 16px;
-    }
-
-    .promo-right .btn-shop {
-      font-size: 14px;
-      padding: 10px 25px;
-    }
-
-    .best-badge {
-      font-size: 18px;
-      padding: 30px 50px;
-      top: 25px;
-      right: 15px;
-    }
-  }
-  @media (min-width:1024px) {
-     .best-badge {
-      font-size: 18px;
-      padding: 30px 50px;
-      top: 25px;
-      right: 15px;
-    }
-  }
-  @media (max-width:480px) {
-    .promo-left {
-    flex: 1 1 50%;
-    position: relative;
-    background: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    height: 250px;
-  }
-    .promo-right h1 {
-      font-size: 28px;
-    }
-
-    .promo-right h2 {
-      font-size: 14px;
-    }
-
-    .promo-right .btn-shop {
-      font-size: 12px;
-      padding: 8px 20px;
-    }
-
-    .best-badge {
-      font-size: 16px;
-      padding: 20px 40px;
-      top: 15px;
-      right: 10px;
-    }
-    .promo-left img {
-    max-width: 80%;
-    border-radius: 12px;
-    height: 200px;
-    transition: transform 0.8s ease;
-  }
-    
-  }
 
 
-  /*background section*/
-  .section-header{
-    background: purple;
-    background-color: purple;
-     height: 50px; padding: 1% 2%;
-    margin: 3% 2%;
-    border-radius: 10px 10px 0 0;
-  }
-   #para{
-    font-size: 1.3rem; 
-    font-weight: 200;
-    color: white;
-  }
- #view{
-font-size: 1rem;
-color: white;
-  }
 
-  @media (max-width:480px) {
-    .section-header{
-    background: purple;
-    background-color: purple;
-     height: 50px;
-     padding: 1% 1%;
-    margin: 1% 2%;
-    border-radius: 10px 10px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-   
-  }
 
-   #view{
-font-size: 0.8rem;
-margin-top: 2%;
-  }
-  #para{
-    font-size: 1rem; 
-    font-weight: 100;
-    color: white;
-  }
-  }
 
-  #art-piece{
-padding: 0;
-margin: 0;
-  }
     </style>
 </head>
 
@@ -2267,18 +2115,20 @@ margin: 0;
                 <button class="close-btn" id="close-menu">×</button>
             </div>
             <ul class="mobile-menu-list">
-                <li class="mobile-menu-item"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="mobile-menu-item"><a href="index.html">Home</a></li>
                 <li class="mobile-menu-item" id="mobile-categories">
-                    <span><i class="fas fa-th"></i> Categories</span>
+                    <span> Categories</span>
                     <i class="fas fa-chevron-right"></i>
                 </li>
                 <div class="sub-menu" id="sub-menu">
-                    <div class="sub-menu-item" data-category="clothes">Clothes</div>
-                    <div class="sub-menu-item" data-category="shoes">Shoes</div>
-                    <div class="sub-menu-item" data-category="bags">Bags</div>
-                    <div class="sub-menu-item" data-category="accessories">Accessories</div>
+                    <div class="sub-menu-item" data-category="clothes"><a href="shop.html#fc-section" target="_blank">Clothes</a></div>
+                    <div class="sub-menu-item" data-category="shoes"><a href="shop.html#featured-products" target="_blank">Shoes</a></div>
+                    <div class="sub-menu-item" data-category="bags"><a href="shop.html#artwork-section" target="_blank">Art&Craft</a></div>
+                    <div class="sub-menu-item" data-category="bags"><a href="shop.html#phone-offers-section" target="_blank">Phones</a></div>
+                    <div class="sub-menu-item" data-category="bags"><a href="shop.html#Art-pieces" target="_blank">Computers</a></div>
+                    <div class="sub-menu-item" data-category="accessories"><a href="shop.html#accessories" target="_blank" rel="noopener noreferrer">Accessories</a></div>
                 </div>
-                <li class="mobile-menu-item"><a href="shop.html"><i class="fas fa-store"></i>Shop</a></li>
+                <li class="mobile-menu-item"><a href="shop.html">Shop</a></li>
             </ul>
         </div>
     </header>
@@ -2326,14 +2176,6 @@ margin: 0;
             </div>
         </section>
 
-<!-- PRODUCTS DISPLAY SECTION -->
-<section class="products-section" id="products-section">
-    <h2 id="category-title" style="margin-bottom: 20px; color: #333;">All Products</h2>
-    <div class="products-grid" id="products-grid">
-        <!-- Products loaded by JS -->
-    </div>
-</section>
-
 
 
 
@@ -2349,7 +2191,7 @@ margin: 0;
                 <span class="tag">SHOES</span>
                 <h3>Step in Style</h3>
                 <p>Trendy, comfortable, and durable footwear for every occasion.</p>
-                <a href="#" class="learn-more"><i class="fas fa-arrow-right"></i></a>
+               
             </div>
         </div>
 
@@ -2362,7 +2204,7 @@ margin: 0;
                 <span class="tag">CLOTHES</span>
                 <h3>Fashion That Fits</h3>
                 <p>From casual to formal — quality apparel for men, women, and kids.</p>
-                <a href="#" class="learn-more"><i class="fas fa-arrow-right"></i></a>
+                
             </div>
         </div>
 
@@ -2373,9 +2215,9 @@ margin: 0;
             </div>
             <div class="card-content">
                 <span class="tag">ELECTRONICS</span>
-                <h3>Smart Tech, Smarter Life</h3>
+                <h3> Smarter Tech Life</h3>
                 <p>Phones, laptops, and gadgets to keep you connected and productive.</p>
-                <a href="#" class="learn-more"><i class="fas fa-arrow-right"></i></a>
+                
             </div>
         </div>
 
@@ -2388,7 +2230,19 @@ margin: 0;
                 <span class="tag">ACCESSORIES</span>
                 <h3>Complete Your Look</h3>
                 <p>Bags, watches, headphones, and more — style meets function.</p>
-                <a href="#" class="learn-more"><i class="fas fa-arrow-right"></i></a>
+               
+            </div>
+        </div>
+        <!-- Card 4: Accessories (Fashion/Tech Hybrid) -->
+        <div class="category-card" data-category="accessories">
+            <div class="card-image">
+                <img src="Images/Digitalwatch.png" alt="Accessories">
+            </div>
+            <div class="card-content">
+                <span class="tag">ACCESSORIES</span>
+                <h3>Complete Your Look</h3>
+                <p>Bags, watches, headphones, and more — style meets function.</p>
+               
             </div>
         </div>
     </div>
@@ -2397,160 +2251,12 @@ margin: 0;
 <!--FEATURE PRODUCTS-->
 
 <section class="featured-products animate-on-scroll" data-animation="slide-in-left">
-    <div class="section-header" style="">
-        <h1 id="para" >Shop For Men's Sneakers</h1>
-       
-    <h1> <a href="shop.html" class="view-all" style="font-size: 1rem; font-weight: 200; margin-top: 2%;" id="view">VIEW ALL</a></h1>   
-
-        
+    <div class="section-header">
+            <h1 >Shop Men's shoe</h1>
+            <a href="shop.html#featured-products" class="view-all" >VIEW ALL</a>
     </div>
-
-    <div class="product-grid">
-        <!-- Product 1 -->
-        <div class="product-card" data-product="sports">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/MenBlackShoe4.png" alt="Super Comfort v2" class="shoe-image" id="sports-img">
-            </div>
-            <div class="product-info">
-                <div class="category">SPORTS</div>
-                <div class="product-title">Super Comfort v2</div>
-                <div class="price">
-                    <span class="original-price">UGX 35,000</span>
-                    <span class="discounted-price">UGX 30,000</span>
-                </div>
-                <div class="size-selector">
-                    <button class="size-btn selected" data-size="39" data-img="Images/MenBlackShoe4.png">39</button>
-                    <button class="size-btn" data-size="40" data-img="Images/MenBlackShoe6.png">40</button>
-                    <button class="size-btn" data-size="41" data-img="Images/MenShoeWhite.png">41</button>
-                    <button class="size-btn" data-size="42" data-img="Images/MensWhiteShoe3.png">42</button>
-                    
-                </div>
-            </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product-card" data-product="kids">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/KidsShoe.jpg" alt="Super Classic XII"
-                    class="shoe-image" id="kids-img">
-            </div>
-            <div class="product-info">
-                <div class="category">KIDS</div>
-                <div class="product-title">Super Classic XII</div>
-                <div class="price">
-                    <span class="original-price">UGX 25,000</span>
-                    <span class="discounted-price">UGX 22,000</span>
-                </div>
-                <div class="size-selector">
-                    <button class="size-btn selected" data-size="39"data-img="Images/LadiesShoe.png">39</button>
-                    <button class="size-btn" data-size="40"data-img="Images/LadiesShoeWithH.png">40</button>
-                    <button class="size-btn" data-size="41"data-img="Images/KidGreenShoe.png">41</button>
-                    <button class="size-btn" data-size="42"data-img="Images/WhitePinkSneakers.png">42</button>
-                </div>
-            </div>
-        </div>
-
-
-
- <!-- Product 2 -->
-        <div class="product-card" data-product="kids">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/KidsShoe.jpg" alt="Super Classic XII"
-                    class="shoe-image" id="kids-img">
-            </div>
-            <div class="product-info">
-                <div class="category">KIDS</div>
-                <div class="product-title">Super Classic XII</div>
-                <div class="price">
-                    <span class="original-price">UGX 25,000</span>
-                    <span class="discounted-price">UGX 22,000</span>
-                </div>
-                <div class="size-selector">
-                    <button class="size-btn selected" data-size="39"data-img="Images/LadiesShoe.png">39</button>
-                    <button class="size-btn" data-size="40"data-img="Images/LadiesShoeWithH.png">40</button>
-                    <button class="size-btn" data-size="41"data-img="Images/KidGreenShoe.png">41</button>
-                    <button class="size-btn" data-size="42"data-img="Images/WhitePinkSneakers.png">42</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-card" data-product="mens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/YellowAirForce.png" alt="Easy Rider Vingate"
-                    class="shoe-image" id="mens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">MENS</div>
-                <div class="product-title">Easy Rider Vingate</div>
-                <div class="price">
-                    <span class="original-price">UGX 45,000</span>
-                    <span class="discounted-price">UGX 41,000</span>
-                </div>
-                <div class="size-selector">
-                    <button class="size-btn selected" data-size="39"data-img="Images/YellowAirForce.png">39</button>
-                    <button class="size-btn" data-size="40"data-img="Images/BlackJordan.png">40</button>
-                    <button class="size-btn" data-size="41"data-img="Images/BlueYellowMensJordan.png">41</button>
-                    <button class="size-btn" data-size="42"data-img="Images/MensWhiteShoe.png">42</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/womenshow.jpg" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Sketcher Shine</div>
-                <div class="price">
-                    <span class="original-price">UGX 50,000</span>
-                    <span class="discounted-price">UGX 48,000</span>
-                </div>
-                <div class="size-selector">
-                    <button class="size-btn selected" data-size="39"data-img="Images/womenAirForce-removebg-preview.png">39</button>
-                    <button class="size-btn" data-size="40"data-img="Images/Gray-N.png">40</button>
-                    <button class="size-btn" data-size="41"data-img="Images/GreenAirForce.png">41</button>
-                    <button class="size-btn" data-size="42"data-img="Images/WomenSHOE3-removebg-preview.png">42</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product 5 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/womenshow.jpg" alt="Sketcher Shine" class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Sketcher Shine</div>
-                <div class="price">
-                    <span class="original-price">UGX 50,000</span>
-                    <span class="discounted-price">UGX 48,000</span>
-                </div>
-                <div class="size-selector">
-                    <button class="size-btn selected" data-size="39"
-                        data-img="Images/womenAirForce-removebg-preview.png">39</button>
-                    <button class="size-btn" data-size="40" data-img="Images/Gray-N.png">40</button>
-                    <button class="size-btn" data-size="41" data-img="Images/GreenAirForce.png">41</button>
-                    <button class="size-btn" data-size="42" data-img="Images/WomenSHOE3-removebg-preview.png">42</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--other shoes-->
-<section class="featured-products animate-on-scroll" data-animation="slide-in-left">
     
+        
     <div class="product-grid">
         <!-- Product 1 -->
         <div class="product-card" data-product="sports">
@@ -2693,15 +2399,6 @@ margin: 0;
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2712,15 +2409,11 @@ margin: 0;
 
 <!-- FEATURED CLOTHES SECTION -->
 <section class="fc-section" id="featured-clothes-section">
-   
-    <!--shop clothes-->
-      <div class="section-header" style="">
-        <h1 id="para" >Shop Quality Clothes</h1>
-       
-    <h1> <a href="shop.html" class="view-all" style="font-size: 1rem; font-weight: 200; margin-top: 2%;" id="view">VIEW ALL</a></h1>   
-
-        
+    <div class="section-header">
+        <h1>Shop Clothes</h1>
+        <a href="shop.html#featured-clothes-section" class="view-all">VIEW ALL</a>
     </div>
+
     <div class="fc-product-grid">
         <!-- Product 1 -->
         <div class="fc-product-card" data-product="sports">
@@ -2760,7 +2453,6 @@ margin: 0;
                 <img src="Images/cool-man2.png" alt="Easy Rider Vingate" class="fc-product-image" id="fc-mens-img">
             </div>
             <div class="fc-product-info">
-                
                 <div class="fc-title">Easy Rider Vingate</div>
                 <div class="fc-price">
                     <span class="fc-original-price">UGX 45,000</span>
@@ -2829,157 +2521,10 @@ margin: 0;
             </div>
         </div>
 
-
-<!--other cloth-->
-
-<div class="fc-product-card" data-product="womens">
-            <div class="fc-sale-badge">SALE!</div>
-            <div class="fc-image-container">
-                <img src="Images/cool-jersey (1).jpg" alt="Sketcher Shine" class="fc-product-image" id="fc-womens-img4">
-            </div>
-            <div class="fc-product-info">
-                
-                <div class="fc-title">Sketcher Shine</div>
-                <div class="fc-price">
-                    <span class="fc-original-price">UGX 50,000</span>
-                    <span class="fc-discounted-price">UGX 48,000</span>
-                </div>
-            </div>
-        </div>
-
-
         <div class="fc-product-card" data-product="womens">
             <div class="fc-sale-badge">SALE!</div>
             <div class="fc-image-container">
-                <img src="Images/cool-jersey (2).jpg" alt="Sketcher Shine" class="fc-product-image" id="fc-womens-img4">
-            </div>
-            <div class="fc-product-info">
-                
-                <div class="fc-title">Sketcher Shine</div>
-                <div class="fc-price">
-                    <span class="fc-original-price">UGX 50,000</span>
-                    <span class="fc-discounted-price">UGX 48,000</span>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="fc-product-card" data-product="womens">
-            <div class="fc-sale-badge">SALE!</div>
-            <div class="fc-image-container">
-                <img src="Images/cool-jersey (4).jpg" alt="Sketcher Shine" class="fc-product-image" id="fc-womens-img4">
-            </div>
-            <div class="fc-product-info">
-                
-                <div class="fc-title">Sketcher Shine</div>
-                <div class="fc-price">
-                    <span class="fc-original-price">UGX 50,000</span>
-                    <span class="fc-discounted-price">UGX 48,000</span>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="fc-product-card" data-product="womens">
-            <div class="fc-sale-badge">SALE!</div>
-            <div class="fc-image-container">
-                <img src="Images/BlueT-Shirt.png" alt="Sketcher Shine" class="fc-product-image" id="fc-womens-img4">
-            </div>
-            <div class="fc-product-info">
-                
-                <div class="fc-title">Sketcher Shine</div>
-                <div class="fc-price">
-                    <span class="fc-original-price">UGX 50,000</span>
-                    <span class="fc-discounted-price">UGX 48,000</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="fc-product-card" data-product="womens">
-            <div class="fc-sale-badge">SALE!</div>
-            <div class="fc-image-container">
-                <img src="Images/cool-jersey (8).jpg" alt="Sketcher Shine" class="fc-product-image" id="fc-womens-img4">
-            </div>
-            <div class="fc-product-info">
-                
-                <div class="fc-title">Sketcher Shine</div>
-                <div class="fc-price">
-                    <span class="fc-original-price">UGX 50,000</span>
-                    <span class="fc-discounted-price">UGX 48,000</span>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="fc-product-card" data-product="womens">
-            <div class="fc-sale-badge">SALE!</div>
-            <div class="fc-image-container">
-                <img src="Images/t-shirts2.jpg" alt="Sketcher Shine" class="fc-product-image" id="fc-womens-img4">
-            </div>
-            <div class="fc-product-info">
-                
-                <div class="fc-title">Sketcher Shine</div>
-                <div class="fc-price">
-                    <span class="fc-original-price">UGX 50,000</span>
-                    <span class="fc-discounted-price">UGX 48,000</span>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="fc-product-card" data-product="womens">
-            <div class="fc-sale-badge">SALE!</div>
-            <div class="fc-image-container">
-                <img src="Images/t-shirts6.jpg" alt="Sketcher Shine" class="fc-product-image" id="fc-womens-img4">
-            </div>
-            <div class="fc-product-info">
-                
-                <div class="fc-title">Sketcher Shine</div>
-                <div class="fc-price">
-                    <span class="fc-original-price">UGX 50,000</span>
-                    <span class="fc-discounted-price">UGX 48,000</span>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="fc-product-card" data-product="womens">
-            <div class="fc-sale-badge">SALE!</div>
-            <div class="fc-image-container">
-                <img src="Images/t-shirts1.jpg" alt="Sketcher Shine" class="fc-product-image" id="fc-womens-img4">
-            </div>
-            <div class="fc-product-info">
-                
-                <div class="fc-title">Sketcher Shine</div>
-                <div class="fc-price">
-                    <span class="fc-original-price">UGX 50,000</span>
-                    <span class="fc-discounted-price">UGX 48,000</span>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="fc-product-card" data-product="womens">
-            <div class="fc-sale-badge">SALE!</div>
-            <div class="fc-image-container">
-                <img src="Images/t-shirts.jpg" alt="Sketcher Shine" class="fc-product-image" id="fc-womens-img5">
+                <img src="Images/cheked-shirt1.png" alt="Sketcher Shine" class="fc-product-image" id="fc-womens-img5">
             </div>
             <div class="fc-product-info">
                 
@@ -2992,25 +2537,6 @@ margin: 0;
         </div>
     </div>
 </section>
-
-<!--other clothes-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3133,134 +2659,19 @@ margin: 0;
 <!--FEATURE PRODUCTS-->
 
 <section class="featured-products animate-on-scroll" data-animation="slide-in-left">
-    
-
-      <div class="section-header" style="">
-        <h1 id="para" >Shop Art Pieces</h1>
-       
-    <h1> <a href="shop.html" class="view-all" style="font-size: 1rem; font-weight: 200; margin-top: 2%;" id="view">VIEW ALL</a></h1>   
-
-        
+    <div class="section-header">
+        <h1>Shop Art Pieces</h1>
+        <a href="shop.html" class="view-all">VIEW ALL</a>
     </div>
+
     <div class="product-grid">
         <!-- Product 1 -->
         <div class="product-card" data-product="sports">
-           
-            <div class="shoe-image-container" style="width: 100%;">
-                <img src="Images/cool-art.jpg" alt="Super Comfort v2" class="shoe-image" id="sports-img" >
-            </div>
-            <div class="product-info">
-                
-                <div class="price">
-                    <span class="original-price">UGX 135,000</span>
-                    <span class="discounted-price">UGX 50,000</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product-card" data-product="kids" id="art-piece">
             <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/cool-art1.jpg" alt="Super Classic XII"
-                    class="shoe-image" id="kids-img">
+            <div class="shoe-image-containerr">
+                <img src="Images/art1-removebg-preview.png" alt="Super Comfort v2" class="shoe-imagee" id="sports-img">
             </div>
             <div class="product-info">
-               
-                <div class="price">
-                    <span class="original-price">UGX 225,000</span>
-                    <span class="discounted-price">UGX 100,000</span>
-                </div>
-               
-            </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-card" data-product="mens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/art2-removebg-preview.png" alt="Easy Rider Vingate"
-                    class="shoe-image" id="mens-img">
-            </div>
-            <div class="product-info">
-               
-                <div class="price">
-                    <span class="original-price">UGX 45,000</span>
-                    <span class="discounted-price">UGX 41,000</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/art3-removebg-preview.png" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-               
-                <div class="price">
-                    <span class="original-price">UGX 50,000</span>
-                    <span class="discounted-price">UGX 48,000</span>
-                </div>
-                
-            </div>
-        </div>
-
-
- <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/art10.jpg" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-               
-                <div class="price">
-                    <span class="original-price">UGX 50,000</span>
-                    <span class="discounted-price">UGX 48,000</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/art4-removebg-preview.png" alt="Sketcher Shine" class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                
-                <div class="price">
-                    <span class="original-price">UGX 50,000</span>
-                    <span class="discounted-price">UGX 48,000</span>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--other art pieces-->
-
-
-<section class="featured-products animate-on-scroll" data-animation="slide-in-left">
-   
-
-    <div class="product-grid">
-        <!-- Product 1 -->
-        <div class="product-card" data-product="sports" >
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/art1-removebg-preview.png" alt="Super Comfort v2" class="shoe-image" id="sports-img">
-            </div>
-            <div class="product-info">
-                
                 <div class="price">
                     <span class="original-price">UGX 35,000</span>
                     <span class="discounted-price">UGX 30,000</span>
@@ -3272,12 +2683,12 @@ margin: 0;
         <!-- Product 2 -->
         <div class="product-card" data-product="kids">
             <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
+            <div class="shoe-image-containerr">
                 <img src="Images/art11-removebg-preview.png" alt="Super Classic XII"
-                    class="shoe-image" id="kids-img">
+                    class="shoe-imagee" id="kids-img">
             </div>
             <div class="product-info">
-               
+                
                 <div class="price">
                     <span class="original-price">UGX 25,000</span>
                     <span class="discounted-price">UGX 22,000</span>
@@ -3289,12 +2700,12 @@ margin: 0;
         <!-- Product 3 -->
         <div class="product-card" data-product="mens">
             <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
+            <div class="shoe-image-containerr">
                 <img src="Images/art2-removebg-preview.png" alt="Easy Rider Vingate"
-                    class="shoe-image" id="mens-img">
+                    class="shoe-imagee" id="mens-img">
             </div>
             <div class="product-info">
-                
+               
                 <div class="price">
                     <span class="original-price">UGX 45,000</span>
                     <span class="discounted-price">UGX 41,000</span>
@@ -3306,12 +2717,12 @@ margin: 0;
         <!-- Product 4 -->
         <div class="product-card" data-product="womens">
             <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
+            <div class="shoe-image-containerr">
                 <img src="Images/art3-removebg-preview.png" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
+                    class="shoe-imagee" id="womens-img">
             </div>
             <div class="product-info">
-               
+                
                 <div class="price">
                     <span class="original-price">UGX 50,000</span>
                     <span class="discounted-price">UGX 48,000</span>
@@ -3324,9 +2735,9 @@ margin: 0;
  <!-- Product 4 -->
         <div class="product-card" data-product="womens">
             <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
+            <div class="shoe-image-containerr">
                 <img src="Images/art10.jpg" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
+                    class="shoe-imagee" id="womens-img" >
             </div>
             <div class="product-info">
                
@@ -3335,6 +2746,214 @@ margin: 0;
                     <span class="discounted-price">UGX 48,000</span>
                 </div>
                 
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" data-product="womens">
+            <div class="sale-badge">SALE!</div>
+            <div class="shoe-image-containerr">
+                <img src="Images/art4-removebg-preview.png" alt="Sketcher Shine" class="shoe-imagee" id="womens-img">
+            </div>
+            <div class="product-info">
+                
+                <div class="price">
+                    <span class="original-price">UGX 50,000</span>
+                    <span class="discounted-price">UGX 48,000</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="featured-products animate-on-scroll" data-animation="slide-in-left">
+    
+
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card" data-product="sports">
+            <div class="sale-badge">SALE!</div>
+            <div class="shoe-image-container">
+                <img src="Images/art1-removebg-preview.png" alt="Super Comfort v2" class="shoe-imagee" id="sports-img">
+            </div>
+            <div class="product-info">
+                
+                <div class="price">
+                    <span class="original-price">UGX 35,000</span>
+                    <span class="discounted-price">UGX 30,000</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-product="kids">
+            <div class="sale-badge">SALE!</div>
+            <div class="shoe-image-container">
+                <img src="Images/art11-removebg-preview.png" alt="Super Classic XII" class="shoe-imagee" id="kids-img">
+            </div>
+            <div class="product-info">
+                
+                <div class="price">
+                    <span class="original-price">UGX 25,000</span>
+                    <span class="discounted-price">UGX 22,000</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-product="mens">
+            <div class="sale-badge">SALE!</div>
+            <div class="shoe-image-container">
+                <img src="Images/art2-removebg-preview.png" alt="Easy Rider Vingate" class="shoe-imagee" id="mens-img">
+            </div>
+            <div class="product-info">
+                
+                <div class="price">
+                    <span class="original-price">UGX 45,000</span>
+                    <span class="discounted-price">UGX 41,000</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" data-product="womens">
+            <div class="sale-badge">SALE!</div>
+            <div class="shoe-image-container">
+                <img src="Images/art3-removebg-preview.png" alt="Sketcher Shine" class="shoe-imagee" id="womens-img">
+            </div>
+            <div class="product-info">
+                
+                <div class="price">
+                    <span class="original-price">UGX 50,000</span>
+                    <span class="discounted-price">UGX 48,000</span>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Product 4 -->
+        <div class="product-card" data-product="womens">
+            <div class="sale-badge">SALE!</div>
+            <div class="shoe-image-container">
+                <img src="Images/art10.jpg" alt="Sketcher Shine" class="shoe-imagee" id="womens-img">
+            </div>
+            <div class="product-info">
+               
+                <div class="price">
+                    <span class="original-price">UGX 50,000</span>
+                    <span class="discounted-price">UGX 48,000</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" data-product="womens">
+            <div class="sale-badge">SALE!</div>
+            <div class="shoe-image-container">
+                <img src="Images/art4-removebg-preview.png" alt="Sketcher Shine" class="shoe-imagee" id="womens-img">
+            </div>
+            <div class="product-info">
+               
+                <div class="price">
+                    <span class="original-price">UGX 50,000</span>
+                    <span class="discounted-price">UGX 48,000</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="Art-pieces" class="featured-products animate-on-scroll" data-animation="slide-in-left">
+    
+
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card" data-product="sports">
+            <div class="sale-badge">SALE!</div>
+            <div class="shoe-image-container">
+                <img src="Images/art1-removebg-preview.png" alt="Super Comfort v2" class="shoe-image" id="sports-img">
+            </div>
+            <div class="product-info">
+               
+                <div class="price">
+                    <span class="original-price">UGX 35,000</span>
+                    <span class="discounted-price">UGX 30,000</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-product="kids">
+            <div class="sale-badge">SALE!</div>
+            <div class="shoe-image-container">
+                <img src="Images/art11-removebg-preview.png" alt="Super Classic XII" class="shoe-image" id="kids-img">
+            </div>
+            <div class="product-info">
+                
+                <div class="price">
+                    <span class="original-price">UGX 25,000</span>
+                    <span class="discounted-price">UGX 22,000</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-product="mens">
+            <div class="sale-badge">SALE!</div>
+            <div class="shoe-image-container">
+                <img src="Images/art2-removebg-preview.png" alt="Easy Rider Vingate" class="shoe-image" id="mens-img">
+            </div>
+            <div class="product-info">
+                
+                <div class="price">
+                    <span class="original-price">UGX 45,000</span>
+                    <span class="discounted-price">UGX 41,000</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" data-product="womens">
+            <div class="sale-badge">SALE!</div>
+            <div class="shoe-image-container">
+                <img src="Images/art3-removebg-preview.png" alt="Sketcher Shine" class="shoe-image" id="womens-img">
+            </div>
+            <div class="product-info">
+                
+                <div class="price">
+                    <span class="original-price">UGX 50,000</span>
+                    <span class="discounted-price">UGX 48,000</span>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Product 4 -->
+        <div class="product-card" data-product="womens">
+            <div class="sale-badge">SALE!</div>
+            <div class="shoe-image-container">
+                <img src="Images/art10.jpg" alt="Sketcher Shine" class="shoe-image" id="womens-img">
+            </div>
+            <div class="product-info">
+               
+                <div class="price">
+                    <span class="original-price">UGX 50,000</span>
+                    <span class="discounted-price">UGX 48,000</span>
+                </div>
+
             </div>
         </div>
 
@@ -3350,533 +2969,11 @@ margin: 0;
                     <span class="original-price">UGX 50,000</span>
                     <span class="discounted-price">UGX 48,000</span>
                 </div>
-                
+
             </div>
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--gadgets laptops-->
-<section class="promo-section" id="promo">
-  <div class="promo-left">
-    <span class="best-badge">Best<br>Prices</span>
-    <img src="Images/hp-pc3.png" alt="Laptop and Tablet" id="picture">
-  </div>
-
-  <div class="promo-right">
-    <h2>Save up to</h2>
-    <h1>UGX 150,000</h1>
-    <p>on selected laptop & tablets brands<br>
-    <small>Terms and conditions apply</small></p>
-    <button class="btn-shop" id="shopBtn">Shop</button>
-  </div>
-</section>
-
-<!--real gadgets-->
-<section class="featured-products animate-on-scroll" data-animation="slide-in-left">
-   
-
-
-      <div class="section-header" style="">
-        <h1 id="para" >Phones & Tablets</h1>
-       
-    <h1> <a href="shop.html" class="view-all" style="font-size: 1rem; font-weight: 200; margin-top: 2%;" id="view">VIEW ALL</a></h1>   
-
-        
-    </div>
-    <div class="product-grid">
-        <!-- Product 1 -->
-        <div class="product-card" data-product="sports">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone1.png" alt="Super Comfort v2" class="shoe-image" id="sports-img">
-            </div>
-            <div class="product-info">
-                <div class="category">SPORTS</div>
-                <div class="product-title">Samsung Galaxy</div>
-                <div class="price">
-                    <span class="original-price">UGX 895,000</span>
-                    <span class="discounted-price">UGX 780,000</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product-card" data-product="kids">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone10.png" alt="Super Classic XII"
-                    class="shoe-image" id="kids-img">
-            </div>
-            <div class="product-info">
-                <div class="category">KIDS</div>
-                <div class="product-title">Iphone 11 pro max</div>
-                <div class="price">
-                    <span class="original-price">UGX 1.8 M</span>
-                    <span class="discounted-price">UGX 1.3 M</span>
-                </div>
-               
-            </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-card" data-product="mens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone11.png" alt="Easy Rider Vingate"
-                    class="shoe-image" id="mens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">MENS</div>
-                <div class="product-title">Iphone 14 pro max</div>
-                <div class="price">
-                    <span class="original-price">UGX 2 M</span>
-                    <span class="discounted-price">UGX 1.43 M</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone13.png" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Google Pixel 6</div>
-                <div class="price">
-                    <span class="original-price">UGX 900,000</span>
-                    <span class="discounted-price">UGX 730,000</span>
-                </div>
-                
-            </div>
-        </div>
-
-
- <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone12.png" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Iphone 13 pro max</div>
-                <div class="price">
-                    <span class="original-price">UGX 1.9 M</span>
-                    <span class="discounted-price">UGX 1.6 M</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone3.png" alt="Sketcher Shine" class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Google Pixel</div>
-                <div class="price">
-                    <span class="original-price">UGX 800,000</span>
-                    <span class="discounted-price">UGX 550,000</span>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!--other gadegts-->
-
-<section class="featured-products animate-on-scroll" data-animation="slide-in-left">
-   
-
-    <div class="product-grid">
-        <!-- Product 1 -->
-        <div class="product-card" data-product="sports">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone1.png" alt="Super Comfort v2" class="shoe-image" id="sports-img">
-            </div>
-            <div class="product-info">
-                <div class="category">SPORTS</div>
-                <div class="product-title">Samsung Galaxy</div>
-                <div class="price">
-                    <span class="original-price">UGX 895,000</span>
-                    <span class="discounted-price">UGX 780,000</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product-card" data-product="kids">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone10.png" alt="Super Classic XII"
-                    class="shoe-image" id="kids-img">
-            </div>
-            <div class="product-info">
-                <div class="category">KIDS</div>
-                <div class="product-title">Iphone 11 pro max</div>
-                <div class="price">
-                    <span class="original-price">UGX 1.8 M</span>
-                    <span class="discounted-price">UGX 1.3 M</span>
-                </div>
-               
-            </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-card" data-product="mens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone11.png" alt="Easy Rider Vingate"
-                    class="shoe-image" id="mens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">MENS</div>
-                <div class="product-title">Iphone 14 pro max</div>
-                <div class="price">
-                    <span class="original-price">UGX 2 M</span>
-                    <span class="discounted-price">UGX 1.43 M</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone13.png" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Google Pixel 6</div>
-                <div class="price">
-                    <span class="original-price">UGX 900,000</span>
-                    <span class="discounted-price">UGX 730,000</span>
-                </div>
-                
-            </div>
-        </div>
-
-
- <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone12.png" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Iphone 13 pro max</div>
-                <div class="price">
-                    <span class="original-price">UGX 1.9 M</span>
-                    <span class="discounted-price">UGX 1.6 M</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone3.png" alt="Sketcher Shine" class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Google Pixel</div>
-                <div class="price">
-                    <span class="original-price">UGX 800,000</span>
-                    <span class="discounted-price">UGX 550,000</span>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--laptops-->
-
-<section class="featured-products animate-on-scroll" data-animation="slide-in-left">
-   
-
-
-      <div class="section-header" style="">
-        <h1 id="para" >Access Original Laptops</h1>
-       
-    <h1> <a href="shop.html" class="view-all" style="font-size: 1rem; font-weight: 200; margin-top: 2%;" id="view">VIEW ALL</a></h1>   
-
-        
-    </div>
-    <div class="product-grid">
-        <!-- Product 1 -->
-        <div class="product-card" data-product="sports">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/hp-pc2.png" alt="Super Comfort v2" class="shoe-image" id="sports-img">
-            </div>
-            <div class="product-info">
-                <div class="category">SPORTS</div>
-                <div class="product-title">Samsung Galaxy</div>
-                <div class="price">
-                    <span class="original-price">UGX 895,000</span>
-                    <span class="discounted-price">UGX 780,000</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product-card" data-product="kids">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/hp-pc1.png" alt="Super Classic XII"
-                    class="shoe-image" id="kids-img">
-            </div>
-            <div class="product-info">
-                <div class="category">KIDS</div>
-                <div class="product-title">Iphone 11 pro max</div>
-                <div class="price">
-                    <span class="original-price">UGX 1.8 M</span>
-                    <span class="discounted-price">UGX 1.3 M</span>
-                </div>
-               
-            </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-card" data-product="mens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/hp-pc3.png" alt="Easy Rider Vingate"
-                    class="shoe-image" id="mens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">MENS</div>
-                <div class="product-title">Iphone 14 pro max</div>
-                <div class="price">
-                    <span class="original-price">UGX 2 M</span>
-                    <span class="discounted-price">UGX 1.43 M</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/hp-pc6.png" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Google Pixel 6</div>
-                <div class="price">
-                    <span class="original-price">UGX 900,000</span>
-                    <span class="discounted-price">UGX 730,000</span>
-                </div>
-                
-            </div>
-        </div>
-
-
- <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/hp-pc7.png" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Iphone 13 pro max</div>
-                <div class="price">
-                    <span class="original-price">UGX 1.9 M</span>
-                    <span class="discounted-price">UGX 1.6 M</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone3.png" alt="Sketcher Shine" class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Google Pixel</div>
-                <div class="price">
-                    <span class="original-price">UGX 800,000</span>
-                    <span class="discounted-price">UGX 550,000</span>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!--other gadegts-->
-
-<section class="featured-products animate-on-scroll" data-animation="slide-in-left">
-   
-
-    <div class="product-grid">
-        <!-- Product 1 -->
-        <div class="product-card" data-product="sports">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone1.png" alt="Super Comfort v2" class="shoe-image" id="sports-img">
-            </div>
-            <div class="product-info">
-                <div class="category">SPORTS</div>
-                <div class="product-title">Samsung Galaxy</div>
-                <div class="price">
-                    <span class="original-price">UGX 895,000</span>
-                    <span class="discounted-price">UGX 780,000</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product-card" data-product="kids">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone10.png" alt="Super Classic XII"
-                    class="shoe-image" id="kids-img">
-            </div>
-            <div class="product-info">
-                <div class="category">KIDS</div>
-                <div class="product-title">Iphone 11 pro max</div>
-                <div class="price">
-                    <span class="original-price">UGX 1.8 M</span>
-                    <span class="discounted-price">UGX 1.3 M</span>
-                </div>
-               
-            </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-card" data-product="mens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone11.png" alt="Easy Rider Vingate"
-                    class="shoe-image" id="mens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">MENS</div>
-                <div class="product-title">Iphone 14 pro max</div>
-                <div class="price">
-                    <span class="original-price">UGX 2 M</span>
-                    <span class="discounted-price">UGX 1.43 M</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone13.png" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Google Pixel 6</div>
-                <div class="price">
-                    <span class="original-price">UGX 900,000</span>
-                    <span class="discounted-price">UGX 730,000</span>
-                </div>
-                
-            </div>
-        </div>
-
-
- <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone12.png" alt="Sketcher Shine"
-                    class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Iphone 13 pro max</div>
-                <div class="price">
-                    <span class="original-price">UGX 1.9 M</span>
-                    <span class="discounted-price">UGX 1.6 M</span>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card" data-product="womens">
-            <div class="sale-badge">SALE!</div>
-            <div class="shoe-image-container">
-                <img src="Images/phone3.png" alt="Sketcher Shine" class="shoe-image" id="womens-img">
-            </div>
-            <div class="product-info">
-                <div class="category">WOMENS</div>
-                <div class="product-title">Google Pixel</div>
-                <div class="price">
-                    <span class="original-price">UGX 800,000</span>
-                    <span class="discounted-price">UGX 550,000</span>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
 
 
 
@@ -3994,7 +3091,7 @@ margin: 0;
         <img src="Images/LadiesPinkShoe.png" alt="Heels">
       </div>
       <div class="social-gallery-item">
-        <img src="Images/hp-pc3.png" alt="Sports Shoes">
+        <img src="Images/cheked-shirt1.png" alt="Sports Shoes">
       </div>
       <div class="social-gallery-item">
         <img src="Images/cool-man.png" alt="Fashion Outfit">
@@ -4074,7 +3171,7 @@ margin: 0;
             },
             clothes: {
                 title1: "Men's Clothing",
-                items1: ["T-Shirts", "Shirts", "Jeans", "Jackets", "Suits", "Shorts"],
+                items1: ["T-Shirts", "fc-section", "Jeans", "Jackets", "Suits", "Shorts"],
                 title2: "Women's Clothing",
                 items2: ["Dresses", "Tops", "Skirts", "Jeans", "Blazers", "Loungewear"]
             },
@@ -4092,33 +3189,7 @@ margin: 0;
             }
         };
 
-        const products = {
-            clothes: [
-                { name: "Cotton T-Shirt", price: "UGX 20000", img: "https://via.placeholder.com/200?text=T-Shirt" },
-                { name: "Denim Jacket", price: "UGX 25000", img: "https://via.placeholder.com/200?text=Jacket" },
-                { name: "Summer Dress", price: "UGX 15000", img: "https://via.placeholder.com/200?text=Dress" },
-                { name: "Formal Shirt", price: "UGX 10000", img: "https://via.placeholder.com/200?text=Shirt" },
-            ],
-            shoes: [
-                { name: "Running Sneakers", price: "$89.99", img: "https://via.placeholder.com/200?text=Sneakers" },
-                { name: "Leather Loafers", price: "$129.99", img: "https://via.placeholder.com/200?text=Loafers" },
-                { name: "Hiking Boots", price: "$149.99", img: "https://via.placeholder.com/200?text=Boots" },
-                { name: "Flip Flops", price: "$19.99", img: "https://via.placeholder.com/200?text=Flip+Flops" },
-            ],
-            bags: [
-                { name: "Leather Tote Bag", price: "$99.99", img: "https://via.placeholder.com/200?text=Tote+Bag" },
-                { name: "Backpack", price: "$69.99", img: "https://via.placeholder.com/200?text=Backpack" },
-                { name: "Crossbody Purse", price: "$59.99", img: "https://via.placeholder.com/200?text=Purse" },
-                { name: "Weekend Duffel", price: "$89.99", img: "https://via.placeholder.com/200?text=Duffel" },
-            ],
-            accessories: [
-                { name: "Sunglasses", price: "$39.99", img: "https://via.placeholder.com/200?text=Sunglasses" },
-                { name: "Smart Watch", price: "$199.99", img: "https://via.placeholder.com/200?text=Watch" },
-                { name: "Silk Scarf", price: "$29.99", img: "https://via.placeholder.com/200?text=Scarf" },
-                { name: "Leather Belt", price: "$24.99", img: "https://via.placeholder.com/200?text=Belt" },
-            ]
-        };
-
+       
         // ===== DESKTOP LOGIC =====
         const categoriesToggle = document.getElementById('categories-toggle');
         const megaMenu = document.getElementById('mega-menu');
@@ -4510,8 +3581,14 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(section);
         });
 
-// category section animation
 
+
+
+
+
+
+
+// category section animation
     document.addEventListener('DOMContentLoaded', () => {
         const section = document.getElementById('shop-categories-section');
         if (!section) return;
@@ -4533,8 +3610,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+
+
+
+
+
+
     //footer
-    // Adds a subtle hover animation on scroll
+   
 document.addEventListener("DOMContentLoaded", () => {
   const columns = document.querySelectorAll(".shopcat-column");
 
@@ -4553,7 +3637,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//email
+
 
 // Email validation and message
 document.addEventListener("DOMContentLoaded", () => {
@@ -4628,39 +3712,83 @@ window.addEventListener('resize', () => {
   updateSlider();
 });
 
-//laptops
-// Interactive JavaScript Animation
-  const promo = document.getElementById('promo');
-  const shopBtn = document.getElementById('shopBtn');
 
-  // Animate when in viewport
-  window.addEventListener('scroll', () => {
-    const rect = promo.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      promo.style.transform = "scale(1)";
-      promo.style.opacity = "1";
-    } else {
-      promo.style.transform = "scale(0.98)";
-      promo.style.opacity = "0.8";
-    }
-  });
 
-  // Button click interaction
-  shopBtn.addEventListener('click', () => {
-    shopBtn.innerText = "Redirecting...";
-    shopBtn.style.background = "#4cd137";
-    shopBtn.style.boxShadow = "0 5px 20px rgba(46,204,113,0.4)";
-    setTimeout(() => {
-      alert("Redirecting to the shop page...");
-      shopBtn.innerText = "Shop";
-      shopBtn.style.background = "linear-gradient(90deg, #6c5ce7, #7a33f3)";
-    }, 1200);
-  }
-);
-  // changing pictures
-  let pictures=document.getElementById("picture")
-  let imagesMy=["images/hp-pc1","images/hp-pc1","images/hp-pc1"];
-  
+
+    //section animation
+    document.addEventListener('DOMContentLoaded', () => {
+        const animatedSections = document.querySelectorAll('.animate-on-scroll');
+        if (animatedSections.length === 0) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15, // Trigger when 15% of the section is visible
+            rootMargin: '0px 0px -50px 0px' // Optional: trigger slightly before fully in view
+        });
+
+        animatedSections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+
+
+
+  // Image Slider Script
+    document.addEventListener('DOMContentLoaded', function () {
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+        let slideInterval;
+
+        // Function to show specific slide
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        // Auto-slide every 5 seconds
+        function startAutoSlide() {
+            slideInterval = setInterval(() => {
+                let nextSlide = (currentSlide + 1) % slides.length;
+                showSlide(nextSlide);
+            }, 5000); // 5 seconds
+        }
+
+        // Pause on hover
+        const bannerRight = document.querySelector('.banner-right');
+        bannerRight.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        bannerRight.addEventListener('mouseleave', startAutoSlide);
+
+        // Click dots to navigate
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                clearInterval(slideInterval);
+                startAutoSlide(); // Restart timer
+            });
+        });
+
+        // Initialize
+        startAutoSlide();
+    });  
+
+
+
+
+
+
+
+
 
     </script>
 

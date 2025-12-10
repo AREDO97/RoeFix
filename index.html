@@ -3245,53 +3245,12 @@ hr{
             subMenu.classList.toggle('active');
         });
 
-        subMenuItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const cat = item.dataset.category;
-                renderProducts(cat);
-                mobileMenu.classList.remove('active');
-            });
-        });
-
-        function renderProducts(category) {
-            const items = products[category] || [];
-            categoryTitle.textContent = `${category.charAt(0).toUpperCase() + category.slice(1)} Products`;
-            productsGrid.innerHTML = items.map(p => `
-        <div class="product-card">
-          <div class="product-image" style="background-image: url('${p.img}')"></div>
-          <div class="product-info">
-            <div class="product-title">${p.name}</div>
-            <div class="product-price">${p.price}</div>
-          </div>
-        </div>
-      `).join('');
-        }
+        
+       
    
 
 
-        
-// ===== HELPER FUNCTION =====
-        function toKebabCase(str) {
-    return str.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-}
-
-        // ===== UPDATED renderCategoryContent =====
-        function renderCategoryContent(categoryKey) {
-    const data = categoryData[categoryKey];
-        if (!data) return;
-
-        const items1HTML = data.items1
-        .map(item => `<a href="shop.html#${toKebabCase(item)}">${item}</a>`)
-        .join('');
-
-        const items2HTML = data.items2
-        .map(item => `<a href="shop.html#${toKebabCase(item)}">${item}</a>`)
-        .join('');
-
-        col1.innerHTML = `<h4>${data.title1}</h4>${items1HTML}`;
-        col2.innerHTML = `<h4>${data.title2}</h4>${items2HTML}`;
-}
-
+         
 
 
 

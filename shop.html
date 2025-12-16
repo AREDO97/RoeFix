@@ -4,21 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+    <title>Shop Shoes, Laptops, Art & More Online | Roefixug Uganda</title>
+
+    <!--META DESCRIPTION-->
+    <meta name="description" content="Roefix Uganda – Your trusted online store for quality shoes,laptops, smartphones, art paintings, and fashion accessories.Fast delivery across Kamapala.">
+
+          <!--SOCIAL SHARING-->
+    <meta property="og:title" content="Shop Shoes, Laptops & Art Online | Roefix Uganda">
+    <meta property="og:description" content="Quality products. Fast delivery. Trusted by Ugandans.">
+    <meta property="og:url" content="https://roefixug.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://roefixug.com/images/roefix-social-banner.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Roefix Uganda – Online Shopping">
+    <meta name="twitter:description" content="Your one-stop shop for fashion, tech & art in Uganda.">
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
+
+    <!--Structured Data (Schema Markup)-->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Roefix Uganda",
+      "url": "https://roefixug.com",
+      "description": "Online shop for shoes, laptops, art, and accessories in Uganda.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "UG"
+      }
+    }
+    </script>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             text-decoration: none;
         }
 
         body {
              background: #ebe5e5;
+
         }
 
         a {
@@ -720,8 +755,8 @@
             transition: opacity 0.6s ease, transform 0.6s ease;
             background-color: #fff;
             width: 98%;
-            margin: 20px auto;
-            border-radius: 10px 10px 0 0;
+            margin: 30px auto;
+            border-radius: 5px 5px 0 0;
         }
 
         .fc-section.animate {
@@ -733,14 +768,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 50px;
             margin: 0 auto;
-            padding-right: 10px;
+           
             width: 100%;
             border-radius: 5px 5px 0 0;
-             background: #8E44AD;
+             background: #B177DA;
             color: white;
-            padding: 12px 20px;
+            padding: 8px 10px;
 
         }
 
@@ -875,7 +909,7 @@
             }
 
             .fc-section-header p {
-                font-size: .9rem;
+                font-size: .95rem;
             }
 
             .fc-product-grid {
@@ -915,7 +949,12 @@
         
         /* =====ART PIECES SECTION ===== */
         .artwork-section {
-            padding: 0 15px;
+            background: #fff;
+            width: 98%;
+            margin: 15px auto;
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+            position: relative; 
         }
 
         .artwork-section-header {
@@ -924,7 +963,7 @@
             align-items: center;
             background-color: #B177DA;
             padding: 8px 10px;
-            border-radius: 8px 8px 0 0;
+            border-radius: 5px 5px 0 0;
             margin-bottom: 8px;
         }
         .art-grid-container {
@@ -934,21 +973,21 @@
   
 }
 
-        .artwork-section-header p {
-            color: #000;
+        .artwork-section-header h2 {
+            color: #FFF;
             font-size: 1rem;
             font-weight: 400;
             margin: 0;
         }
         .artwork-section-header h2 {
-            color: #000;
+            color: #FFF;
             font-size: 1rem;
             font-weight: 400;
             margin: 0;
         }
 
         .artwork-see-all-link {
-            color: #000;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
             font-size: 0.9rem;
@@ -963,6 +1002,7 @@
             position: relative;
             width: 100%;
             overflow: visible;
+            background-color: #fff;
         }
 
         /* ===== SCROLLABLE GRID CONTAINER ===== */
@@ -973,6 +1013,7 @@
             padding: 10px;
             overflow-x: auto;
             gap:5px;
+            
 
         }
 
@@ -1058,6 +1099,13 @@
 
         /* Tablet & Desktop: 6 per row */
         @media (min-width: 768px) {
+            .artwork-section-header {
+            
+            background-color: #B177DA;
+            padding: 8px 10px;
+            border-radius: 0 0 0 0;
+            
+        }
             .artwork-card {
                 min-width: calc(100% / 6 - 10px);
                 /* 6 per row */
@@ -1110,7 +1158,7 @@
                 padding: 10px 15px;
             }
 
-            .artwork-section-header p {
+            .artwork-section-header h2 {
                 font-size: 1rem;
             }
 
@@ -1142,7 +1190,7 @@
                 padding: 8px 12px;
             }
 
-            .artwork-section-header p{
+            .artwork-section-header h2{
                 font-size: 0.9rem;
             }
         }
@@ -1183,7 +1231,7 @@
     padding: 7px 10px;
   }
 
-  .artwork-section-header p {
+  .artwork-section-header h2 {
     font-size: 0.9rem;
   }
 }
@@ -1198,11 +1246,10 @@
         /* ===== BANNER CONTAINER ===== */
         .jumia-black-friday-banner {
             position: relative;
-            width: 100%;
-            max-width: 1200px;
+            width: 98%;
             margin: 30px auto;
             overflow: hidden;
-            border-radius: 8px;
+            border-radius: 8px 8px 0 0;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
 
@@ -1454,12 +1501,12 @@
 /*PHONES SECTION*/
 /* ===== PHONE CATEGORIES SECTION ===== */
         .phone-cat-section {
-            max-width: 1400px;
-            margin: 0 auto 40px;
-            background-color: #000;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            width: 98%;
+            margin: 30px auto;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            position: relative;
         }
 
         .phone-cat-grid {
@@ -1523,15 +1570,19 @@
 
         /* ===== PHONE OFFERS SECTION ===== */
         .phone-offers-section {
-            max-width: 1200px;
-            margin: 0 auto 40px;
+         background: #fff;
+            width: 98%;
+            margin: 15px auto;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            position: relative;   
         }
 
         .phone-offers-header {
-            background-color: #B155DA;
+           background: #B177DA;
             color: #fff;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 8px 10px;
+            border-radius: 5px 5px 0 0;
             display: flex;
             font-size: 1rem;
             justify-content: space-between;
@@ -1680,6 +1731,11 @@
         }
 
         @media (max-width: 768px) {
+            .phone-offers-header {
+             background: #B177DA;
+            border-radius: 0 0 0 0;
+        }
+
             .phone-offers-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
@@ -1798,15 +1854,17 @@
 
 /* ===== LAPTOPS SECTION ===== */
     .laptop-scrollable-section {
-      margin: 30px 0;
-      padding: 0 15px;
-    }
+      background: #fff;   
+        margin: 15px auto;
+        overflow: hidden;
+        position: relative;
+}
 
     .laptop-section-header {
       background: #B177DA;
       color: white;
-      padding: 12px 20px;
-      border-radius: 8px 8px 0 0;
+      padding: 8px 10px;
+      border-radius: 5px 5px 0 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1998,6 +2056,10 @@
     }
 
     @media (max-width: 767px) {
+        .laptop-section-header {
+      border-radius: 0 0 0 0;
+      
+    }
       .laptop-section-header {
         padding: 10px 15px;
         font-size: 1rem;
@@ -2061,15 +2123,12 @@
 
 
             /* ===== QUALITY SHOE SECTION ===== */
-        .quality-shoe-section {
-            padding: 0 15px;
-        }
 
         .quality-shoe-header {
-            background: #8E44AD;
+            background: #B177DA;
             color: white;
-            padding: 12px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 8px 10px;
+            border-radius: 5px 5px 0 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -2098,6 +2157,7 @@
             position: relative;
             width: 100%;
             overflow: visible;
+            padding: 10px;
         }
 
         /* ===== SCROLLABLE CONTAINER ===== */
@@ -2242,12 +2302,14 @@
 
         /* Mobile (<768px) */
         @media (max-width: 767px) {
-            .quality-shoe-section {
-                padding: 0 10px;
-            }
-
+            
+             .quality-shoe-header {
+            
+            border-radius: 0 0 0 0;
+            
+        }
             .quality-shoe-header {
-                padding: 10px 15px;
+                padding: 8px 10px;
                 font-size: 1rem;
             }
 
@@ -2299,15 +2361,20 @@
 
         /* ===== SECTION 2 QUALITY SHOE GRID SECTION ===== */
         .quality-shoe-grid-section {
-            margin: 30px 15px;
-            padding: 0 20px;
+            background: #fff;
+            width: 98%;
+            margin: 30px auto;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            position: relative;
+        
         }
 
         .quality-shoe-grid-header {
-            background: #8E44AD;
+            background: #B177DA;
             color: white;
-            padding: 12px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 8px 10px;
+            border-radius: 5px 5px 0 0;
             font-weight: bold;
             font-size: 1.2rem;
             margin-bottom: 0;
@@ -2460,7 +2527,7 @@
             font-weight: 700;
         }
             .quality-shoe-grid-header {
-            background: #8E44AD;
+            background: #B177DA;
              padding: 12px 20px;
             border-radius: 0 0 0 0;
             
@@ -2471,7 +2538,7 @@
         }
 
             .quality-shoe-card-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 3px;
             }
 
@@ -2497,7 +2564,7 @@
 }
 
 .s-header {
-    background: #8E44AD;
+    background: #B177DA;
     color: white;
     padding: 12px 20px;
     border-radius: 8px 8px 0 0;
@@ -2701,7 +2768,7 @@
 /* Extra small screens (<480px) */
 @media (max-width: 480px) {
     .s-header {
-    background: #8E44AD;
+    background: #B177DA;
     color: white;
     border-radius: 0 0 0 0;
     
@@ -2768,7 +2835,7 @@
             background: #fff;
             width: 98%;
             margin: 30px auto;
-            border-radius: 10px 10px 0 0;
+            border-radius: 5px 5px 0 0;
             overflow: hidden;
             position: relative;
            
@@ -2785,13 +2852,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #8E44AD;
-            padding: 12px 20px;
-            border-radius: 10px 10px 0 0;
+            background: #B177DA;
+            padding: 8px 10px;
+            border-radius: 5px 5px 0 0;
             width: 100%;
         }
 
-        .jackets-section-header p {
+        .jackets-section-header h2 {
             color: #fff;
             font-size: 1.2rem;
             font-weight: 600;
@@ -2903,10 +2970,12 @@
         /* ===== MOBILE: ≤ 480px → HORIZONTAL SCROLL ===== */
         @media (max-width: 480px) {
             .jackets-section-header {
-                height: 40px;
-            }
+            border-radius: 0px 0px 0px 0px;
+            width: 100%;
+        }
 
-            .jackets-section-header p {
+
+            .jackets-section-header h2 {
                 font-size: 0.95rem;
             }
 
@@ -2968,8 +3037,8 @@
             transition: opacity 0.8s ease, transform 0.8s ease;
             background: #fff;
             width: 98%;
-            margin: 15px auto;
-            border-radius: 10px 10px 0 0;
+            margin: 30px auto;
+            border-radius: 5px 5px 0 0;
             overflow: hidden;
         }
 
@@ -2983,13 +3052,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #8E44AD;
-            padding: 0 12px;
-            height: 42px;
-            border-radius: 10px 10px 0 0;
+            background: #B177DA;
+            padding: 8px 10px;
+            border-radius: 5px 5px 0 0;
         }
 
-        .jersey-section-header p {
+        .jersey-section-header h2 {
             color: #fff;
             font-size: 1.2rem;
             font-weight: 600;
@@ -2999,7 +3067,6 @@
 
         .jersey-call-to-order {
             color: white;
-            font-weight: bold;
             font-size: 0.9rem;
             text-decoration: none;
             padding: 4px 10px;
@@ -3105,7 +3172,7 @@
                 height: 40px;
             }
 
-            .jersey-section-header p {
+            .jersey-section-header h2 {
                 font-size: 0.95rem;
             }
 
@@ -3125,6 +3192,10 @@
         }
 
         @media (max-width: 480px) {
+             
+            .jersey-section-header h2 {
+                font-size: 0.85rem;
+            }
             .jersey-featured {
             width: 100%;
             border-radius: 0px;
@@ -3166,8 +3237,8 @@
         .t-shirts-featured {
             background: #fff;
             width: 98%;
-            margin: 15px auto;
-            border-radius: 10px 10px 0 0;
+            margin: 30px auto;
+            border-radius: 5px 5px 0 0;
             overflow: hidden;
             position: relative;
         }
@@ -3177,13 +3248,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #8E44AD;
-            padding: 0 12px;
-            height: 42px;
-            border-radius: 10px 10px 0 0;
+            background: #B177DA;
+            padding: 8px 10px;
+            border-radius: 5px 5px 0 0;
         }
     
-        .t-shirts-section-header p {
+        .t-shirts-section-header h2 {
             color: #fff;
             font-size: 1.2rem;
             font-weight: 600;
@@ -3231,7 +3301,7 @@
             top: 50%;
             right: 10px;
             transform: translateY(-50%);
-            background: #8E44AD;
+            background: #B177DA;
             color: white;
             border: none;
             width: 36px;
@@ -3254,7 +3324,7 @@
         }
     
         .t-shirts-scroll-right-btn:hover {
-            background: #7D3C98;
+            background: #B177DA;
         }
     
         /* ===== PRODUCT CARD ===== */
@@ -3374,7 +3444,11 @@
         /*SECTION ART PIECES 3 STYLING*/
         /* =====ART PIECES SECTION (SEC3) ===== */
 .sec3-section {
-    padding: 0 15px;
+    background-color: #fff;
+    width: 98%;
+   margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
 }
 
 .sec3-section-header {
@@ -3382,9 +3456,10 @@
     justify-content: space-between;
     align-items: center;
     background-color: #B177DA;
-    padding: 8px 10px;
-    border-radius: 8px 8px 0 0;
+    position: relative;
+    border-radius: 5px 5px 0 0;
     margin-bottom: 8px;
+    
 }
 .art-grid-container {
     display: flex;
@@ -3392,20 +3467,20 @@
 }
 
 .sec3-section-header p {
-    color: #000;
+    color: #fff;
     font-size: 1rem;
     font-weight: 400;
     margin: 0;
 }
 .sec3-section-header h2 {
-    color: #000;
+    color: #fff;
     font-size: 1rem;
     font-weight: 400;
     margin: 0;
 }
 
 .sec3-see-all-link {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 0.9rem;
@@ -3418,7 +3493,7 @@
 /* ===== GRID WRAPPER ===== */
 .sec3-grid-wrapper {
     position: relative;
-    width: 100%;
+    width: 98%;
     overflow: hidden; 
 }
 
@@ -3426,7 +3501,6 @@
 .sec3-grid-container {
     display: flex;
     flex-wrap: nowrap;
-    padding: 10px;
     overflow-x: auto;
     overflow-y: hidden;
     gap: 5px;
@@ -3438,7 +3512,7 @@
 
 /* ===== ART CARD ===== */
 .sec3-card {
-    flex: 0 0 auto;
+    flex: 0 0 100px;
     min-width: calc(100% / 3 - 8px); 
     background: white;
     border-radius: 3px;
@@ -3636,7 +3710,7 @@
         padding: 7px 10px;
     }
 
-    .sec3-section-header p {
+    .sec3-section-header h2 {
         font-size: 0.9rem;
     }
 }
@@ -3693,7 +3767,7 @@
     align-items: center;
     background-color: #B177DA;
     padding: 8px 10px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 5px 5px 0 0;
     margin-bottom: 8px;
 }
 .art-grid-container {
@@ -4650,7 +4724,7 @@
     <section class="fc-section" id="featured-clothes-section">
         <div class="fc-section-header">
             <p>Top Fashions</p>
-            <a href="tel:+256777891441" class="fc-view-all">Call To Order →</a>
+            <a href="tel:+256777891441" class="fc-view-all">Order →</a>
         </div>
 
         <div class="fc-product-grid">
@@ -4917,8 +4991,8 @@
 
 <section class="jackets-featured visible" id="jackets-section">
     <div class="jackets-section-header">
-        <p>Jackets Collection</p>
-        <a href="tel:+256700000000" class="jackets-call-to-order">Call to Order</a>
+        <h2>Jackets Collection</h2>
+        <a href="tel:+256700000000" class="jackets-call-to-order">Order</a>
     </div>
 
     <div class="jackets-product-grid">
@@ -5170,8 +5244,8 @@
     <!-- JERSEY SECTION 1 -->
     <section class="jersey-featured visible" id="jersey-section-1">
         <div class="jersey-section-header">
-            <p>Favourite Team Jerseys</p>
-            <a href="tel:+256777891441" class="jersey-call-to-order">Call To Order →</a>
+            <h2>Favourite Team Jerseys</h2>
+            <a href="tel:+256777891441" class="jersey-call-to-order">Order →</a>
         </div>
     
         <div class="jersey-product-grid">
@@ -5340,8 +5414,8 @@
     <!-- JERSEY SECTION 2 -->
     <section class="jersey-featured visible" id="jersey-section-2">
         <div class="jersey-section-header">
-            <p>More Team Jerseys</p>
-            <a href="tel:+256777891441" class="jersey-call-to-order">Call To Order →</a>
+            <h2>More Team Jerseys</h2>
+            <a href="tel:+256777891441" class="jersey-call-to-order">Order →</a>
         </div>
     
         <div class="jersey-product-grid">
@@ -5589,8 +5663,8 @@
     <!--T-SHIRTS-->
     <section class="t-shirts-featured animate-on-scroll" data-animation="slide-in-left">
         <div class="t-shirts-section-header">
-            <p>Popular T-Shirts</p>
-            <a href="tel:+256777891441" class="t-shirts-call-to-order">Call To Order →</a>
+            <h2>Popular T-Shirts</h2>
+            <a href="tel:+256777891441" class="t-shirts-call-to-order">Order →</a>
         </div>
     
         <div class="t-shirts-scroll-wrapper">
@@ -5783,8 +5857,8 @@
 <!-- PHONE OFFERS -->
 <section class="phone-offers-section">
     <div class="phone-offers-header">
-        <span>Phone Offers</span>
-        <a href="tel:+256777891441" class="see-all-link">Call To Order <span>→</span></a>
+        <h2>Phone Offers</h2>
+        <a href="tel:+256777891441" class="see-all-link">Order <span>→</span></a>
     </div>
     <div class="phone-offers-grid">
 
@@ -5982,8 +6056,8 @@
     <!-- SECTION 1 -->
     <section class="artwork-section animate-on-scroll" data-animation="slide-in-left">
         <div class="artwork-section-header">
-            <p>Featured Art Pieces</p>
-            <a href="tel:+256777891441" class="artwork-see-all-link">Call To Order →</a>
+            <h2>Featured Art Pieces</h2>
+            <a href="tel:+256777891441" class="artwork-see-all-link">Order →</a>
         </div>
         <div class="artwork-grid-wrapper">
             <div class="artwork-grid-container">
@@ -6211,8 +6285,8 @@
     <!--SECTION 3-->
 <section class="sec3-section animate-on-scroll" data-animation="slide-in-left">
     <div class="sec3-section-header">
-        <p>Best Sellers</p>
-        <a href="tel:+256777891441" class="sec3-see-all-link">Call To Order →</a>
+        <h2>Best Sellers</h2>
+        <a href="tel:+256777891441" class="sec3-see-all-link">Order →</a>
     </div>
     <div class="sec3-grid-wrapper">
         <div class="sec3-grid-container">

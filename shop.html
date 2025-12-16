@@ -2168,7 +2168,7 @@
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
-            padding-right: 40px;
+            padding-right: 10px;
             background-color: #fff;
         }
 
@@ -2310,7 +2310,7 @@
         }
             .quality-shoe-header {
                 padding: 8px 10px;
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
 
             .quality-shoe-card {
@@ -2360,28 +2360,29 @@
 
 
         /* ===== SECTION 2 QUALITY SHOE GRID SECTION ===== */
-        .quality-shoe-grid-section {
-            background: #fff;
-            width: 98%;
-            margin: 30px auto;
-            border-radius: 5px 5px 0 0;
-            overflow: hidden;
-            position: relative;
-        
-        }
+    .quality-shoe-grid-section {
+    background: #fff;
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 30px auto;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    position: relative;
+    padding: 0; 
+}
 
-        .quality-shoe-grid-header {
-            background: #B177DA;
-            color: white;
-            padding: 8px 10px;
-            border-radius: 5px 5px 0 0;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 0;
-        }
-
+.quality-shoe-grid-header {
+    background: #B177DA;
+    color: white;
+    padding: 8px 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
         .quality-shoe-grid-header h2 {
-            margin: 0;
+            
             font-size: 1.2rem;
         }
 
@@ -2392,7 +2393,7 @@
             gap: 5px;
             padding: 20px 0;
             background: white;
-            border-radius: 0 0 8px 8px;
+            border-radius: 0 0 5px 5px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
         }
 
@@ -2485,13 +2486,8 @@
         /* Mobile (<768px) */
         @media (max-width: 767px) {
             .quality-shoe-grid-section {
-            margin: 20px 0px;
-            padding: 0 10px;
+                margin: 20px 0px;
         }
-
-            .quality-shoe-grid-section {
-                padding: 0 10px;
-            }
 
             .quality-shoe-card-grid {
                 grid-template-columns: repeat(4, 1fr);
@@ -2513,6 +2509,9 @@
 
         
         @media (max-width: 480px) {
+           .quality-shoe-grid-section{
+            border-radius: 0px 0px 0px 0px;
+           }
             .quality-shoe-grid-info h3 {
             font-size: 0.9rem;
             font-weight: 500;
@@ -2526,15 +2525,9 @@
             font-size: 0.8rem;
             font-weight: 700;
         }
-            .quality-shoe-grid-header {
+        .quality-shoe-grid-header {
             background: #B177DA;
-             padding: 12px 20px;
             border-radius: 0 0 0 0;
-            
-        }
-            .quality-shoe-grid-section {
-            margin: 15px 0px;
-            padding: 0 5px;
         }
 
             .quality-shoe-card-grid {
@@ -3941,7 +3934,7 @@
 <section class="quality-shoe-section animate-on-scroll">
     <div class="quality-shoe-header">
         <h2>Top Offers</h2>
-        <a href="tel:+256777891441" class="quality-shoe-see-all-link">Order →</a>
+        <a href="tel:+256777891441" class="quality-shoe-see-all-link">Order </a>
     </div>
 
     <div class="quality-shoe-scroll-container-wrapper">
@@ -4548,7 +4541,7 @@
 <section class="s-section animate-on-scroll">
     <div class="s-header">
         <h2>More Offers</h2>
-        <a href="tel:+256777891441" class="s-see-all-link">Order →</a>
+        <a href="tel:+256777891441" class="s-see-all-link">Order</a>
     </div>
 
     <div class="s-scroll-container-wrapper">

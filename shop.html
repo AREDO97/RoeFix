@@ -52,7 +52,7 @@
         }
 
         body {
-             background: #ebe5e5;
+             background: #fff;
 
         }
 
@@ -749,12 +749,12 @@
         /*CLOTHES SECTION*/
 
         .fc-section {
-
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
             background-color: #fff;
-            width: 98%;
+            width: 100%;
+            max-width: 1200px;
             margin: 30px auto;
             border-radius: 5px 5px 0 0;
         }
@@ -769,7 +769,6 @@
             justify-content: space-between;
             align-items: center;
             margin: 0 auto;
-           
             width: 100%;
             border-radius: 5px 5px 0 0;
              background: #B177DA;
@@ -778,12 +777,9 @@
 
         }
 
-        .fc-section-header p {
+        .fc-section-header h2 {
             color: #fff;
             font-size: 1.2rem;
-            margin-left: 10px;
-            letter-spacing: 0.5px;
-            font-weight: 500;
         }
 
 
@@ -864,7 +860,7 @@
         }
 
         .fc-title {
-            font-size: 1rem;
+            font-size: .8rem;
             font-weight: 500;
             margin-bottom: 3px;
         }
@@ -904,6 +900,16 @@
         }
 
         @media (max-width: 480px) {
+            .fc-product-image {
+            max-width: 90%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+             .fc-section-header {
+            border-radius: 0px 0px 0 0;
+
+        }
+
             .fc-product-grid {
                 gap: 5px;
             }
@@ -913,7 +919,7 @@
             }
 
             .fc-product-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
 
             .fc-image-container {
@@ -921,13 +927,13 @@
             }
 
             .fc-title {
-                font-size: 0.6rem;
+                font-size: 0.7rem;
                 font-weight: 200;
                 margin-bottom: 3px;
             }
 
             .fc-price {
-                font-size: 0.5rem;
+                font-size: 0.75rem;
                 font-weight: 600;
                 margin-bottom: 3px;
                 display: block;
@@ -936,8 +942,7 @@
             .fc-original-price {
                 text-decoration: line-through;
                 color: #b3b2b2;
-                font-size: 0.5rem;
-
+                font-size: 0.7rem;
                 font-weight: 500;
             }
         }
@@ -2559,15 +2564,24 @@
 .s-header {
     background: #B177DA;
     color: white;
-    padding: 12px 20px;
-    border-radius: 8px 8px 0 0;
+    padding: 8px 12px;
+    border-radius: 5px 5px 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
     font-size: 1.2rem;
 }
-
+.s-header{
+    background: #B177DA;
+    color: white;
+    padding: 8px 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
 .s-header h2 {
     margin: 0;
     font-size: 1.2rem;
@@ -4306,7 +4320,6 @@
     </div>
 </section>
 
-
 <section class="quality-shoe-grid-section animate-on-scroll">
     <div class="quality-shoe-grid-header">
         <h2>Top Selling Shoes</h2>
@@ -4316,12 +4329,12 @@
         <!-- Card 1 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-56%</div>
-            <img src="Images/othershoe15.jpg" alt="Men's Casual Shoe 1" class="quality-shoe-grid-image" />
+            <img src="Images/othershoe15.jpg" alt="Classic Urban Loafers – Brown" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 1</h3>
+                <h3>Classic Urban Loafers – Brown</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 37,013</span>
-                    <span class="quality-shoe-grid-original">UGX 83,776</span>
+                    <span class="quality-shoe-grid-discounted">UGX 112,000</span>
+                    <span class="quality-shoe-grid-original">UGX 254,500</span>
                 </div>
             </div>
         </div>
@@ -4329,12 +4342,12 @@
         <!-- Card 2 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-57%</div>
-            <img src="Images/WhiteJordan.png" alt="Men's Casual Shoe 2" class="quality-shoe-grid-image" />
+            <img src="Images/WhiteJordan.png" alt="White Retro High-Top Sneakers" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 2</h3>
+                <h3>White Retro High-Top Sneakers</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 30,020</span>
-                    <span class="quality-shoe-grid-original">UGX 69,198</span>
+                    <span class="quality-shoe-grid-discounted">UGX 108,500</span>
+                    <span class="quality-shoe-grid-original">UGX 252,300</span>
                 </div>
             </div>
         </div>
@@ -4342,12 +4355,13 @@
         <!-- Card 3 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-72%</div>
-            <img src="Images/WhitePinkSneakers.png" alt="Men's Casual Shoe 3" class="quality-shoe-grid-image" />
+            <img src="Images/WhitePinkSneakers.png" alt="Women's White & Pink Running Shoes"
+                class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 3</h3>
+                <h3>Women's White & Pink Running Shoes</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 19,730</span>
-                    <span class="quality-shoe-grid-original">UGX 70,566</span>
+                    <span class="quality-shoe-grid-discounted">UGX 103,200</span>
+                    <span class="quality-shoe-grid-original">UGX 368,600</span>
                 </div>
             </div>
         </div>
@@ -4355,12 +4369,12 @@
         <!-- Card 4 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-84%</div>
-            <img src="Images/WomenSHOE3.jpg" alt="Men's Casual Shoe 4" class="quality-shoe-grid-image" />
+            <img src="Images/WomenSHOE3.jpg" alt="Women's Stylish Wedge Sandals" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 4</h3>
+                <h3>Women's Stylish Wedge Sandals</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 34,200</span>
-                    <span class="quality-shoe-grid-original">UGX 193,686</span>
+                    <span class="quality-shoe-grid-discounted">UGX 107,000</span>
+                    <span class="quality-shoe-grid-original">UGX 668,800</span>
                 </div>
             </div>
         </div>
@@ -4368,12 +4382,12 @@
         <!-- Card 5 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-50%</div>
-            <img src="Images/womenshow.jpg" alt="Men's Casual Shoe 5" class="quality-shoe-grid-image" />
+            <img src="Images/womenshow.jpg" alt="Women's Glitter Party Heels" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 5</h3>
+                <h3>Women's Glitter Party Heels</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 19,000</span>
-                    <span class="quality-shoe-grid-original">UGX 38,000</span>
+                    <span class="quality-shoe-grid-discounted">UGX 115,000</span>
+                    <span class="quality-shoe-grid-original">UGX 230,000</span>
                 </div>
             </div>
         </div>
@@ -4381,150 +4395,170 @@
         <!-- Card 6 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-54%</div>
-            <img src="Images/KidGreenShoe.png" alt="Men's Casual Shoe 6" class="quality-shoe-grid-image" />
+            <img src="Images/KidGreenShoe.png" alt="Kids' Green Velcro Sport Sneakers"
+                class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 6</h3>
+                <h3>Kids' Green Velcro Sport Sneakers</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 35,335</span>
-                    <span class="quality-shoe-grid-original">UGX 76,000</span>
+                    <span class="quality-shoe-grid-discounted">UGX 118,200</span>
+                    <span class="quality-shoe-grid-original">UGX 257,300</span>
                 </div>
             </div>
         </div>
 
-        <!-- Row 2: Cards 7–12 -->
+        <!-- Card 7 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-56%</div>
-            <img src="Images/KidsShoe.jpg" alt="Men's Casual Shoe 7" class="quality-shoe-grid-image" />
+            <img src="Images/KidsShoe.jpg" alt="Kids' Blue Canvas Slip-Ons" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 7</h3>
+                <h3>Kids' Blue Canvas Slip-Ons</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 37,013</span>
-                    <span class="quality-shoe-grid-original">UGX 83,776</span>
+                    <span class="quality-shoe-grid-discounted">UGX 110,300</span>
+                    <span class="quality-shoe-grid-original">UGX 250,700</span>
                 </div>
             </div>
         </div>
+
+        <!-- Card 8 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-28%</div>
-            <img src="Images/n-brandGray.png" alt="Men's Casual Shoe 8" class="quality-shoe-grid-image" />
+            <img src="Images/n-brandGray.png" alt="Men's Gray Performance Running Shoes"
+                class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 8</h3>
+                <h3>Men's Gray Performance Running Shoes</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 30,020</span>
-                    <span class="quality-shoe-grid-original">UGX 41,998</span>
+                    <span class="quality-shoe-grid-discounted">UGX 132,400</span>
+                    <span class="quality-shoe-grid-original">UGX 183,900</span>
                 </div>
             </div>
         </div>
+
+        <!-- Card 9 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-59%</div>
-            <img src="Images/N-BARN.png" alt="Men's Casual Shoe 9" class="quality-shoe-grid-image" />
+            <img src="Images/N-BARN.png" alt="Men's Red & Black Trail Hikers" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 9</h3>
+                <h3>Men's Red & Black Trail Hikers</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 19,730</span>
-                    <span class="quality-shoe-grid-original">UGX 48,566</span>
+                    <span class="quality-shoe-grid-discounted">UGX 109,800</span>
+                    <span class="quality-shoe-grid-original">UGX 267,800</span>
                 </div>
             </div>
         </div>
+
+        <!-- Card 10 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-52%</div>
-            <img src="Images/NB-Brand.png" alt="Men's Casual Shoe 10" class="quality-shoe-grid-image" />
+            <img src="Images/NB-Brand.png" alt="Men's Black Athletic Training Shoes" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 10</h3>
+                <h3>Men's Black Athletic Training Shoes</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 34,200</span>
-                    <span class="quality-shoe-grid-original">UGX 71,000</span>
+                    <span class="quality-shoe-grid-discounted">UGX 126,700</span>
+                    <span class="quality-shoe-grid-original">UGX 264,000</span>
                 </div>
             </div>
         </div>
+
+        <!-- Card 11 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-36%</div>
-            <img src="Images/NB-Brand.png" alt="Men's Casual Shoe 11" class="quality-shoe-grid-image" />
+            <img src="Images/NB-Brand.png" alt="Men's Navy Mesh Walking Shoes" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 11</h3>
+                <h3>Men's Navy Mesh Walking Shoes</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 29,413</span>
-                    <span class="quality-shoe-grid-original">UGX 46,000</span>
+                    <span class="quality-shoe-grid-discounted">UGX 124,500</span>
+                    <span class="quality-shoe-grid-original">UGX 194,500</span>
                 </div>
             </div>
         </div>
+
+        <!-- Card 12 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-43%</div>
-            <img src="Images/othershoe.jpg" alt="Men's Casual Shoe 12" class="quality-shoe-grid-image" />
+            <img src="Images/othershoe.jpg" alt="Women's Beige Ankle Boots" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 12</h3>
+                <h3>Women's Beige Ankle Boots</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 26,873</span>
-                    <span class="quality-shoe-grid-original">UGX 47,000</span>
+                    <span class="quality-shoe-grid-discounted">UGX 120,900</span>
+                    <span class="quality-shoe-grid-original">UGX 212,100</span>
                 </div>
             </div>
         </div>
 
-        <!-- Row 3: Cards 13–18 -->
+        <!-- Card 13 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-61%</div>
-            <img src="Images/othershoe1.jpg" alt="Men's Casual Shoe 13" class="quality-shoe-grid-image" />
+            <img src="Images/othershoe1.jpg" alt="Men's Brown Leather Formal Shoes" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 13</h3>
+                <h3>Men's Brown Leather Formal Shoes</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 22,500</span>
-                    <span class="quality-shoe-grid-original">UGX 57,000</span>
+                    <span class="quality-shoe-grid-discounted">UGX 117,300</span>
+                    <span class="quality-shoe-grid-original">UGX 300,800</span>
                 </div>
             </div>
         </div>
 
+        <!-- Card 14 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-48%</div>
-            <img src="Images/othershoe2.jpg" alt="Men's Casual Shoe 14" class="quality-shoe-grid-image" />
+            <img src="Images/othershoe2.jpg" alt="Women's Floral Summer Sandals" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 14</h3>
+                <h3>Women's Floral Summer Sandals</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 31,200</span>
-                    <span class="quality-shoe-grid-original">UGX 60,000</span>
+                    <span class="quality-shoe-grid-discounted">UGX 128,600</span>
+                    <span class="quality-shoe-grid-original">UGX 247,300</span>
                 </div>
             </div>
         </div>
 
+        <!-- Card 15 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-55%</div>
-            <img src="Images/othershoe30.jpg" alt="Men's Casual Shoe 15" class="quality-shoe-grid-image" />
+            <img src="Images/othershoe30.jpg" alt="Unisex Black & White Skate Shoes" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 15</h3>
+                <h3>Unisex Black & White Skate Shoes</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 28,900</span>
-                    <span class="quality-shoe-grid-original">UGX 64,000</span>
+                    <span class="quality-shoe-grid-discounted">UGX 123,100</span>
+                    <span class="quality-shoe-grid-original">UGX 273,600</span>
                 </div>
             </div>
         </div>
+
+        <!-- Card 16 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-40%</div>
-            <img src="Images/othershoe4.jpg" alt="Men's Casual Shoe 16" class="quality-shoe-grid-image" />
+            <img src="Images/othershoe4.jpg" alt="Men's Charcoal Grey Office Loafers" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 16</h3>
+                <h3>Men's Charcoal Grey Office Loafers</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 35,000</span>
-                    <span class="quality-shoe-grid-original">UGX 58,500</span>
+                    <span class="quality-shoe-grid-discounted">UGX 135,000</span>
+                    <span class="quality-shoe-grid-original">UGX 225,000</span>
                 </div>
             </div>
         </div>
+
+        <!-- Card 17 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-65%</div>
-            <img src="Images/othershoe5.jpg" alt="Men's Casual Shoe 17" class="quality-shoe-grid-image" />
+            <img src="Images/othershoe5.jpg" alt="Women's Red Platform Heels" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 17</h3>
+                <h3>Women's Red Platform Heels</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 18,700</span>
-                    <span class="quality-shoe-grid-original">UGX 53,000</span>
+                    <span class="quality-shoe-grid-discounted">UGX 106,200</span>
+                    <span class="quality-shoe-grid-original">UGX 303,400</span>
                 </div>
             </div>
         </div>
+
+        <!-- Card 18 -->
         <div class="quality-shoe-grid-card">
             <div class="quality-shoe-grid-sale-badge">-50%</div>
-            <img src="Images/othershoe7.jpg" alt="Men's Casual Shoe 18" class="quality-shoe-grid-image" />
+            <img src="Images/othershoe7.jpg" alt="Kids' Multicolor School Sneakers" class="quality-shoe-grid-image" />
             <div class="quality-shoe-grid-info">
-                <h3>Men's Casual Shoe 18</h3>
+                <h3>Kids' Multicolor School Sneakers</h3>
                 <div class="quality-shoe-grid-price">
-                    <span class="quality-shoe-grid-discounted">UGX 25,000</span>
-                    <span class="quality-shoe-grid-original">UGX 50,000</span>
+                    <span class="quality-shoe-grid-discounted">UGX 125,000</span>
+                    <span class="quality-shoe-grid-original">UGX 250,000</span>
                 </div>
             </div>
         </div>
@@ -4533,10 +4567,6 @@
 
 
 
-
-
-
-<!--SECTION 3 SHOE-->
 <!-- SHOE SECTION -->
 <section class="s-section animate-on-scroll">
     <div class="s-header">
@@ -4714,277 +4744,297 @@
 
     <!--CLOTHES SECTION-->
     <!-- FEATURED CLOTHES SECTION -->
-    <section class="fc-section" id="featured-clothes-section">
-        <div class="fc-section-header">
-            <p>Top Fashions</p>
-            <a href="tel:+256777891441" class="fc-view-all">Order →</a>
-        </div>
+<section class="fc-section" id="featured-clothes-section">
+    <div class="fc-section-header">
+        <h2>Top Fashions</h2>
+        <a href="tel:+256777891441" class="fc-view-all">Order</a>
+    </div>
 
-        <div class="fc-product-grid">
-
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/pullovers3.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
+    <div class="fc-product-grid">
+        <!-- Pullover 1 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/pullovers3.jpg" alt="Women's Chunky Knit Pullover – Beige" class="fc-product-image">
             </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/pullovers.5.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/CheckedShirts3.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/pullovers7.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/pullovers.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/pullovers1.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/CheckedShirts6.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/Hoodies.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/pullovers9.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/CheckedShirts7.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/CheckedShirts.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/CheckedShirts4.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/pullovers2.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/Sleeveless.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Sleeveless</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/CheckedShirts1.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/CheckedShirts8.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/Caps.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Classic Caps</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="fc-product-card" data-product="womens">
-                <div class="fc-sale-badge">SALE!</div>
-                <div class="fc-image-container">
-                    <img src="Images/CheckedShirts5.jpg" alt="Sketcher Shine" class="fc-product-image"
-                        id="fc-womens-img4">
-                </div>
-                <div class="fc-product-info">
-                    <div class="fc-title">Jackets</div>
-                    <div class="fc-price">
-                        <span class="fc-original-price">UGX 50,000</span>
-                        <span class="fc-discounted-price">UGX 48,000</span>
-                    </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Chunky Knit Pullover – Beige</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 42,000</span>
+                    <span class="fc-discounted-price">UGX 38,500</span>
                 </div>
             </div>
         </div>
 
-    </section>
+        <!-- Pullover 2 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/pullovers.5.jpg" alt="Women's Oversized Cable Sweater – Grey" class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Oversized Cable Sweater – Grey</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 44,000</span>
+                    <span class="fc-discounted-price">UGX 39,800</span>
+                </div>
+            </div>
+        </div>
 
+        <!-- Checked Shirt 1 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/CheckedShirts3.jpg" alt="Women's Red & White Checked Long Sleeve Shirt"
+                    class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Red & White Checked Shirt</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 40,000</span>
+                    <span class="fc-discounted-price">UGX 36,200</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pullover 3 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/pullovers7.jpg" alt="Women's Turtleneck Wool Pullover – Navy" class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Turtleneck Wool Pullover – Navy</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 45,000</span>
+                    <span class="fc-discounted-price">UGX 41,000</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pullover 4 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/pullovers.jpg" alt="Women's Ribbed Knit Sweater – Cream" class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Ribbed Knit Sweater – Cream</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 41,500</span>
+                    <span class="fc-discounted-price">UGX 37,900</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pullover 5 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/pullovers1.jpg" alt="Women's Casual Drop-Shoulder Pullover – Olive"
+                    class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Drop-Shoulder Pullover – Olive</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 43,000</span>
+                    <span class="fc-discounted-price">UGX 39,200</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checked Shirt 2 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/CheckedShirts6.jpg" alt="Women's Blue Plaid Long Sleeve Shirt"
+                    class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Blue Plaid Long Sleeve Shirt</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 39,500</span>
+                    <span class="fc-discounted-price">UGX 35,800</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hoodie -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/Hoodies.jpg" alt="Women's Drawstring Hoodie – Charcoal" class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Drawstring Hoodie – Charcoal</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 44,500</span>
+                    <span class="fc-discounted-price">UGX 40,500</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pullover 6 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/pullovers9.jpg" alt="Women's Cuffed-Sleeve Sweater – Rust" class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Cuffed-Sleeve Sweater – Rust</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 42,800</span>
+                    <span class="fc-discounted-price">UGX 38,900</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checked Shirt 3 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/CheckedShirts7.jpg" alt="Women's Black & White Gingham Shirt" class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Black & White Gingham Shirt</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 40,200</span>
+                    <span class="fc-discounted-price">UGX 36,500</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checked Shirt 4 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/CheckedShirts.jpg" alt="Women's Brown Check Long Sleeve Top" class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Brown Check Long Sleeve Top</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 39,800</span>
+                    <span class="fc-discounted-price">UGX 35,500</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checked Shirt 5 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/CheckedShirts4.jpg" alt="Women's Green Tartan Shirt – Slim Fit"
+                    class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Green Tartan Slim Fit Shirt</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 41,000</span>
+                    <span class="fc-discounted-price">UGX 37,200</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pullover 7 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/pullovers2.jpg" alt="Women's V-Neck Lightweight Sweater – Lavender"
+                    class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">V-Neck Lightweight Sweater – Lavender</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 40,500</span>
+                    <span class="fc-discounted-price">UGX 36,800</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sleeveless Top -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/Sleeveless.jpg" alt="Women's Sleeveless Linen-Blend Top – White"
+                    class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Sleeveless Linen-Blend Top – White</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 38,000</span>
+                    <span class="fc-discounted-price">UGX 35,000</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checked Shirt 6 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/CheckedShirts1.jpg" alt="Women's Pink Check Button-Up Shirt" class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Pink Check Button-Up Shirt</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 40,800</span>
+                    <span class="fc-discounted-price">UGX 37,000</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checked Shirt 7 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/CheckedShirts8.jpg" alt="Women's Navy Windowpane Shirt" class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Navy Windowpane Long Sleeve Shirt</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 42,200</span>
+                    <span class="fc-discounted-price">UGX 38,200</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cap -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/Caps.jpg" alt="Classic Cotton Baseball Cap – Black" class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Classic Cotton Baseball Cap – Black</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 25,000</span>
+                    <span class="fc-discounted-price">UGX 22,000</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checked Shirt 8 -->
+        <div class="fc-product-card" data-product="womens">
+            <div class="fc-sale-badge">SALE!</div>
+            <div class="fc-image-container">
+                <img src="Images/CheckedShirts5.jpg" alt="Women's Yellow Gingham Long Sleeve Blouse"
+                    class="fc-product-image">
+            </div>
+            <div class="fc-product-info">
+                <div class="fc-title">Yellow Gingham Long Sleeve Blouse</div>
+                <div class="fc-price">
+                    <span class="fc-original-price">UGX 41,200</span>
+                    <span class="fc-discounted-price">UGX 37,500</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!--JACKETS-->
 
 <section class="jackets-featured visible" id="jackets-section">
     <div class="jackets-section-header">
-        <h2>Jackets Collection</h2>
+        <h2>Classic Jackets</h2>
         <a href="tel:+256700000000" class="jackets-call-to-order">Order</a>
     </div>
 
@@ -5238,7 +5288,7 @@
     <section class="jersey-featured visible" id="jersey-section-1">
         <div class="jersey-section-header">
             <h2>Favourite Team Jerseys</h2>
-            <a href="tel:+256777891441" class="jersey-call-to-order">Order →</a>
+            <a href="tel:+256777891441" class="jersey-call-to-order">Order</a>
         </div>
     
         <div class="jersey-product-grid">

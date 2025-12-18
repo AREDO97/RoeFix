@@ -1251,17 +1251,17 @@
         /* ===== BANNER CONTAINER ===== */
         .jumia-black-friday-banner {
             position: relative;
-            width: 98%;
+            width: 100%;
             margin: 30px auto;
             overflow: hidden;
-            border-radius: 8px 8px 0 0;
+            border-radius: 5px 5px 0 0;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
 
         /* ===== ORANGE HEADER ===== */
         .banner-header {
             background-color: #B177DA;
-            padding: 10px 20px;
+            padding: 8px 12px;
             text-align: center;
             font-size: 1rem;
             font-weight: bold;
@@ -1507,7 +1507,8 @@
 /* ===== PHONE CATEGORIES SECTION ===== */
         .phone-cat-section {
             background: #fff;
-            width: 98%;
+            width: 100%;
+            max-width: 1200px;
             margin: 30px auto;
             border-radius: 5px 5px 0 0;
             overflow: hidden;
@@ -1576,8 +1577,9 @@
         /* ===== PHONE OFFERS SECTION ===== */
         .phone-offers-section {
          background: #fff;
-            width: 98%;
-            margin: 15px auto;
+            width: 100%;
+            max-width: 1200px;
+            margin: 30px auto;
             border-radius: 5px 5px 0 0;
             overflow: hidden;
             position: relative;   
@@ -1593,6 +1595,9 @@
             justify-content: space-between;
             align-items: center;
             font-weight: 400;
+        }
+        .phone-offers-header h2{
+            font-size: 1.2rem;
         }
 
         .see-all-link {
@@ -1613,7 +1618,7 @@
             grid-template-columns: repeat(6, 1fr);
             gap: 10px;
             background-color: white;
-            border-radius: 0 0 8px 8px;
+            border-radius: 0 0 5px 5px;
         }
 
         .phone-offer-card {
@@ -1679,12 +1684,12 @@
         .offer-current-price {
             font-size: 0.8rem;
             font-weight: 700;
-            color: #333;
+            color: #000;
         }
 
         .offer-original-price {
             font-size: 0.8rem;
-            color: #999;
+            color: #000;
             text-decoration: line-through;
         }
 
@@ -1771,16 +1776,16 @@
             }
 
             .offer-title {
-                font-size: 0.7rem;
+                font-size: 0.9rem;
             }
 
             .offer-current-price {
-                font-size: 0.7rem;
+                font-size: 0.9rem;
                 font-weight: 700;
             }
 
             .offer-original-price {
-                font-size: 0.7rem;
+                font-size: 0.8rem;
             }
 
             .offer-discount {
@@ -3242,8 +3247,9 @@
                 /* ===== SECTION ===== */
         .t-shirts-featured {
             background: #fff;
-            width: 98%;
-            margin: 30px auto;
+            width: 100%;
+            max-height: 1200px;
+            margin: 30px 30px auto;
             border-radius: 5px 5px 0 0;
             overflow: hidden;
             position: relative;
@@ -3262,9 +3268,7 @@
         .t-shirts-section-header h2 {
             color: #fff;
             font-size: 1.2rem;
-            font-weight: 600;
-            margin: 0;
-            letter-spacing: 0.4px;
+            
         }
     
         .t-shirts-call-to-order {
@@ -3375,7 +3379,7 @@
         .t-shirts-image {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             transition: transform 0.3s ease;
         }
     
@@ -3399,7 +3403,7 @@
         }
     
         .t-shirts-price {
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 700;
         }
     
@@ -3407,7 +3411,7 @@
             text-decoration: line-through;
             color: #aaa;
             margin-right: 4px;
-            font-size: 0.65rem;
+            font-size: 0.7rem;
         }
     
         .t-shirts-discounted-price {
@@ -3425,7 +3429,20 @@
             }
         }
     
-        @media (max-width: 480px) {
+        @media (max-width: 480px) {.t-shirts-featured {
+            
+            margin: 30px 10px auto;
+            
+        }
+
+            .t-shirts-section-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: #B177DA;
+                padding: 8px 10px;
+                border-radius: 0px 0px 0 0;
+        }
             .t-shirts-product-card {
                 width: 120px;
             }
@@ -3435,11 +3452,11 @@
             }
     
             .t-shirts-product-title {
-                font-size: 0.75rem;
+                font-size: 0.9rem;
             }
     
             .t-shirts-price {
-                font-size: 0.65rem;
+                font-size: 0.75rem;
             }
         }
 
@@ -5708,145 +5725,143 @@
 </section>
 
 
-    <!--T-SHIRTS-->
-    <section class="t-shirts-featured animate-on-scroll" data-animation="slide-in-left">
-        <div class="t-shirts-section-header">
-            <h2>Popular T-Shirts</h2>
-            <a href="tel:+256777891441" class="t-shirts-call-to-order">Order </a>
-        </div>
-    
-        <div class="t-shirts-scroll-wrapper">
-            <button class="t-shirts-scroll-right-btn" aria-label="Scroll right" id="t-shirts-scroll-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 18l6-6-6-6"></path>
-                </svg>
-            </button>
-    
-            <div class="t-shirts-scroll-container" id="t-shirts-container">
-                <!-- Product 1 -->
-                <div class="t-shirts-product-card" data-product="sports">
-                    <div class="t-shirts-sale-badge">SALE!</div>
-                    <div class="t-shirts-image-container">
-                        <img src="Images/t-shirts.jpg" alt="Super Comfort v2" class="t-shirts-image">
-                    </div>
-                    <div class="t-shirts-product-info">
-                        <div class="t-shirts-product-title">Super Comfort v2</div>
-                        <div class="t-shirts-price">
-                            <span class="t-shirts-original-price">UGX 35,000</span>
-                            <span class="t-shirts-discounted-price">UGX 30,000</span>
-                        </div>
+<!--T-SHIRTS-->
+<section class="t-shirts-featured animate-on-scroll" data-animation="slide-in-left">
+    <div class="t-shirts-section-header">
+        <h2>T-Shirts Designs</h2>
+        <a href="tel:+256777891441" class="t-shirts-call-to-order">Order</a>
+    </div>
+
+    <div class="t-shirts-scroll-wrapper">
+        <button class="t-shirts-scroll-right-btn" aria-label="Scroll right" id="t-shirts-scroll-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"></path>
+            </svg>
+        </button>
+
+        <div class="t-shirts-scroll-container" id="t-shirts-container">
+            <!-- Product 1 -->
+            <div class="t-shirts-product-card" data-product="sports">
+                <div class="t-shirts-sale-badge">SALE!</div>
+                <div class="t-shirts-image-container">
+                    <img src="Images/t-shirts.jpg" alt="Urban Pulse Tee" class="t-shirts-image">
+                </div>
+                <div class="t-shirts-product-info">
+                    <div class="t-shirts-product-title">Urban Pulse Tee</div>
+                    <div class="t-shirts-price">
+                        <span class="t-shirts-original-price">UGX 22,000</span>
+                        <span class="t-shirts-discounted-price">UGX 19,500</span>
                     </div>
                 </div>
-    
-                <!-- Product 2 -->
-                <div class="t-shirts-product-card" data-product="kids">
-                    <div class="t-shirts-sale-badge">SALE!</div>
-                    <div class="t-shirts-image-container">
-                        <img src="Images/t-shirts1.jpg" alt="Super Classic XII" class="t-shirts-image">
-                    </div>
-                    <div class="t-shirts-product-info">
-                        <div class="t-shirts-product-title">Super Classic XII</div>
-                        <div class="t-shirts-price">
-                            <span class="t-shirts-original-price">UGX 25,000</span>
-                            <span class="t-shirts-discounted-price">UGX 22,000</span>
-                        </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="t-shirts-product-card" data-product="kids">
+                <div class="t-shirts-sale-badge">SALE!</div>
+                <div class="t-shirts-image-container">
+                    <img src="Images/t-shirts1.jpg" alt="Tiny Explorer Tee" class="t-shirts-image">
+                </div>
+                <div class="t-shirts-product-info">
+                    <div class="t-shirts-product-title">Tiny Explorer Tee</div>
+                    <div class="t-shirts-price">
+                        <span class="t-shirts-original-price">UGX 18,000</span>
+                        <span class="t-shirts-discounted-price">UGX 15,500</span>
                     </div>
                 </div>
-    
-                <!-- Product 3 -->
-                <div class="t-shirts-product-card" data-product="kids">
-                    <div class="t-shirts-sale-badge">SALE!</div>
-                    <div class="t-shirts-image-container">
-                        <img src="Images/t-shirts2.jpg" alt="Super Classic XII" class="t-shirts-image">
-                    </div>
-                    <div class="t-shirts-product-info">
-                        <div class="t-shirts-product-title">Super Classic XII</div>
-                        <div class="t-shirts-price">
-                            <span class="t-shirts-original-price">UGX 25,000</span>
-                            <span class="t-shirts-discounted-price">UGX 22,000</span>
-                        </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="t-shirts-product-card" data-product="kids">
+                <div class="t-shirts-sale-badge">SALE!</div>
+                <div class="t-shirts-image-container">
+                    <img src="Images/t-shirts2.jpg" alt="Little Dynamo Tee" class="t-shirts-image">
+                </div>
+                <div class="t-shirts-product-info">
+                    <div class="t-shirts-product-title">Little Dynamo Tee</div>
+                    <div class="t-shirts-price">
+                        <span class="t-shirts-original-price">UGX 18,000</span>
+                        <span class="t-shirts-discounted-price">UGX 16,000</span>
                     </div>
                 </div>
-    
-                <!-- Product 4 -->
-                <div class="t-shirts-product-card" data-product="mens">
-                    <div class="t-shirts-sale-badge">SALE!</div>
-                    <div class="t-shirts-image-container">
-                        <img src="Images/t-shirts3.jpg" alt="Easy Rider Vingate" class="t-shirts-image">
-                    </div>
-                    <div class="t-shirts-product-info">
-                        <div class="t-shirts-product-title">Easy Rider Vingate</div>
-                        <div class="t-shirts-price">
-                            <span class="t-shirts-original-price">UGX 45,000</span>
-                            <span class="t-shirts-discounted-price">UGX 41,000</span>
-                        </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="t-shirts-product-card" data-product="mens">
+                <div class="t-shirts-sale-badge">SALE!</div>
+                <div class="t-shirts-image-container">
+                    <img src="Images/t-shirts3.jpg" alt="Vanguard Street Tee" class="t-shirts-image">
+                </div>
+                <div class="t-shirts-product-info">
+                    <div class="t-shirts-product-title">Vanguard Street Tee</div>
+                    <div class="t-shirts-price">
+                        <span class="t-shirts-original-price">UGX 24,000</span>
+                        <span class="t-shirts-discounted-price">UGX 21,000</span>
                     </div>
                 </div>
-    
-                <!-- Product 5 -->
-                <div class="t-shirts-product-card" data-product="womens">
-                    <div class="t-shirts-sale-badge">SALE!</div>
-                    <div class="t-shirts-image-container">
-                        <img src="Images/t-shirts4.jpg" alt="Sketcher Shine" class="t-shirts-image">
-                    </div>
-                    <div class="t-shirts-product-info">
-                        <div class="t-shirts-product-title">Sketcher Shine</div>
-                        <div class="t-shirts-price">
-                            <span class="t-shirts-original-price">UGX 50,000</span>
-                            <span class="t-shirts-discounted-price">UGX 48,000</span>
-                        </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="t-shirts-product-card" data-product="womens">
+                <div class="t-shirts-sale-badge">SALE!</div>
+                <div class="t-shirts-image-container">
+                    <img src="Images/t-shirts4.jpg" alt="Blossom Aura Tee" class="t-shirts-image">
+                </div>
+                <div class="t-shirts-product-info">
+                    <div class="t-shirts-product-title">Blossom Aura Tee</div>
+                    <div class="t-shirts-price">
+                        <span class="t-shirts-original-price">UGX 25,000</span>
+                        <span class="t-shirts-discounted-price">UGX 22,500</span>
                     </div>
                 </div>
-    
-                <!-- Product 6 -->
-                <div class="t-shirts-product-card" data-product="womens">
-                    <div class="t-shirts-sale-badge">SALE!</div>
-                    <div class="t-shirts-image-container">
-                        <img src="Images/t-shirts5.jpg" alt="Sketcher Shine" class="t-shirts-image">
-                    </div>
-                    <div class="t-shirts-product-info">
-                        <div class="t-shirts-product-title">Sketcher Shine</div>
-                        <div class="t-shirts-price">
-                            <span class="t-shirts-original-price">UGX 50,000</span>
-                            <span class="t-shirts-discounted-price">UGX 48,000</span>
-                        </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="t-shirts-product-card" data-product="womens">
+                <div class="t-shirts-sale-badge">SALE!</div>
+                <div class="t-shirts-image-container">
+                    <img src="Images/t-shirts5.jpg" alt="Midnight Muse Tee" class="t-shirts-image">
+                </div>
+                <div class="t-shirts-product-info">
+                    <div class="t-shirts-product-title">Midnight Muse Tee</div>
+                    <div class="t-shirts-price">
+                        <span class="t-shirts-original-price">UGX 23,000</span>
+                        <span class="t-shirts-discounted-price">UGX 20,000</span>
                     </div>
                 </div>
-    
-                <!-- Product 7 -->
-                <div class="t-shirts-product-card" data-product="womens">
-                    <div class="t-shirts-sale-badge">SALE!</div>
-                    <div class="t-shirts-image-container">
-                        <img src="Images/t-shirts6.jpg" alt="Sketcher Shine" class="t-shirts-image">
-                    </div>
-                    <div class="t-shirts-product-info">
-                        <div class="t-shirts-product-title">Sketcher Shine</div>
-                        <div class="t-shirts-price">
-                            <span class="t-shirts-original-price">UGX 50,000</span>
-                            <span class="t-shirts-discounted-price">UGX 48,000</span>
-                        </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="t-shirts-product-card" data-product="womens">
+                <div class="t-shirts-sale-badge">SALE!</div>
+                <div class="t-shirts-image-container">
+                    <img src="Images/t-shirts6.jpg" alt="Serenity Stripe Tee" class="t-shirts-image">
+                </div>
+                <div class="t-shirts-product-info">
+                    <div class="t-shirts-product-title">Serenity Stripe Tee</div>
+                    <div class="t-shirts-price">
+                        <span class="t-shirts-original-price">UGX 22,000</span>
+                        <span class="t-shirts-discounted-price">UGX 19,000</span>
                     </div>
                 </div>
-    
-                <!-- Product 8 -->
-                <div class="t-shirts-product-card" data-product="womens">
-                    <div class="t-shirts-sale-badge">SALE!</div>
-                    <div class="t-shirts-image-container">
-                        <img src="Images/GreenShirt.png" alt="Green T-Shirt" class="t-shirts-image">
-                    </div>
-                    <div class="t-shirts-product-info">
-                        <div class="t-shirts-product-title">Green T-Shirt</div>
-                        <div class="t-shirts-price">
-                            <span class="t-shirts-original-price">UGX 50,000</span>
-                            <span class="t-shirts-discounted-price">UGX 48,000</span>
-                        </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="t-shirts-product-card" data-product="womens">
+                <div class="t-shirts-sale-badge">SALE!</div>
+                <div class="t-shirts-image-container">
+                    <img src="Images/GreenShirt.png" alt="Emerald Zen Tee" class="t-shirts-image">
+                </div>
+                <div class="t-shirts-product-info">
+                    <div class="t-shirts-product-title">Emerald Zen Tee</div>
+                    <div class="t-shirts-price">
+                        <span class="t-shirts-original-price">UGX 24,500</span>
+                        <span class="t-shirts-discounted-price">UGX 21,500</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-   
+    </div>
+</section>
 
 
 
@@ -5905,7 +5920,7 @@
 <!-- PHONE OFFERS -->
 <section class="phone-offers-section">
     <div class="phone-offers-header">
-        <h2>Phone Offers</h2>
+        <h2>Durable Gadgets</h2>
         <a href="tel:+256777891441" class="see-all-link">Order <span></span></a>
     </div>
     <div class="phone-offers-grid">

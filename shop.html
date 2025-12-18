@@ -49,6 +49,7 @@
             box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
             text-decoration: none;
+            overflow-x:hidden;
         }
 
         body {
@@ -955,9 +956,9 @@
         /* =====ART PIECES SECTION ===== */
         .artwork-section {
             background: #fff;
-            width: 98%;
-            margin: 15px auto;
-            border-radius: 10px 10px 0 0;
+            width: 100%;
+            margin: 30px auto;
+            border-radius: 5px 5px 0 0;
             overflow: hidden;
             position: relative; 
         }
@@ -981,14 +982,6 @@
         .artwork-section-header h2 {
             color: #FFF;
             font-size: 1rem;
-            font-weight: 400;
-            margin: 0;
-        }
-        .artwork-section-header h2 {
-            color: #FFF;
-            font-size: 1rem;
-            font-weight: 400;
-            margin: 0;
         }
 
         .artwork-see-all-link {
@@ -1100,7 +1093,7 @@
             color: #000;
         }
 
-        /* ===== RESPONSIVE ===== */
+        
 
         /* Tablet & Desktop: 6 per row */
         @media (min-width: 768px) {
@@ -1108,7 +1101,7 @@
             
             background-color: #B177DA;
             padding: 8px 10px;
-            border-radius: 0 0 0 0;
+            border-radius: 0px 0px 0 0;
             
         }
             .artwork-card {
@@ -1184,15 +1177,15 @@
             }
 
             .artwork-title {
-                font-size: 0.65rem;
+                font-size: 0.9rem;
             }
 
             .artwork-price {
-                font-size: 0.6rem;
+                font-size: 0.75rem;
             }
 
             .artwork-section-header {
-                padding: 8px 12px;
+                padding: 8px 10px;
             }
 
             .artwork-section-header h2{
@@ -1253,15 +1246,15 @@
             position: relative;
             width: 100%;
             margin: 30px auto;
+            min-height: 100vh;
             overflow: hidden;
             border-radius: 5px 5px 0 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            background:#000;
         }
 
         /* ===== ORANGE HEADER ===== */
         .banner-header {
             background-color: #B177DA;
-            padding: 8px 12px;
             text-align: center;
             font-size: 1rem;
             font-weight: bold;
@@ -1271,14 +1264,14 @@
         /* ===== MAIN CONTENT LAYOUT ===== */
         .banner-content {
             display: flex;
-            height: 400px;
+            height: 500px;
             background: #000;
         }
 
         /* ===== LEFT SIDE: TEXT & LOGO ===== */
         .banner-left {
             flex: 0 0 40%;
-            padding: 30px 20px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -1498,17 +1491,10 @@
 
 
 
-
-
-
-
-
-/*PHONES SECTION*/
 /* ===== PHONE CATEGORIES SECTION ===== */
         .phone-cat-section {
             background: #fff;
-            width: 100%;
-            max-width: 1200px;
+            
             margin: 30px auto;
             border-radius: 5px 5px 0 0;
             overflow: hidden;
@@ -1577,8 +1563,7 @@
         /* ===== PHONE OFFERS SECTION ===== */
         .phone-offers-section {
          background: #fff;
-            width: 100%;
-            max-width: 1200px;
+            
             margin: 30px auto;
             border-radius: 5px 5px 0 0;
             overflow: hidden;
@@ -1865,7 +1850,7 @@
 /* ===== LAPTOPS SECTION ===== */
     .laptop-scrollable-section {
       background: #fff;   
-        margin: 15px auto;
+        margin: 30px auto;
         overflow: hidden;
         position: relative;
 }
@@ -1884,7 +1869,7 @@
 
     .laptop-section-header h2 {
       margin: 0;
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     .laptop-see-all-link {
@@ -1977,8 +1962,8 @@
     }
 
     .laptop-product-info h3 {
-      font-size: 0.85rem;
-      font-weight: 400;
+      font-size: 0.9rem;
+      font-weight: 700;
       margin-bottom: 4px;
       white-space: nowrap;
       overflow: hidden;
@@ -1986,14 +1971,14 @@
     }
 
     .laptop-price {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 500;
       margin: 2px 0;
     }
 
     /* ===== SPECS LIST ===== */
     .laptop-product-specs {
-      font-size: 0.65rem;
+      font-size: 0.7rem;
       line-height: 1.4;
       margin-top: 3px;
       color: #444;
@@ -2012,7 +1997,7 @@
 
     .laptop-product-specs li::before {
       content: "";
-      color: #FF9900;
+      color: #282626;
       font-weight: bold;
       display: inline-block;
       width: 1em;
@@ -2025,8 +2010,8 @@
       top: 50%;
       right: 10px;
       transform: translateY(-50%);
-      background: #FF9900;
-      border: 1px solid #FF9900;
+      background:#282626;
+      border: 1px solid #fff;
       width: 36px;
       height: 36px;
       border-radius: 50%;
@@ -2071,8 +2056,7 @@
       
     }
       .laptop-section-header {
-        padding: 10px 15px;
-        font-size: 1rem;
+        border-radius: 0 0 0 0;
       }
 
       .laptop-product-card {
@@ -2088,11 +2072,11 @@
       }
 
       .laptop-price {
-        font-size: 0.65rem;
+        font-size: 0.9em;
       }
 
       .laptop-product-specs {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
       }
     }
 
@@ -2106,15 +2090,15 @@
       }
 
       .laptop-product-info h3 {
-        font-size: 0.65rem;
+        font-size: 0.9rem;
       }
 
       .laptop-price {
-        font-size: 0.6rem;
+        font-size: 0.9rem;
       }
 
       .laptop-product-specs {
-        font-size: 0.58rem;
+        font-size: 0.7rem;
       }
     }
 
@@ -2813,12 +2797,6 @@
 
 /*HERO SECTION*/
 
-@media(max-width:1024px){
-    .jumia-black-friday-banner{
-        min-height: 70vh;
-}
-}
-
 @media(max-width: 768px){
     .jumia-black-friday-banner{
         min-height: 50vh;
@@ -3247,9 +3225,8 @@
                 /* ===== SECTION ===== */
         .t-shirts-featured {
             background: #fff;
-            width: 100%;
             max-height: 1200px;
-            margin: 30px 30px auto;
+            margin: 30px  auto;
             border-radius: 5px 5px 0 0;
             overflow: hidden;
             position: relative;
@@ -3468,8 +3445,8 @@
         /* =====ART PIECES SECTION (SEC3) ===== */
 .sec3-section {
     background-color: #fff;
-    width: 98%;
-   margin: 0 auto;
+    width: 100%;
+    margin: 30px auto;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
 }
@@ -3491,15 +3468,8 @@
 
 .sec3-section-header h2 {
     color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    margin: 0;
-}
-.sec3-section-header h2 {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    margin: 0;
+    font-size: 1,2rem;
+    
 }
 
 .sec3-see-all-link {
@@ -3516,7 +3486,7 @@
 /* ===== GRID WRAPPER ===== */
 .sec3-grid-wrapper {
     position: relative;
-    width: 98%;
+    width: 100%;
     overflow: hidden; 
 }
 
@@ -3738,10 +3708,6 @@
     }
 }
 /* =====ART PIECES SECTION (SEC3) ===== */
-.sec3-section {
-    padding: 0 15px;
-    position: relative; 
-}
 
 
 .sec3-nav-arrow {
@@ -3751,7 +3717,7 @@
     width: 30px;
     height: 30px;
     background: rgba(0, 0, 0, 0.6);
-    color: white;
+    color: rgb(167, 162, 162);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -3825,6 +3791,278 @@
     }
 }
 
+
+/* ===== MAIN WRAPPER ===== */
+        .promo-showcase-container {
+            position: relative;
+            width: 100%;
+            margin: 30px auto;
+            min-height: 90vh;
+            overflow: hidden;
+            border-radius: 5px 5px 0 0;
+            background:#000;
+        }
+
+        /* ===== TOP ANNOUNCEMENT BAR ===== */
+        .promo-top-bar {
+            background-color: #B177DA;
+            padding:8px 12px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        /* ===== CORE LAYOUT ===== */
+        .promo-main-body {
+            display: flex;
+            height: 500px;
+            background: #000;
+        }
+
+        /* ===== LEFT PANEL: BRANDING ===== */
+        .panel-branding {
+            flex: 0 0 40%;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #000;
+            position: relative;
+        }
+
+        .brand-headline {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .brand-headline span {
+            color: #FF9900;
+            font-size: 1.8rem;
+        }
+
+        .brand-headline::after {
+            content: "BEST OFFERS";
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .display-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #FF9900;
+            margin: 20px 0;
+            line-height: 1.1;
+        }
+
+        .display-subtitle {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .terms-disclaimer {
+            font-size: 0.85rem;
+            color: #ccc;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        /* ===== RIGHT PANEL: MEDIA ===== */
+        .panel-media {
+            flex: 0 0 60%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .media-viewer {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .media-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            object-fit: cover;
+            filter: brightness(0.9);
+        }
+
+        .media-item.is-visible {
+            opacity: 1;
+        }
+
+        /* ===== OVERLAY LOGOS ===== */
+        .partner-group {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .partner-img {
+            width: 70px;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #fff;
+            padding: 5px;
+        }
+
+        /* ===== NAVIGATION DOTS ===== */
+        .nav-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .indicator-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #888;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .indicator-dot.is-active {
+            background: #FF9900;
+        }
+
+        /* ===== ACTION BUTTON ===== */
+        .cta-action-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #B177DA;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+
+        .cta-action-button:hover {
+            background-color: #B155DA;
+            transform: scale(1.05);
+        }
+
+        /* ===== ADAPTIVE LAYOUTS ===== */
+
+        @media(min-width:1024px){
+            .promo-showcase-container {
+            position: relative;
+            width: 100%;
+            max-height:1200px;
+            margin: 30px auto;
+            min-height: 50vh;
+            overflow: hidden;
+            border-radius: 5px 5px 0 0;
+            background:#000;
+        }
+        }
+        @media (max-width: 768px) {
+            .promo-showcase-container {
+            
+            min-height: 70vh;
+            
+        }
+            .promo-main-body {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .panel-branding {
+                flex: 0 0 auto;
+                padding: 20px;
+            }
+
+            .display-title {
+                font-size: 2rem;
+            }
+
+            .display-subtitle {
+                font-size: 1rem;
+            }
+
+            .panel-media {
+                flex: 0 0 auto;
+                height: 250px;
+            }
+
+            .partner-group {
+                top: 10px;
+                right: 10px;
+                padding: 5px;
+            }
+
+            .partner-img {
+                width: 50px;
+            }
+
+            .nav-indicators {
+                bottom: 10px;
+            }
+
+            .cta-action-button {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .promo-showcase-container {
+            
+            min-height: 50vh;
+            
+        }
+            .brand-headline {
+                font-size: 2rem;
+            }
+
+            .brand-headline::after {
+                font-size: 1.5rem;
+            }
+
+            .display-title {
+                font-size: 1.8rem;
+            }
+
+            .partner-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .partner-img {
+                width: 60px;
+            }
+        }
 
     </style>
 </head>
@@ -3912,7 +4150,7 @@
 
 
 <!--HERO SECTION SHOP PAGE-->
-<div class="jumia-black-friday-banner" style="margin-top: 0; max-width: 100%; border-radius: 0;">
+<div class="jumia-black-friday-banner" style="margin-top: 0; border-radius: 0;">
 
     
     <div class="banner-content">
@@ -3948,7 +4186,7 @@
             </div>
 
             <!-- Shop Now Button -->
-            <a href="tel:+256777891441" class="shop-now-bt">CALL TO ORDER NOW →</a>
+            <a href="tel:+256777891441" class="shop-now-bt">CALL TO ORDER NOW</a>
         </div>
 
     </div>
@@ -5865,56 +6103,39 @@
 
 
 
-
-<div class="jumia-black-friday-banner">
-    <!-- Orange Header -->
-    <div class="banner-header">
+<div class="promo-showcase-container">
+    <div class="promo-top-bar">
         Big things coming to our lucky shoppers!
     </div>
 
-    <!-- Main Content -->
-    <div class="banner-content">
+    <div class="promo-main-body">
 
-        <!-- Left Side: Text & Logo -->
-        <div class="banner-left">
-            <div class="jumia-logo">ROEFIX<span>★</span></div>
-            <h1 class="banner-title">Shop with us!!</h1>
-            <p class="banner-subtitle">For an unforgettable durable & Quality Products</p>
-            <p class="banner-tc">T&C's apply: Customer with the highest order value</p>
+        <div class="panel-branding">
+            <div class="brand-headline">ROEFIX<span>★</span></div>
+            <h1 class="display-title">Shop with us!!</h1>
+            <p class="display-subtitle">For an unforgettable durable & Quality Products</p>
+            <p class="terms-disclaimer">T&C's apply: Customer with the highest order value</p>
         </div>
 
-        <!-- Right Side: Image Slider -->
-        <div class="banner-right">
-            <div class="image-slider">
-                <!-- Slide 1 -->
-                <img src="Images/Advert.png" alt="Aerial view of island 1" class="slide active" style="object-fit: contain;" />
-                
+        <div class="panel-media">
+            <div class="media-viewer">
+                <img src="Images/Advert.png" alt="Advert Image" class="media-item is-visible"
+                    style="object-fit: contain;" />
             </div>
 
-
-            <!-- Carousel Dots -->
-            <div class="carousel-dots" style="display: none;">
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
+            <div class="nav-indicators" style="display: none;">
+                <div class="indicator-dot is-active"></div>
+                <div class="indicator-dot"></div>
+                <div class="indicator-dot"></div>
+                <div class="indicator-dot"></div>
+                <div class="indicator-dot"></div>
             </div>
 
-            <!-- Shop Now Button -->
-            <a href="tel:+256777891441" class="shop-now-bt">CALL TO SHOP NOW →</a>
+            <a href="tel:+256777891441" class="cta-action-button">CALL TO SHOP NOW</a>
         </div>
 
     </div>
-
 </div>
-
-
-
-
-
-
-
 
 <!--PHONES SECTION-->
 <!-- PHONE OFFERS -->
@@ -6630,7 +6851,7 @@
 <section class="laptop-scrollable-section">
     <div class="laptop-section-header">
         <h2>Computing</h2>
-        <a href="tel:+256777891441" class="laptop-see-all-link">Order →</a>
+        <a href="tel:+256777891441" class="laptop-see-all-link">Order</a>
     </div>
 
     <div class="laptop-scroll-container-wrapper">
@@ -6794,14 +7015,7 @@
     </div>
 </section>
 
-
-
-
-
-
-
-
-
+<!-- PROMO SHOWCASE -->
 
 </main>
 

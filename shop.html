@@ -28,20 +28,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
 
-    <!--Structured Data (Schema Markup)-->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Store",
-      "name": "Roefix Uganda",
-      "url": "https://roefixug.com",
-      "description": "Online shop for shoes, laptops, art, and accessories in Uganda.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "UG"
-      }
-    }
-    </script>
+    
     <style>
         * {
             margin: 0;
@@ -49,7 +36,7 @@
             box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
             text-decoration: none;
-            overflow-x:hidden;
+            
         }
 
         body {
@@ -84,7 +71,7 @@
             padding: 15px 20px;
         }
 
-        .logo {
+        .logoo {
             width: 40px;
             height: 40px;
             background: #000;
@@ -126,26 +113,7 @@
             align-items: center;
         }
 
-        .cart-icon {
-            position: relative;
-        }
-
-        .cart-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: #ff6b35;
-            color: white;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
+        
         /* ===== DESKTOP MEGA MENU ===== */
         .mega-menu {
             position: absolute;
@@ -1215,255 +1183,6 @@
         
 
 
-/* ===== PHONES SECTION ===== */
-
-        /* ===== BANNER CONTAINER ===== */
-        .jumia-black-friday-banner {
-            position: relative;
-            width: 100%;
-            margin: 30px auto;
-            min-height: 100vh;
-            overflow: hidden;
-            border-radius: 5px 5px 0 0;
-            background:#000;
-        }
-
-        /* ===== ORANGE HEADER ===== */
-        .banner-header {
-            background-color: #B177DA;
-            text-align: center;
-            font-size: 1rem;
-            font-weight: bold;
-            color: #000;
-        }
-
-        /* ===== MAIN CONTENT LAYOUT ===== */
-        .banner-content {
-            display: flex;
-            height: 500px;
-            background: #000;
-        }
-
-        /* ===== LEFT SIDE: TEXT & LOGO ===== */
-        .banner-left {
-            flex: 0 0 40%;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: #000;
-            position: relative;
-        }
-
-        .jumia-logo {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #fff;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .jumia-logo span {
-            color: #FF9900;
-            font-size: 1.8rem;
-        }
-
-        .jumia-logo::after {
-            content: "BEST OFFERS";
-            display: block;
-            font-size: 2rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-top: 10px;
-        }
-
-        .banner-title {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: #FF9900;
-            margin: 20px 0;
-            line-height: 1.1;
-        }
-
-        .banner-subtitle {
-            font-size: 1.2rem;
-            color: #fff;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .banner-tc {
-            font-size: 0.85rem;
-            color: #ccc;
-            font-style: italic;
-            margin-top: 10px;
-        }
-
-        /* ===== RIGHT SIDE: IMAGE SLIDER ===== */
-        .banner-right {
-            flex: 0 0 60%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .image-slider {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            object-fit: cover;
-            filter: brightness(0.9);
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        /* ===== OVERLAY FOR BRAND LOGOS ===== */
-        .brand-logos {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            z-index: 10;
-        }
-
-        .brand-logo {
-            width: 70px;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background: #fff;
-            padding: 5px;
-        }
-
-        /* ===== CAROUSEL DOTS ===== */
-        .carousel-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-            z-index: 10;
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #888;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .dot.active {
-            background: #FF9900;
-        }
-
-        /* ===== SHOP NOW BUTTON ===== */
-        .shop-now-bt {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-           background-color: #B177DA;
-            color: #000;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            z-index: 10;
-        }
-
-        .shop-now-bt:hover {
-            background-color: #B155DA;
-            transform: scale(1.05);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .banner-content {
-                flex-direction: column;
-                height: auto;
-            }
-
-            .banner-left {
-                flex: 0 0 auto;
-                padding: 20px;
-            }
-
-            .banner-title {
-                font-size: 2rem;
-            }
-
-            .banner-subtitle {
-                font-size: 1rem;
-            }
-
-            .banner-right {
-                flex: 0 0 auto;
-                height: 250px;
-            }
-
-            .brand-logos {
-                top: 10px;
-                right: 10px;
-                padding: 5px;
-            }
-
-            .brand-logo {
-                width: 50px;
-            }
-
-            .carousel-dots {
-                bottom: 10px;
-            }
-
-            .shop-now-bt {
-                bottom: 10px;
-                right: 10px;
-                padding: 8px 16px;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .jumia-logo {
-                font-size: 2rem;
-            }
-
-            .jumia-logo::after {
-                font-size: 1.5rem;
-            }
-
-            .banner-title {
-                font-size: 1.8rem;
-            }
-
-            .brand-logos {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .brand-logo {
-                width: 60px;
-            }
-        }
 
 
 
@@ -1755,67 +1474,6 @@
             }
         }
 
-
-
-
-
-
-/*HERO SECTION SHOP PAGE*/
-.roefix-logo {
-        font-size: 2.5rem;
-        font-weight: 900;
-        letter-spacing: -1px;
-        color: white;
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .roefix-logo span {
-        font-size: 1.8rem;
-        color: #FF9500;
-    }
-
-    .tagline {
-        font-size: 2.8rem;
-        font-weight: 800;
-        color: #FF9500;
-        line-height: 1.2;
-        margin-bottom: 15px;
-    }
-
-    .subtext {
-        font-size: 1rem;
-        margin-bottom: 20px;
-        line-height: 1.5;
-    }
-
-    .tnc {
-        font-size: 0.85rem;
-        color: #ccc;
-        margin-top: 10px;
-    }
-
-     /* Responsive Design */
-    @media (max-width: 768px) {
-        .tagline {
-            font-size: 2rem;
-        }
-
-        
-    }
-
-    @media (max-width: 480px) {
-        .top-alert {
-            font-size: 12px;
-            padding: 6px;
-        }
-
-        .tagline {
-            font-size: 1.6rem;
-        }
-    }
 
 
 
@@ -2523,10 +2181,20 @@
 /* ===== SHOE SECTION ===== */
 
 
-.s-header {
-    background: #B177DA;
+.s-section {
+    background: #fff;   
+    margin: 30px auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%; 
+    max-width: 1200px; 
+    padding: 0; 
+}
+.s-header{ 
+    box-sizing: border-box; 
+     background: #B177DA;
     color: white;
-    padding: 8px 10px;
+    padding: 8px 0px;
     border-radius: 5px 5px 0 0;
     display: flex;
     justify-content: space-between;
@@ -2534,16 +2202,6 @@
     font-weight: bold;
     font-size: 1.2rem;
     margin:30px auto;
-}
-.s-header{
-    background: #B177DA;
-    color: white;
-    padding: 8px 10px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin: 0; 
-    width: 100%; 
-    box-sizing: border-box; 
 }
 .s-header h2 {
     margin: 0;
@@ -3768,38 +3426,47 @@
 }
 
 
-/* ===== MAIN WRAPPER ===== */
-        .promo-showcase-container {
+
+
+
+
+
+
+
+  /* ===== BANNER CONTAINER ===== */
+        .jumia-black-friday-banner {
             position: relative;
             width: 100%;
+            min-height:90vh;
+            max-width: 1200px;
             margin: 30px auto;
-            min-height: 90vh;
             overflow: hidden;
-            border-radius: 5px 5px 0 0;
-            background:#000;
+            border-radius: 8px 8px 0 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            background-color: #000;
         }
 
-        /* ===== TOP ANNOUNCEMENT BAR ===== */
-        .promo-top-bar {
+        /* ===== ORANGE HEADER ===== */
+        .banner-header {
             background-color: #B177DA;
-            padding:8px 12px;
+            padding: 10px 20px;
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: bold;
             color: #000;
         }
 
-        /* ===== CORE LAYOUT ===== */
-        .promo-main-body {
+        /* ===== MAIN CONTENT LAYOUT ===== */
+        .banner-content {
             display: flex;
-            height: 500px;
+            height: 400px;
             background: #000;
         }
 
-        /* ===== LEFT PANEL: BRANDING ===== */
-        .panel-branding {
+        /* ===== LEFT SIDE: TEXT & LOGO ===== */
+        .banner-left {
             flex: 0 0 40%;
-            padding: 40px 20px;
+            padding: 50px 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -3807,7 +3474,7 @@
             position: relative;
         }
 
-        .brand-headline {
+        .jumia-logo {
             font-size: 2.5rem;
             font-weight: 900;
             color: #fff;
@@ -3815,12 +3482,12 @@
             margin-bottom: 20px;
         }
 
-        .brand-headline span {
+        .jumia-logo span {
             color: #FF9900;
             font-size: 1.8rem;
         }
 
-        .brand-headline::after {
+        .jumia-logo::after {
             content: "BEST OFFERS";
             display: block;
             font-size: 2rem;
@@ -3829,7 +3496,7 @@
             margin-top: 10px;
         }
 
-        .display-title {
+        .banner-title {
             font-size: 2.8rem;
             font-weight: 800;
             color: #FF9900;
@@ -3837,34 +3504,34 @@
             line-height: 1.1;
         }
 
-        .display-subtitle {
+        .banner-subtitle {
             font-size: 1.2rem;
             color: #fff;
             margin-bottom: 20px;
             line-height: 1.5;
         }
 
-        .terms-disclaimer {
+        .banner-tc {
             font-size: 0.85rem;
             color: #ccc;
             font-style: italic;
             margin-top: 10px;
         }
 
-        /* ===== RIGHT PANEL: MEDIA ===== */
-        .panel-media {
+        /* ===== RIGHT SIDE: IMAGE SLIDER ===== */
+        .banner-right {
             flex: 0 0 60%;
             position: relative;
             overflow: hidden;
         }
 
-        .media-viewer {
+        .image-slider {
             width: 100%;
             height: 100%;
             position: relative;
         }
 
-        .media-item {
+        .slide {
             position: absolute;
             top: 0;
             left: 0;
@@ -3876,12 +3543,12 @@
             filter: brightness(0.9);
         }
 
-        .media-item.is-visible {
+        .slide.active {
             opacity: 1;
         }
 
-        /* ===== OVERLAY LOGOS ===== */
-        .partner-group {
+        /* ===== OVERLAY FOR BRAND LOGOS ===== */
+        .brand-logos {
             position: absolute;
             top: 20px;
             right: 20px;
@@ -3894,7 +3561,7 @@
             z-index: 10;
         }
 
-        .partner-img {
+        .brand-logo {
             width: 70px;
             height: auto;
             border: 1px solid #ddd;
@@ -3903,8 +3570,8 @@
             padding: 5px;
         }
 
-        /* ===== NAVIGATION DOTS ===== */
-        .nav-indicators {
+        /* ===== CAROUSEL DOTS ===== */
+        .carousel-dots {
             position: absolute;
             bottom: 20px;
             left: 50%;
@@ -3914,7 +3581,7 @@
             z-index: 10;
         }
 
-        .indicator-dot {
+        .dot {
             width: 10px;
             height: 10px;
             border-radius: 50%;
@@ -3923,16 +3590,16 @@
             transition: background 0.3s ease;
         }
 
-        .indicator-dot.is-active {
+        .dot.active {
             background: #FF9900;
         }
 
-        /* ===== ACTION BUTTON ===== */
-        .cta-action-button {
+        /* ===== SHOP NOW BUTTON ===== */
+        .shop-now-bt {
             position: absolute;
             bottom: 20px;
             right: 20px;
-            background-color: #B177DA;
+           background-color: #B177DA;
             color: #000;
             padding: 10px 20px;
             border-radius: 4px;
@@ -3942,69 +3609,54 @@
             z-index: 10;
         }
 
-        .cta-action-button:hover {
+        .shop-now-bt:hover {
             background-color: #B155DA;
             transform: scale(1.05);
         }
 
-        /* ===== ADAPTIVE LAYOUTS ===== */
-
-        @media(min-width:1024px){
-            .promo-showcase-container {
-            position: relative;
-            width: 100%;
-            max-height:1200px;
-            margin: 30px auto;
-            min-height: 50vh;
-            overflow: hidden;
-            border-radius: 5px 5px 0 0;
-            background:#000;
-        }
-        }
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .promo-showcase-container {
-            
-            min-height: 70vh;
-            
-        }
-            .promo-main-body {
+            .jumia-black-friday-banner{
+                min-height: 50vh;
+            }
+            .banner-content {
                 flex-direction: column;
                 height: auto;
             }
 
-            .panel-branding {
+            .banner-left {
                 flex: 0 0 auto;
                 padding: 20px;
             }
 
-            .display-title {
+            .banner-title {
                 font-size: 2rem;
             }
 
-            .display-subtitle {
+            .banner-subtitle {
                 font-size: 1rem;
             }
 
-            .panel-media {
+            .banner-right {
                 flex: 0 0 auto;
                 height: 250px;
             }
 
-            .partner-group {
+            .brand-logos {
                 top: 10px;
                 right: 10px;
                 padding: 5px;
             }
 
-            .partner-img {
+            .brand-logo {
                 width: 50px;
             }
 
-            .nav-indicators {
+            .carousel-dots {
                 bottom: 10px;
             }
 
-            .cta-action-button {
+            .shop-now-bt {
                 bottom: 10px;
                 right: 10px;
                 padding: 8px 16px;
@@ -4013,57 +3665,743 @@
         }
 
         @media (max-width: 480px) {
-            .promo-showcase-container {
-            
-            min-height: 50vh;
-            
-        }
-            .brand-headline {
+            .jumia-logo {
                 font-size: 2rem;
             }
 
-            .brand-headline::after {
+            .jumia-logo::after {
                 font-size: 1.5rem;
             }
 
-            .display-title {
+            .banner-title {
                 font-size: 1.8rem;
             }
 
-            .partner-group {
+            .brand-logos {
                 flex-direction: column;
                 align-items: flex-start;
             }
 
-            .partner-img {
+            .brand-logo {
                 width: 60px;
             }
         }
 
+
+
+
+
+
+/*HERO SECTION SHOP PAGE*/
+.roefix-logo {
+        font-size: 2.5rem;
+        font-weight: 900;
+        letter-spacing: -1px;
+        color: white;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .roefix-logo span {
+        font-size: 1.8rem;
+        color: #FF9500;
+    }
+
+    .tagline {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: #FF9500;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .subtext {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .tnc {
+        font-size: 0.85rem;
+        color: #ccc;
+        margin-top: 10px;
+    }
+
+     /* Responsive Design */
+    @media (max-width: 768px) {
+        .tagline {
+            font-size: 2rem;
+        }
+
+        
+    }
+
+    @media (max-width: 480px) {
+        .top-alert {
+            font-size: 12px;
+            padding: 6px;
+        }
+
+        .tagline {
+            font-size: 1.6rem;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER SECTION*/
+
+    /*footer*/
+ h1 {
+      font-size: 2.3rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      margin-top: 50px;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      width: 100%;
+      max-width: 1200px;
+        margin-top: 2%;
+        margin-bottom: 10%;
+        margin: 0 auto;
+      
+    }
+
+    .benefit {
+      text-align: center;
+      padding: 20px;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .benefit:hover {
+      transform: translateY(-5px);
+      
+    }
+
+    .icon {
+      font-size: 40px;
+      background-color: #000;
+      color: #fff;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width:768px) {
+      .benefits {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+      }
+      .benefits {
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      gap: 10px;
+      width: 100%;
+      max-width: 1100px;
+    }
+    }
+
+
+        /* ===== Shop Category Section Styling ===== */
+.shopcat-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.shopcat-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  letter-spacing: 0.5px;
+}
+
+.shopcat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.shopcat-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background: #ffffff;
+
+}
+
+
+
+.shopcat-heading {
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.shopcat-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background:#B177DA;
+  border-radius: 3px;
+}
+
+.shopcat-link {
+  text-decoration: none;
+  color: #444;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  font-weight: 200;
+}
+
+.shopcat-link:hover {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shopcat-title {
+    font-size: 1.8rem;
+  }
+
+  .shopcat-grid {
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .shopcat-column {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .shopcat-grid {
+    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .shopcat-title {
+    font-size: 1.5rem;
+  }
+
+  .shopcat-heading {
+    font-size: 1rem;
+  }
+
+  .shopcat-link {
+    font-size: 0.9rem;
+  }
+}
+hr{
+  color: rgb(221, 216, 216);
+  
+}
+
+
+/*email*/
+/* ===== Signup Promo Section ===== */
+.signupPromo-section {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupPromo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+  align-items: center;
+}
+
+/* ===== Text Section ===== */
+.signupPromo-text {
+  text-align: left;
+}
+
+.signupPromo-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.signupPromo-heading span {
+  color: #000;
+}
+
+.signupPromo-desc {
+  font-size: 1rem;
+  color: #555;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* ===== Form Section ===== */
+.signupPromo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signupPromo-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.signupPromo-input-group {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  transition: border 0.3s ease;
+}
+
+.signupPromo-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #111;
+}
+
+.signupPromo-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signupPromo-btn:hover {
+  background-color: #222;
+}
+
+.signupPromo-privacy {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.signupPromo-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+}
+
+.signupPromo-input-group:focus-within {
+  border-color: #000;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .signupPromo-heading {
+    font-size: 2rem;
+  }
+  .signupPromo-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signupPromo-heading {
+    font-size: 1.7rem;
+  }
+  .signupPromo-input {
+    font-size: 0.9rem;
+  }
+  .signupPromo-btn {
+    padding: 10px 14px;
+  }
+}
+
+/*FOOTER IMAGE*/
+   .social-gallery-section {
+  text-align: center;
+  padding: 40px 20px 20px 5px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.social-gallery-title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.social-gallery-slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.social-gallery-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.social-gallery-item {
+  flex: 1 0 25%;
+  padding: 10px;
+  height: 300px;
+}
+
+.social-gallery-item img {
+  width: 100%;
+
+  object-position: center;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Slider Buttons */
+.social-gallery-controls {
+  margin-top: 20px;
+}
+
+.social-gallery-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.social-gallery-btn:hover {
+  background: #B177DA;
+}
+
+/* Responsive Layouts */
+@media (max-width: 768px) {
+  .social-gallery-item {
+    flex: 1 0 33.33%;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-gallery-item {
+    flex: 1 0 50%;
+    height: 200px;
+  }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*COPYRIGHTS*/
+        /* Social Media Styles */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #B177DA;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-icon:hover {
+            background-color: #B199DA;
+            transform: translateY(-3px);
+        }
+        
+        /* Copyright Section */
+        .copyright {
+            text-align: center;
+            padding: 20px;
+            
+            color: #000;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 30px;
+            height: 30px;
+            background-color: #B177DA;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1rem;
+            cursor: pointer;
+           
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .social-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+        }
+
+
+
+
+/*ROEFIXUG SECTION*/
+
+.roefixug-order-section {
+    padding: 60px 20px;
+    background-color: #fcfcfc;
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #111;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+
+.order-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.order-card {
+    flex: 1;
+    background: #ffffff;
+    padding: 40px 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+/* Icon Styling */
+.icon-box {
+    font-size: 2.5rem;
+    color: #B177DA; 
+    margin-bottom: 20px;
+}
+
+.order-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.order-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.phone-link {
+    color: #B177DA;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Button Styling */
+.main-call-btn {
+    display: inline-block;
+    background-color: #28a745; 
+    color: #fff;
+    padding: 18px 45px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+.main-call-btn:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
+}
+
+.brand-footer {
+    margin-top: 30px;
+    color: #999;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .order-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .order-card {
+        width: 100%;
+        max-width: 450px;
+    }
+}
     </style>
 </head>
 
 <body>
     <header class="header">
         <div class="nav-container">
-            <div class="logo"><img src="Images/Log.png" fetchpriority="high" alt="" width="70px" height="60px"></div>
-
+            <div class="logo"><img src="Images/Log.png" alt="" width="70px" height="60px"></div>
+    
             <nav class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link"> Home</a>
                 <div class="nav-link dropdown" id="categories-toggle">
                     Categories<i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <a href="shop.html" class="nav-link">Shop</a>
             </nav>
-
-
-
+    
+    
+    
             <!-- Mobile Toggle -->
             <button class="mobile-toggle" id="mobile-toggle">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-
+    
         <!-- DESKTOP MEGA MENU -->
         <div class="mega-menu" id="mega-menu">
             <div class="sidebar">
@@ -4080,39 +4418,45 @@
                     <i class="fas fa-glasses"></i> Accessories
                 </div>
             </div>
-
+    
             <div class="content">
                 <div class="column" id="column1"></div>
                 <div class="column" id="column2"></div>
             </div>
-
+    
             <div class="promo-image">
                 <div class="promo-text">
                     <i class="fas fa-tag"></i> Season Sale
                 </div>
             </div>
         </div>
-
+    
         <!-- MOBILE MENU -->
         <div class="mobile-menu" id="mobile-menu">
             <div class="mobile-menu-header">
-                <div class="logo"><img src="Images/Log.png" fetchpriority="high"  alt="" width="70px" height="60px"></div>
+                <div class="logo"><img src="Images/Log.png" alt="" width="70px" height="60px"></div>
                 <button class="close-btn" id="close-menu">×</button>
             </div>
             <ul class="mobile-menu-list">
-                <li class="mobile-menu-item"><a href="index.html"> Home</a></li>
+                <li class="mobile-menu-item"><a href="index.html">Home</a></li>
                 <li class="mobile-menu-item" id="mobile-categories">
                     <span> Categories</span>
                     <i class="fas fa-chevron-right"></i>
                 </li>
-            <div class="sub-menu" id="sub-menu">
-                <div class="sub-menu-item" data-category="clothes"><a href="#fc-section" >Clothes</a></div>
-                <div class="sub-menu-item" data-category="shoes"><a href="#featured-products" >Shoes</a></div>
-                <div class="sub-menu-item" data-category="bags"><a href="#artwork-section" >Art&Craft</a></div>
-                <div class="sub-menu-item" data-category="bags"><a href="#phone-offers-section" >Phones</a></div>
-                <div class="sub-menu-item" data-category="bags"><a href="#Art-pieces">Computers</a></div>
-                <div class="sub-menu-item" data-category="accessories"><a href="#accessories">Accessories</a></div>
-            </div>
+                <div class="sub-menu" id="sub-menu">
+                    <div class="sub-menu-item" data-category="clothes"><a href="shop.html#fc-section"
+                            target="_blank">Clothes</a></div>
+                    <div class="sub-menu-item" data-category="shoes"><a href="shop.html#featured-products"
+                            target="_blank">Shoes</a></div>
+                    <div class="sub-menu-item" data-category="bags"><a href="shop.html#artwork-section"
+                            target="_blank">Art&Craft</a></div>
+                    <div class="sub-menu-item" data-category="bags"><a href="shop.html#phone-offers-section"
+                            target="_blank">Phones</a></div>
+                    <div class="sub-menu-item" data-category="bags"><a href="shop.html#Art-pieces"
+                            target="_blank">Computers</a></div>
+                    <div class="sub-menu-item" data-category="accessories"><a href="shop.html#accessories" target="_blank"
+                            rel="noopener noreferrer">Accessories</a></div>
+                </div>
                 <li class="mobile-menu-item"><a href="shop.html">Shop</a></li>
             </ul>
         </div>
@@ -4122,13 +4466,10 @@
 
 
 
-
-
-
 <!--HERO SECTION SHOP PAGE-->
-<div class="jumia-black-friday-banner" style="margin-top: 0; border-radius: 0;">
+<div class="jumia-black-friday-banner" style="margin-top: 0; max-width: 100%; border-radius: 0;">
 
-    
+
     <div class="banner-content">
 
         <!-- Left Side: Text & Logo -->
@@ -4144,10 +4485,11 @@
             </div>
         </div>
 
-       
+
         <div class="banner-right">
             <div class="image-slider">
-                <img src="Images/fashion-shop-categories4-1-1536x1488.jpg"  fetchpriority="high" loading="lazy" alt="Aerial view of island 1" class="slide active" style="object-fit: contain;" />
+                <img src="Images/fashion-shop-categories4-1-1536x1488.jpg" fetchpriority="high" loading="lazy"
+                    alt="Aerial view of island 1" class="slide active" style="object-fit: contain;" />
 
             </div>
 
@@ -4162,13 +4504,12 @@
             </div>
 
             <!-- Shop Now Button -->
-            <a href="tel:+256777891441" class="shop-now-bt">CALL TO ORDER NOW</a>
+            <a href="tel:+256777891441" class="shop-now-bt">CALL TO ORDER NOW →</a>
         </div>
 
     </div>
 
 </div>
-
 
 
 
@@ -4178,7 +4519,7 @@
 <section class="quality-shoe-section animate-on-scroll">
     <div class="quality-shoe-header">
         <h2>Top Offers</h2>
-        <a href="tel:+256777891441" class="quality-shoe-see-all-link">Order </a>
+        <a href="tel:+25678648883" class="quality-shoe-see-all-link">Order </a>
     </div>
 
     <div class="quality-shoe-scroll-container-wrapper">
@@ -4801,7 +5142,7 @@
 <section class="s-section animate-on-scroll">
     <div class="s-header">
         <h2>More Offers</h2>
-        <a href="tel:+256777891441" class="s-see-all-link">Order</a>
+        <a href="tel:+25678648883" class="s-see-all-link">Order</a>
     </div>
 
     <div class="s-scroll-container-wrapper">
@@ -4977,7 +5318,7 @@
 <section class="fc-section" id="featured-clothes-section">
     <div class="fc-section-header">
         <h2>Top Fashions</h2>
-        <a href="tel:+256777891441" class="fc-view-all">Order</a>
+        <a href="tel:+256741427763" class="fc-view-all">Order</a>
     </div>
 
     <div class="fc-product-grid">
@@ -5265,7 +5606,7 @@
 <section class="jackets-featured visible" id="jackets-section">
     <div class="jackets-section-header">
         <h2>Classic Jackets</h2>
-        <a href="tel:+256700000000" class="jackets-call-to-order">Order</a>
+        <a href="tel:+256784648883" class="jackets-call-to-order">Order</a>
     </div>
 
     <div class="jackets-product-grid">
@@ -5518,7 +5859,7 @@
 <section class="jersey-featured visible" id="jersey-section-1">
     <div class="jersey-section-header">
         <h2>Your Team's Kits</h2>
-        <a href="tel:+256777891441" class="jersey-call-to-order">Order</a>
+        <a href="tel:+256784648883" class="jersey-call-to-order">Order</a>
     </div>
 
     <div class="jersey-product-grid">
@@ -5692,7 +6033,7 @@
 <section class="jersey-featured visible" id="jersey-section-2">
     <div class="jersey-section-header">
         <h2>More Kits</h2>
-        <a href="tel:+256777891441" class="jersey-call-to-order">Order</a>
+        <a href="tel:+256784648883" class="jersey-call-to-order">Order</a>
     </div>
 
     <div class="jersey-product-grid">
@@ -5943,7 +6284,7 @@
 <section class="t-shirts-featured animate-on-scroll" data-animation="slide-in-left">
     <div class="t-shirts-section-header">
         <h2>T-Shirts Designs</h2>
-        <a href="tel:+256777891441" class="t-shirts-call-to-order">Order</a>
+        <a href="tel:+256726825627" class="t-shirts-call-to-order">Order</a>
     </div>
 
     <div class="t-shirts-scroll-wrapper">
@@ -6079,46 +6420,12 @@
 
 
 
-<div class="promo-showcase-container">
-    <div class="promo-top-bar">
-        Big things coming to our lucky shoppers!
-    </div>
-
-    <div class="promo-main-body">
-
-        <div class="panel-branding">
-            <div class="brand-headline">ROEFIX<span>★</span></div>
-            <h1 class="display-title">Shop with us!!</h1>
-            <p class="display-subtitle">For an unforgettable durable & Quality Products</p>
-            <p class="terms-disclaimer">T&C's apply: Customer with the highest order value</p>
-        </div>
-
-        <div class="panel-media">
-            <div class="media-viewer">
-                <img src="Images/Advert.png" alt="Advert Image" class="media-item"
-                    style="object-fit: contain;" />
-            </div>
-
-            <div class="nav-indicators" style="display: none;">
-                <div class="indicator-dot is-active"></div>
-                <div class="indicator-dot"></div>
-                <div class="indicator-dot"></div>
-                <div class="indicator-dot"></div>
-                <div class="indicator-dot"></div>
-            </div>
-
-            <a href="tel:+256777891441" class="cta-action-button">CALL TO SHOP NOW</a>
-        </div>
-
-    </div>
-</div>
-
 <!--PHONES SECTION-->
 <!-- PHONE OFFERS -->
 <section class="phone-offers-section">
     <div class="phone-offers-header">
         <h2>Durable Gadgets</h2>
-        <a href="tel:+256777891441" class="see-all-link">Order <span></span></a>
+        <a href="tel:+256726825627" class="see-all-link">Order</a>
     </div>
     <div class="phone-offers-grid">
 
@@ -6317,7 +6624,7 @@
     <section class="artwork-section animate-on-scroll" data-animation="slide-in-left">
         <div class="artwork-section-header">
             <h2>Featured Art Pieces</h2>
-            <a href="tel:+256777891441" class="artwork-see-all-link">Order</a>
+            <a href="tel:+256726825627" class="artwork-see-all-link">Order</a>
         </div>
         <div class="artwork-grid-wrapper">
             <div class="artwork-grid-container">
@@ -6546,7 +6853,7 @@
 <section class="sec3-section animate-on-scroll" data-animation="slide-in-left">
     <div class="sec3-section-header">
         <h2>Best Sellers</h2>
-        <a href="tel:+256777891441" class="sec3-see-all-link">Order</a>
+        <a href="tel:+256726825627" class="sec3-see-all-link">Order</a>
     </div>
     <div class="sec3-grid-wrapper">
         <div class="sec3-grid-container">
@@ -6827,7 +7134,7 @@
 <section class="laptop-scrollable-section">
     <div class="laptop-section-header">
         <h2>Computing</h2>
-        <a href="tel:+256777891441" class="laptop-see-all-link">Order</a>
+        <a href="tel:+256741427763" class="laptop-see-all-link">Order</a>
     </div>
 
     <div class="laptop-scroll-container-wrapper">
@@ -6992,12 +7299,139 @@
 </section>
 
 <!-- PROMO SHOWCASE -->
+<!-- ===== FOOTER SECTION ===== -->
+
+
+    
+
+
+<section class="signupPromo-section" id="signupPromo-section">
+    <div class="signupPromo-container">
+
+        <!-- Left Side: Text -->
+        <div class="signupPromo-text">
+            <h1 class="signupPromo-heading">Sign up & get<br><span>20% off instantly</span></h1>
+            <p class="signupPromo-desc">
+                Receive exclusive offers, product alerts, style inspiration, and early access to new arrivals — straight
+                to your inbox.
+            </p>
+        </div>
+
+        <!-- Right Side: Form -->
+        <form class="signupPromo-form" id="signupPromo-form">
+            <label for="signupPromo-email" class="signupPromo-label">Your email address</label>
+            <div class="signupPromo-input-group">
+                <input type="email" id="signupPromo-email" class="signupPromo-input" placeholder="Enter your email"
+                    required readonly>
+                <button type="submit" class="signupPromo-btn">
+                    <span>&#8599;</span>
+                </button>
+            </div>
+            <p class="signupPromo-privacy">
+                By signing up, you agree to our <a href="#" class="signupPromo-link">Privacy Policy</a>.
+            </p>
+        </form>
+
+    </div>
+</section>
+<section class="roefixug-order-section">
+    <div class="container">
+        <h2 class="section-title">How to Order with Roefixug</h2>
+        <p class="section-subtitle">
+            We believe in a personalized approach to marketing. To ensure you get exactly what you need, we handle all
+            transactions via <strong>direct consultation</strong> rather than automated checkouts.
+        </p>
+
+        <div class="order-grid">
+            <div class="order-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+                <h3>Browse our Services</h3>
+                <p>Explore our available goods and marketing packages.</p>
+            </div>
+
+            <div class="order-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-phone-arrow-up-right"></i>
+                </div>
+                <h3>Call to Order</h3>
+                <p>Once you’ve found what you need, call us at <br>
+                    <a href="tel:+256784648883" class="phone-link">[+256784648883/+256726825627]</a>
+                </p>
+            </div>
+
+            <div class="order-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-user-gear"></i>
+                </div>
+                <h3>Personalized Setup</h3>
+                <p>We will discuss your requirements, confirm your order, and arrange payment and delivery details
+                    directly over the phone.</p>
+            </div>
+        </div>
+
+        <div class="cta-area">
+            <a href="tel:+256784648883" class="main-call-btn">
+                <i class="fa-solid fa-phone"></i> Call Now to Get Started
+            </a>
+            <p class="brand-footer">Follow us @Roefixug.com</p>
+        </div>
+    </div>
+</section>
+
+<!-- Social Media Links -->
+<div class="social-links">
+    <a href="#" class="social-icon" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="social-icon" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="social-icon" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" class="social-icon" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="#" class="social-icon" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
+
+<!-- Copyright Section -->
+<div class="copyright">
+    <p>&copy; 2025 Roefixug - Stores. All rights reserved.</p>
+</div>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-bolt"></i>
+</button>
+
 
 </main>
 
     <script>
 
+    //BACK TO TOP BUTTON
+    // Back to Top Button Functionality
+    const backToTopButton = document.getElementById('backToTop');
 
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 
         //section animation
         document.addEventListener('DOMContentLoaded', () => {
@@ -7638,6 +8072,110 @@
                             setTimeout(updateButtonVisibility, 100);
                         });
     
+
+
+
+
+
+
+
+
+       //FOOTER 
+        
+            document.addEventListener("DOMContentLoaded", () => {
+                const columns = document.querySelectorAll(".shopcat-column");
+
+                const revealOnScroll = () => {
+                    const triggerPoint = window.innerHeight * 0.9;
+                    columns.forEach(col => {
+                        const colTop = col.getBoundingClientRect().top;
+                        if (colTop < triggerPoint) {
+                            col.classList.add("shopcat-visible");
+                        }
+                    });
+                };
+
+                window.addEventListener("scroll", revealOnScroll);
+                revealOnScroll();
+            });
+
+
+
+
+            // Email validation and message
+            document.addEventListener("DOMContentLoaded", () => {
+                const form = document.getElementById("signupPromo-form");
+                const emailInput = document.getElementById("signupPromo-email");
+
+                form.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    const email = emailInput.value.trim();
+
+                    if (email === "" || !email.includes("@")) {
+                        alert("Please enter a valid email address.");
+                        return;
+                    }
+
+                    alert("🎉 Thank you for signing up! Check your inbox for your 20% discount code.");
+                    form.reset();
+                });
+            });
+
+
+
+            //FOOTER IMAGES
+            const track = document.querySelector('.social-gallery-track');
+            const prevBtn = document.getElementById('socialPrevBtn');
+            const nextBtn = document.getElementById('socialNextBtn');
+
+            let index = 0;
+            let slidesToShow = getSlidesToShow();
+
+            function getSlidesToShow() {
+                if (window.innerWidth <= 600) return 2;
+                if (window.innerWidth <= 768) return 3;
+                return 4;
+            }
+
+            function updateSlider() {
+                const slideWidth = document.querySelector('.social-gallery-item').offsetWidth;
+                track.style.transform = `translateX(-${index * slideWidth}px)`;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                const totalSlides = document.querySelectorAll('.social-gallery-item').length;
+                if (index < totalSlides - slidesToShow) {
+                    index++;
+                    updateSlider();
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (index > 0) {
+                    index--;
+                    updateSlider();
+                }
+            });
+
+            // Auto-slide every 5 seconds
+            setInterval(() => {
+                const totalSlides = document.querySelectorAll('.social-gallery-item').length;
+                if (index < totalSlides - slidesToShow) {
+                    index++;
+                } else {
+                    index = 0;
+                }
+                updateSlider();
+            }, 5000);
+
+            // Adjust slider on resize
+            window.addEventListener('resize', () => {
+                slidesToShow = getSlidesToShow();
+                index = 0;
+                updateSlider();
+            });
+        
+                 
     </script>
 </body>
 

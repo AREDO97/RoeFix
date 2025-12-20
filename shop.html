@@ -3781,8 +3781,7 @@
       font-weight: 600;
       margin-bottom: 30px;
       margin-top: 50px;
-      text-align: center;
-      font-style: italic;
+      
     }
 
     .benefits {
@@ -3872,7 +3871,7 @@
 }
 
 .shopcat-title {
-  text-align: center;
+  
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 50px;
@@ -4094,92 +4093,6 @@ hr{
   }
 }
 
-/*FOOTER IMAGE*/
-   .social-gallery-section {
-  text-align: center;
-  padding: 40px 20px 20px 5px;
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-}
-
-.social-gallery-title {
-  font-size: 2rem;
-  font-weight: 700;
-  font-style: italic;
-  margin-bottom: 40px;
-}
-
-.social-gallery-slider {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-}
-
-.social-gallery-track {
-  display: flex;
-  transition: transform 0.6s ease;
-}
-
-.social-gallery-item {
-  flex: 1 0 25%;
-  padding: 10px;
-  height: 300px;
-}
-
-.social-gallery-item img {
-  width: 100%;
-
-  object-position: center;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-
-
-/* Slider Buttons */
-.social-gallery-controls {
-  margin-top: 20px;
-}
-
-.social-gallery-btn {
-  background: black;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.social-gallery-btn:hover {
-  background: #B177DA;
-}
-
-/* Responsive Layouts */
-@media (max-width: 768px) {
-  .social-gallery-item {
-    flex: 1 0 33.33%;
-  }
-}
-
-@media (max-width: 480px) {
-  .social-gallery-item {
-    flex: 1 0 50%;
-    height: 200px;
-  }
- 
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4272,9 +4185,9 @@ hr{
 /*ROEFIXUG SECTION*/
 
 .roefixug-order-section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     background-color: #fcfcfc;
-    text-align: center;
+   
 }
 
 .container {
@@ -4292,7 +4205,7 @@ hr{
 .section-subtitle {
     font-size: 1.1rem;
     color: #555;
-    max-width: 800px;
+    
     margin: 0 auto 50px;
     line-height: 1.6;
 }
@@ -4344,7 +4257,7 @@ hr{
     display: inline-block;
     background-color: #28a745; 
     color: #fff;
-    padding: 18px 45px;
+    padding: 18px 40px;
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
@@ -4377,6 +4290,40 @@ hr{
         width: 100%;
         max-width: 450px;
     }
+}
+@media (max-width:450px){
+    .roefixug-order-section {
+    padding: 20px 8px;
+    background-color: #fcfcfc;
+}
+.main-call-btn{
+     padding: 20px 20px;
+    font-size: 1rem;
+}
+.roefixug-terms {
+    margin-top: 50px;
+    padding: 30px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.roefixug-terms h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.roefixug-terms p {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
 }
     </style>
 </head>
@@ -7337,7 +7284,7 @@ hr{
 <section class="roefixug-order-section">
     <div class="container">
         <h2 class="section-title">How to Order with Roefixug</h2>
-        <p class="section-subtitle">
+        <p class="section-subtitle" >
             We believe in a personalized approach to marketing. To ensure you get exactly what you need, we handle all
             transactions via <strong>direct consultation</strong> rather than automated checkouts.
         </p>
@@ -7353,7 +7300,8 @@ hr{
 
             <div class="order-card">
                 <div class="icon-box">
-                    <i class="fa-solid fa-phone-arrow-up-right"></i>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <i class="fa-solid fa-phone-volume"></i>
                 </div>
                 <h3>Call to Order</h3>
                 <p>Once you’ve found what you need, call us at <br>
@@ -7376,6 +7324,13 @@ hr{
                 <i class="fa-solid fa-phone"></i> Call Now to Get Started
             </a>
             <p class="brand-footer">Follow us @Roefixug.com</p>
+        </div>
+        <div class="roefixug-terms">
+            <h3>Terms of Service</h3>
+            <p><strong>Personalized Verification:</strong> By calling to order, you receive a custom audit of your needs. We
+                reserve the right to suggest adjustments to your package to ensure maximum marketing ROI.</p>
+            <p><strong>Payment Policy:</strong> No charges are made until a service agreement is reached during your
+                consultation. All prices discussed are final and inclusive of the discussed scope.</p>
         </div>
     </div>
 </section>

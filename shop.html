@@ -1036,7 +1036,7 @@
 
         .artwork-title {
             font-size: 0.9rem;
-            font-weight: 700;
+            font-weight: 500;
             margin-bottom: 4px;
             white-space: nowrap;
             overflow: hidden;
@@ -1597,7 +1597,7 @@
 
     .laptop-product-info h3 {
       font-size: 0.9rem;
-      font-weight: 700;
+      font-weight: 500;
       margin-bottom: 4px;
       white-space: nowrap;
       overflow: hidden;
@@ -1605,14 +1605,14 @@
     }
 
     .laptop-price {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       font-weight: 500;
       margin: 2px 0;
     }
 
     /* ===== SPECS LIST ===== */
     .laptop-product-specs {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       line-height: 1.4;
       margin-top: 3px;
       color: #444;
@@ -1867,7 +1867,7 @@
 
         .quality-shoe-price {
             font-size: 0.9rem;
-            font-weight: 700;
+            font-weight: 600;
             margin: 4px 0;
         }
 
@@ -2561,7 +2561,7 @@
         }
 
         .jackets-product-title {
-            font-size: 0.75rem;
+            font-size: 0.9rem;
             font-weight: 500;
             margin-bottom: 3px;
             color: #333;
@@ -3434,12 +3434,10 @@
             position: relative;
             width: 100%;
             min-height:90vh;
-            max-width: 1200px;
             margin: 30px auto;
             overflow: hidden;
             border-radius: 8px 8px 0 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            background-color: #000;
+            background-color: #F7F2EA;
         }
 
         /* ===== ORANGE HEADER ===== */
@@ -3455,8 +3453,9 @@
         /* ===== MAIN CONTENT LAYOUT ===== */
         .banner-content {
             display: flex;
-            height: 400px;
-            background: #000;
+            height:400px;
+            weight:100%;
+            
         }
 
         /* ===== LEFT SIDE: TEXT & LOGO ===== */
@@ -3466,14 +3465,14 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background: #000;
+            background: #F7F2EA;
             position: relative;
         }
 
         .jumia-logo {
             font-size: 2.5rem;
             font-weight: 900;
-            color: #fff;
+            color: #333;
             line-height: 1.2;
             margin-bottom: 20px;
         }
@@ -3525,6 +3524,7 @@
             width: 100%;
             height: 100%;
             position: relative;
+            z-index:100;
         }
 
         .slide {
@@ -3535,7 +3535,7 @@
             height: 100%;
             opacity: 0;
             transition: opacity 1s ease-in-out;
-            object-fit: cover;
+            object-fit: contain;
             filter: brightness(0.9);
         }
 
@@ -3553,7 +3553,7 @@
             background: rgba(255, 255, 255, 0.9);
             padding: 10px;
             border-radius: 5px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            
             z-index: 10;
         }
 
@@ -3612,13 +3612,41 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
+            image-slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 400px;
+            height: 400px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            object-fit: contain;
+            filter: brightness(0.9);
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
             .jumia-black-friday-banner{
-                min-height: 50vh;
+                min-height: 70vh;
             }
             .banner-content {
                 flex-direction: column;
                 height: auto;
             }
+           
+            .banner-right {
+                flex: 0 0 auto;
+                height: 550px; 
+            }
+       
 
             .banner-left {
                 flex: 0 0 auto;
@@ -3633,10 +3661,7 @@
                 font-size: 1rem;
             }
 
-            .banner-right {
-                flex: 0 0 auto;
-                height: 250px;
-            }
+            
 
             .brand-logos {
                 top: 10px;
@@ -3661,6 +3686,36 @@
         }
 
         @media (max-width: 480px) {
+            image-slider {
+            width: 80%;
+            height: 80%;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 2px;
+            width: 80%;
+            height: 80%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            object-fit: contain;
+            filter: brightness(0.9);
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+            .banner-right {
+                flex: 0 0 auto;
+                height: 500px; 
+            }
+       
+            .jumia-black-friday-banner{
+                min-height: 80vh;
+            }
             .jumia-logo {
                 font-size: 2rem;
             }
@@ -3747,6 +3802,32 @@
 
 
 
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.slide.active {
+  opacity: 1;
+}
 
 
 
@@ -4412,12 +4493,10 @@ hr{
 
 
 
+
 <!--HERO SECTION SHOP PAGE-->
 <div class="jumia-black-friday-banner" style="margin-top: 0; max-width: 100%; border-radius: 0;">
-
-
     <div class="banner-content">
-
         <!-- Left Side: Text & Logo -->
         <div class="banner-left">
             <div class="jumia-logo">ROEFIX<span>★</span></div>
@@ -4429,32 +4508,35 @@ hr{
                 <strong>Computers</strong>,
                 <strong>Clothes</strong> and more!
             </div>
+            <!-- Shop Now Button -->
+            <a href="tel:+256777891441" class="shop-now-bt">ORDER NOW →</a>
         </div>
 
-
+        <!-- Right Side: Auto-Rotating Image Slider -->
         <div class="banner-right">
             <div class="image-slider">
-                <img src="Images/fashion-shop-categories4-1-1536x1488.jpg" fetchpriority="high" loading="lazy"
-                    alt="Aerial view of island 1" class="slide active" style="object-fit: contain;" />
+                <!-- Add 5 high-quality banner images -->
+                <img src="Images/fashion-shop-categories4-1-1536x1488.jpg" alt="Promo 1" class="slide active" />
+                <img src="Images/YellowAirForce.png" alt="Promo 2" class="slide" />
+                <img src="Images/pullovers2.png" alt="Promo 3" class="slide" />
+                <img src="Images/LenovoX1Yoga-removebg-preview.png" alt="Promo 4" class="slide" />
+                <img src="Images/phone7.png" alt="Promo 5" class="slide" />
+
+
+                <!-- Carousel Dots (now visible) -->
+                <div class="carousel-dots">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
 
             </div>
 
-
-            <!-- Carousel Dots -->
-            <div class="carousel-dots" style="display: none;">
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-
-            <!-- Shop Now Button -->
-            <a href="tel:+256777891441" class="shop-now-bt">CALL TO ORDER NOW →</a>
+           
         </div>
-
     </div>
-
 </div>
 
 
@@ -5725,10 +5807,10 @@ hr{
                 <img src="Images/TeamJerseys.jpg" alt="Uganda Cranes Home Jersey 2025" class="jersey-image" />
             </div>
             <div class="jersey-product-info">
-                <div class="jersey-product-title">Uganda Cranes Home Jersey</div>
+                <div class="jersey-product-title">Brussia Dortmund Home Jersey</div>
                 <div class="jersey-price">
                     <span class="jersey-original-price">UGX 16,500</span>
-                    <span class="jersey-discounted-price">UGX 14,200</span>
+                    <span class="jersey-discounted-price">UGX 15,200</span>
                 </div>
             </div>
         </div>
@@ -5741,7 +5823,7 @@ hr{
                 <div class="jersey-product-title">SSC Napoli Home Kit</div>
                 <div class="jersey-price">
                     <span class="jersey-original-price">UGX 17,000</span>
-                    <span class="jersey-discounted-price">UGX 14,800</span>
+                    <span class="jersey-discounted-price">UGX 15,800</span>
                 </div>
             </div>
         </div>
@@ -5751,7 +5833,7 @@ hr{
                 <img src="Images/TeamJerseys2.jpg" alt="Manchester City Away Jersey 2025" class="jersey-image" />
             </div>
             <div class="jersey-product-info">
-                <div class="jersey-product-title">Man City Away Jersey</div>
+                <div class="jersey-product-title">Galatasary Away Jersey</div>
                 <div class="jersey-price">
                     <span class="jersey-original-price">UGX 17,500</span>
                     <span class="jersey-discounted-price">UGX 15,200</span>
@@ -5790,7 +5872,7 @@ hr{
                 <img src="Images/TeamJerseys5.jpg" alt="Chelsea FC Training Jersey" class="jersey-image" />
             </div>
             <div class="jersey-product-info">
-                <div class="jersey-product-title">Chelsea Training Jersey</div>
+                <div class="jersey-product-title">South Sudan Jersey</div>
                 <div class="jersey-price">
                     <span class="jersey-original-price">UGX 16,000</span>
                     <span class="jersey-discounted-price">UGX 14,000</span>
@@ -5805,7 +5887,7 @@ hr{
                 <img src="Images/TeamJerseys6.jpg" alt="Bayern Munich Youth Kit" class="jersey-image" />
             </div>
             <div class="jersey-product-info">
-                <div class="jersey-product-title">Bayern Munich Youth Kit</div>
+                <div class="jersey-product-title">S.F.C Youth Kit</div>
                 <div class="jersey-price">
                     <span class="jersey-original-price">UGX 16,800</span>
                     <span class="jersey-discounted-price">UGX 14,600</span>
@@ -5831,7 +5913,7 @@ hr{
                 <img src="Images/TeamJerseys8.jpg" alt="Paris Saint-Germain Home Jersey" class="jersey-image" />
             </div>
             <div class="jersey-product-info">
-                <div class="jersey-product-title">PSG Home Jersey</div>
+                <div class="jersey-product-title">AS Roma Home Jersey</div>
                 <div class="jersey-price">
                     <span class="jersey-original-price">UGX 17,300</span>
                     <span class="jersey-discounted-price">UGX 15,000</span>
@@ -5870,7 +5952,7 @@ hr{
                 <img src="Images/TeamJerseys11.jpg" alt="Real Madrid Third Kit 2025" class="jersey-image" />
             </div>
             <div class="jersey-product-info">
-                <div class="jersey-product-title">Real Madrid Third Kit</div>
+                <div class="jersey-product-title">Manchested Utd Third Kit</div>
                 <div class="jersey-price">
                     <span class="jersey-original-price">UGX 17,600</span>
                     <span class="jersey-discounted-price">UGX 15,300</span>
@@ -5938,7 +6020,7 @@ hr{
                 <img src="Images/TeamJerseys15.jpg" alt="Chelsea FC Training Top – Blue" class="jersey-image" />
             </div>
             <div class="jersey-product-info">
-                <div class="jersey-product-title">Chelsea Training Top</div>
+                <div class="jersey-product-title">Brazil Team Top</div>
                 <div class="jersey-price">
                     <span class="jersey-original-price">UGX 16,000</span>
                     <span class="jersey-discounted-price">UGX 14,000</span>
@@ -6019,10 +6101,10 @@ hr{
                     class="jersey-image" />
             </div>
             <div class="jersey-product-info">
-                <div class="jersey-product-title">Black Sports Training Jersey</div>
+                <div class="jersey-product-title">Black United Snapdrop </div>
                 <div class="jersey-price">
-                    <span class="jersey-original-price">UGX 15,500</span>
-                    <span class="jersey-discounted-price">UGX 13,800</span>
+                    <span class="jersey-original-price">UGX 19,500</span>
+                    <span class="jersey-discounted-price">UGX 15,800</span>
                 </div>
             </div>
         </div>
@@ -6032,7 +6114,7 @@ hr{
                 <img src="Images/TeamJerseys22.jpg" alt="Youth Sports Jersey – Navy Blue" class="jersey-image" />
             </div>
             <div class="jersey-product-info">
-                <div class="jersey-product-title">Navy Blue Training Jersey</div>
+                <div class="jersey-product-title">Ghana Team Jersey</div>
                 <div class="jersey-price">
                     <span class="jersey-original-price">UGX 15,200</span>
                     <span class="jersey-discounted-price">UGX 13,500</span>
@@ -6046,10 +6128,10 @@ hr{
                     class="jersey-image" />
             </div>
             <div class="jersey-product-info">
-                <div class="jersey-product-title">White Sports Training Jersey</div>
+                <div class="jersey-product-title">White United  Jersey</div>
                 <div class="jersey-price">
-                    <span class="jersey-original-price">UGX 15,000</span>
-                    <span class="jersey-discounted-price">UGX 13,300</span>
+                    <span class="jersey-original-price">UGX 18,000</span>
+                    <span class="jersey-discounted-price">UGX 15,300</span>
                 </div>
             </div>
         </div>
@@ -6072,10 +6154,10 @@ hr{
                 <img src="Images/TeamJerseys28.jpg" alt="Generic Football Jersey – Red" class="jersey-image" />
             </div>
             <div class="jersey-product-info">
-                <div class="jersey-product-title">Red Generic Football Jersey</div>
+                <div class="jersey-product-title">Juventus  FC</div>
                 <div class="jersey-price">
-                    <span class="jersey-original-price">UGX 14,800</span>
-                    <span class="jersey-discounted-price">UGX 13,000</span>
+                    <span class="jersey-original-price">UGX 15,800</span>
+                    <span class="jersey-discounted-price">UGX 50,000</span>
                 </div>
             </div>
         </div>
@@ -6127,7 +6209,7 @@ hr{
                 <div class="jersey-product-title">Newcastle United Home Jersey</div>
                 <div class="jersey-price">
                     <span class="jersey-original-price">UGX 17,100</span>
-                    <span class="jersey-discounted-price">UGX 14,900</span>
+                    <span class="jersey-discounted-price">UGX 15,900</span>
                 </div>
             </div>
         </div>
@@ -6154,13 +6236,13 @@ hr{
             <div class="t-shirts-product-card" data-product="sports">
                 <div class="t-shirts-sale-badge">SALE!</div>
                 <div class="t-shirts-image-container">
-                    <img src="Images/t-shirts.jpg" alt="Urban Pulse Tee" class="t-shirts-image">
+                    <img src="Images/t-shirts.jpg" alt="Urban Pulse Tee – Premium Cotton Fit" class="t-shirts-image">
                 </div>
                 <div class="t-shirts-product-info">
                     <div class="t-shirts-product-title">Urban Pulse Tee</div>
                     <div class="t-shirts-price">
-                        <span class="t-shirts-original-price">UGX 22,000</span>
-                        <span class="t-shirts-discounted-price">UGX 19,500</span>
+                        <span class="t-shirts-original-price">UGX 25,500</span>
+                        <span class="t-shirts-discounted-price">UGX 24,500</span>
                     </div>
                 </div>
             </div>
@@ -6169,13 +6251,13 @@ hr{
             <div class="t-shirts-product-card" data-product="kids">
                 <div class="t-shirts-sale-badge">SALE!</div>
                 <div class="t-shirts-image-container">
-                    <img src="Images/t-shirts1.jpg" alt="Tiny Explorer Tee" class="t-shirts-image">
+                    <img src="Images/t-shirts1.jpg" alt="Tiny Explorer Tee – Soft Kids Cotton" class="t-shirts-image">
                 </div>
                 <div class="t-shirts-product-info">
                     <div class="t-shirts-product-title">Tiny Explorer Tee</div>
                     <div class="t-shirts-price">
-                        <span class="t-shirts-original-price">UGX 18,000</span>
-                        <span class="t-shirts-discounted-price">UGX 15,500</span>
+                        <span class="t-shirts-original-price">UGX 27,000</span>
+                        <span class="t-shirts-discounted-price">UGX 25,000</span>
                     </div>
                 </div>
             </div>
@@ -6184,13 +6266,13 @@ hr{
             <div class="t-shirts-product-card" data-product="kids">
                 <div class="t-shirts-sale-badge">SALE!</div>
                 <div class="t-shirts-image-container">
-                    <img src="Images/t-shirts2.jpg" alt="Little Dynamo Tee" class="t-shirts-image">
+                    <img src="Images/t-shirts2.jpg" alt="Little Dynamo Tee – Play-Ready Design" class="t-shirts-image">
                 </div>
                 <div class="t-shirts-product-info">
                     <div class="t-shirts-product-title">Little Dynamo Tee</div>
                     <div class="t-shirts-price">
-                        <span class="t-shirts-original-price">UGX 18,000</span>
-                        <span class="t-shirts-discounted-price">UGX 16,000</span>
+                        <span class="t-shirts-original-price">UGX 25,500</span>
+                        <span class="t-shirts-discounted-price">UGX 24,500</span>
                     </div>
                 </div>
             </div>
@@ -6199,13 +6281,14 @@ hr{
             <div class="t-shirts-product-card" data-product="mens">
                 <div class="t-shirts-sale-badge">SALE!</div>
                 <div class="t-shirts-image-container">
-                    <img src="Images/t-shirts3.jpg" alt="Vanguard Street Tee" class="t-shirts-image">
+                    <img src="Images/t-shirts3.jpg" alt="Vanguard Street Tee – Urban Graphic Fit"
+                        class="t-shirts-image">
                 </div>
                 <div class="t-shirts-product-info">
                     <div class="t-shirts-product-title">Vanguard Street Tee</div>
                     <div class="t-shirts-price">
-                        <span class="t-shirts-original-price">UGX 24,000</span>
-                        <span class="t-shirts-discounted-price">UGX 21,000</span>
+                        <span class="t-shirts-original-price">UGX 26,000</span>
+                        <span class="t-shirts-discounted-price">UGX 25,500</span>
                     </div>
                 </div>
             </div>
@@ -6214,13 +6297,14 @@ hr{
             <div class="t-shirts-product-card" data-product="womens">
                 <div class="t-shirts-sale-badge">SALE!</div>
                 <div class="t-shirts-image-container">
-                    <img src="Images/t-shirts4.jpg" alt="Blossom Aura Tee" class="t-shirts-image">
+                    <img src="Images/t-shirts4.jpg" alt="Blossom Aura Tee – Lightweight Fashion Fit"
+                        class="t-shirts-image">
                 </div>
                 <div class="t-shirts-product-info">
                     <div class="t-shirts-product-title">Blossom Aura Tee</div>
                     <div class="t-shirts-price">
-                        <span class="t-shirts-original-price">UGX 25,000</span>
-                        <span class="t-shirts-discounted-price">UGX 22,500</span>
+                        <span class="t-shirts-original-price">UGX 27,000</span>
+                        <span class="t-shirts-discounted-price">UGX 25,500</span>
                     </div>
                 </div>
             </div>
@@ -6229,13 +6313,14 @@ hr{
             <div class="t-shirts-product-card" data-product="womens">
                 <div class="t-shirts-sale-badge">SALE!</div>
                 <div class="t-shirts-image-container">
-                    <img src="Images/t-shirts5.jpg" alt="Midnight Muse Tee" class="t-shirts-image">
+                    <img src="Images/t-shirts5.jpg" alt="Midnight Muse Tee – Stylish Evening Wear"
+                        class="t-shirts-image">
                 </div>
                 <div class="t-shirts-product-info">
                     <div class="t-shirts-product-title">Midnight Muse Tee</div>
                     <div class="t-shirts-price">
-                        <span class="t-shirts-original-price">UGX 23,000</span>
-                        <span class="t-shirts-discounted-price">UGX 20,000</span>
+                        <span class="t-shirts-original-price">UGX 25,500</span>
+                        <span class="t-shirts-discounted-price">UGX 24,000</span>
                     </div>
                 </div>
             </div>
@@ -6244,35 +6329,35 @@ hr{
             <div class="t-shirts-product-card" data-product="womens">
                 <div class="t-shirts-sale-badge">SALE!</div>
                 <div class="t-shirts-image-container">
-                    <img src="Images/t-shirts6.jpg" alt="Serenity Stripe Tee" class="t-shirts-image">
+                    <img src="Images/t-shirts6.jpg" alt="Serenity Stripe Tee – Comfort Fit" class="t-shirts-image">
                 </div>
                 <div class="t-shirts-product-info">
                     <div class="t-shirts-product-title">Serenity Stripe Tee</div>
                     <div class="t-shirts-price">
-                        <span class="t-shirts-original-price">UGX 22,000</span>
-                        <span class="t-shirts-discounted-price">UGX 19,000</span>
+                        <span class="t-shirts-original-price">UGX 26,000</span>
+                        <span class="t-shirts-discounted-price">UGX 25,000</span>
                     </div>
                 </div>
             </div>
 
             <!-- Product 8 -->
-            <div class="t-shirts-product-card" data-product="womens">
+            <div class="t-shirts-product-card" data-product="premium">
                 <div class="t-shirts-sale-badge">SALE!</div>
                 <div class="t-shirts-image-container">
-                    <img src="Images/GreenShirt.png" alt="Emerald Zen Tee" class="t-shirts-image">
+                    <img src="Images/GreenShirt.png" alt="Emerald Zen Tee – Premium Organic Cotton"
+                        class="t-shirts-image">
                 </div>
                 <div class="t-shirts-product-info">
                     <div class="t-shirts-product-title">Emerald Zen Tee</div>
                     <div class="t-shirts-price">
-                        <span class="t-shirts-original-price">UGX 24,500</span>
-                        <span class="t-shirts-discounted-price">UGX 21,500</span>
+                        <span class="t-shirts-original-price">UGX 28,000</span>
+                        <span class="t-shirts-discounted-price">UGX 25,000</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 
 <!--PHONES SECTION-->
@@ -7339,6 +7424,51 @@ hr{
 </main>
 
     <script>
+
+//hero section styling .Image 
+  document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+    const intervalTime = 5000; // 5 seconds
+
+    function updateSlides(index) {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlides(currentIndex);
+    }
+
+    // Start auto-rotation
+    let slideInterval = setInterval(nextSlide, intervalTime);
+
+    // Pause on hover, resume on leave
+    const slider = document.querySelector('.image-slider');
+    slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    slider.addEventListener('mouseleave', () => {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, intervalTime);
+    });
+
+    // Optional: Click dots to jump
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        clearInterval(slideInterval);
+        currentIndex = index;
+        updateSlides(currentIndex);
+        slideInterval = setInterval(nextSlide, intervalTime);
+      });
+    });
+  });
+
+
+
+
+
+
 
     //BACK TO TOP BUTTON
     // Back to Top Button Functionality

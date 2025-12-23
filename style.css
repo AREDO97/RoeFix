@@ -11,12 +11,12 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 50px;
 }
 
 .hero-text {
     flex: 1;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .tag {
@@ -26,7 +26,7 @@
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border: 1px solid #eee;
 }
 
@@ -36,7 +36,7 @@
     font-style: italic;
     line-height: 1;
     color: #000;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .headline span {
@@ -46,7 +46,8 @@
 .subtext {
     font-size: 16px;
     color: #555;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
+    font-weight:300
 }
 
 .price-action {
@@ -57,7 +58,7 @@
 }
 
 .special-price {
-    font-size: 14px;
+    font-size: 25px;
     color: #333;
     display: flex;
     align-items: center;
@@ -65,7 +66,7 @@
 }
 
 .price {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 800;
     color: #ff4444;
 }

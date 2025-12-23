@@ -3427,391 +3427,103 @@
 
 
 
-
-
-  /* ===== BANNER CONTAINER ===== */
-        .jumia-black-friday-banner {
-            position: relative;
-            width: 100%;
-            min-height:90vh;
-            margin: 30px auto;
-            overflow: hidden;
-            border-radius: 8px 8px 0 0;
-            background-color: #F7F2EA;
-        }
-
-        /* ===== ORANGE HEADER ===== */
-        .banner-header {
-            background-color: #B177DA;
-            padding: 10px 20px;
-            text-align: center;
-            font-size: 1rem;
-            font-weight: bold;
-            color: #000;
-        }
-
-        /* ===== MAIN CONTENT LAYOUT ===== */
-        .banner-content {
-            display: flex;
-            height:400px;
-            weight:100%;
-            
-        }
-
-        /* ===== LEFT SIDE: TEXT & LOGO ===== */
-        .banner-left {
-            flex: 0 0 40%;
-            padding: 50px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: #F7F2EA;
-            position: relative;
-        }
-
-        .jumia-logo {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #333;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .jumia-logo span {
-            color: #FF9900;
-            font-size: 1.8rem;
-        }
-
-        .jumia-logo::after {
-            content: "BEST OFFERS";
-            display: block;
-            font-size: 2rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-top: 10px;
-        }
-
-        .banner-title {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: #FF9900;
-            margin: 20px 0;
-            line-height: 1.1;
-        }
-
-        .banner-subtitle {
-            font-size: 1.2rem;
-            color: #fff;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .banner-tc {
-            font-size: 0.85rem;
-            color: #ccc;
-            font-style: italic;
-            margin-top: 10px;
-        }
-
-        /* ===== RIGHT SIDE: IMAGE SLIDER ===== */
-        .banner-right {
-            flex: 0 0 60%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .image-slider {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            z-index:100;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            object-fit: contain;
-            filter: brightness(0.9);
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        /* ===== OVERLAY FOR BRAND LOGOS ===== */
-        .brand-logos {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 10px;
-            border-radius: 5px;
-            
-            z-index: 10;
-        }
-
-        .brand-logo {
-            width: 70px;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background: #fff;
-            padding: 5px;
-        }
-
-        /* ===== CAROUSEL DOTS ===== */
-        .carousel-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-            z-index: 10;
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #888;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .dot.active {
-            background: #FF9900;
-        }
-
-        /* ===== SHOP NOW BUTTON ===== */
-        .shop-now-bt {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-           background-color: #B177DA;
-            color: #000;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            z-index: 10;
-        }
-
-        .shop-now-bt:hover {
-            background-color: #B155DA;
-            transform: scale(1.05);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            image-slider {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 400px;
-            height: 400px;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            object-fit: contain;
-            filter: brightness(0.9);
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-            .jumia-black-friday-banner{
-                min-height: 70vh;
-            }
-            .banner-content {
-                flex-direction: column;
-                height: auto;
-            }
-           
-            .banner-right {
-                flex: 0 0 auto;
-                height: 550px; 
-            }
-       
-
-            .banner-left {
-                flex: 0 0 auto;
-                padding: 20px;
-            }
-
-            .banner-title {
-                font-size: 2rem;
-            }
-
-            .banner-subtitle {
-                font-size: 1rem;
-            }
-
-            
-
-            .brand-logos {
-                top: 10px;
-                right: 10px;
-                padding: 5px;
-            }
-
-            .brand-logo {
-                width: 50px;
-            }
-
-            .carousel-dots {
-                bottom: 10px;
-            }
-
-            .shop-now-bt {
-                bottom: 10px;
-                right: 10px;
-                padding: 8px 16px;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            image-slider {
-            width: 80%;
-            height: 80%;
-            position: relative;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 2px;
-            width: 80%;
-            height: 80%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            object-fit: contain;
-            filter: brightness(0.9);
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-            .banner-right {
-                flex: 0 0 auto;
-                height: 500px; 
-            }
-       
-            .jumia-black-friday-banner{
-                min-height: 80vh;
-            }
-            .jumia-logo {
-                font-size: 2rem;
-            }
-
-            .jumia-logo::after {
-                font-size: 1.5rem;
-            }
-
-            .banner-title {
-                font-size: 1.8rem;
-            }
-
-            .brand-logos {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .brand-logo {
-                width: 60px;
-            }
-        }
-
-
-
-
-
-
-/*HERO SECTION SHOP PAGE*/
-.roefix-logo {
-        font-size: 2.5rem;
-        font-weight: 900;
-        letter-spacing: -1px;
-        color: white;
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .roefix-logo span {
-        font-size: 1.8rem;
-        color: #FF9500;
-    }
-
-    .tagline {
-        font-size: 2.8rem;
-        font-weight: 800;
-        color: #FF9500;
-        line-height: 1.2;
-        margin-bottom: 15px;
-    }
-
-    .subtext {
-        font-size: 1rem;
-        margin-bottom: 20px;
-        line-height: 1.5;
-    }
-
-    .tnc {
-        font-size: 0.85rem;
-        color: #ccc;
-        margin-top: 10px;
-    }
-
-     /* Responsive Design */
-    @media (max-width: 768px) {
-        .tagline {
-            font-size: 2rem;
-        }
-
-        
-    }
-
-    @media (max-width: 480px) {
-        .top-alert {
-            font-size: 12px;
-            padding: 6px;
-        }
-
-        .tagline {
-            font-size: 1.6rem;
-        }
-    }
-
-
-
-.carousel-dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 10;
+/* ===== BANNER CONTAINER ===== */
+.jumia-black-friday-banner {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  background-color: #F7F2EA;
 }
 
+/* ===== ORANGE HEADER ===== */
+.banner-header {
+  background-color: #B177DA;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* ===== MAIN CONTENT LAYOUT ===== */
+.banner-content {
+  display: flex;
+  height: 400px;
+  gap: 100px;
+  padding: 50px 20px;
+}
+
+/* ===== LEFT SIDE: TEXT & LOGO ===== */
+.banner-left {
+  flex: 0 0 40%;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: #F7F2EA;
+  position: relative;
+}
+
+.jumia-logo {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.jumia-logo span {
+  color: #FF9900;
+  font-size: 1.8rem;
+}
+
+.jumia-logo::after {
+  content: "BEST OFFERS";
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.banner-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #FF9900;
+  margin: 20px 0;
+  line-height: 1.1;
+}
+
+.banner-subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.banner-tc {
+  font-size: 0.85rem;
+  color: #ccc;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* ===== RIGHT SIDE: IMAGE SLIDER ===== */
+.banner-right {
+  flex: 0 0 60%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
 .slide {
   position: absolute;
@@ -3821,17 +3533,271 @@
   height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  object-fit: cover;
+  object-fit: contain;
   filter: brightness(0.9);
+  z-index: 1001;
 }
 
 .slide.active {
   opacity: 1;
 }
 
+/* ===== OVERLAY FOR BRAND LOGOS ===== */
+.brand-logos {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
 
+.brand-logo {
+  width: 70px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  padding: 5px;
+}
 
+/* ===== CAROUSEL DOTS ===== */
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
 
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #888;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background: #FF9900;
+}
+
+/* ===== SHOP NOW BUTTON ===== */
+.shop-now-bt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 8px;
+  padding: 20px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #ff9900, #ff7700);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(177, 119, 218, 0.4);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.shop-now-bt:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(177, 119, 218, 0.6);
+  background: linear-gradient(135deg, #9A5DCF, #8A4BCF);
+}
+
+.shop-now-bt:active {
+  transform: translateY(0) scale(1);
+  box-shadow: 0 3px 10px rgba(177, 119, 218, 0.4);
+}
+
+.shop-now-bt::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s;
+  z-index: -1;
+}
+
+.shop-now-bt:hover::after {
+  left: 100%;
+}
+
+.shop-now-bt:focus {
+  outline: 2px solid #FF9500;
+  outline-offset: 4px;
+}
+
+/* ===== HERO SECTION (SHOP PAGE) ===== */
+.roefix-logo {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: white;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.roefix-logo span {
+  font-size: 1.8rem;
+  color: #FF9500;
+}
+
+.tagline {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #FF9500;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.subtext {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.tnc {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .jumia-black-friday-banner {
+    min-height: 70vh;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+    padding: 30px 15px;
+  }
+
+  .banner-left {
+    flex: 0 0 auto;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .banner-right {
+    flex: 0 0 auto;
+    height: 550px;
+    width: 100%;
+  }
+
+  .image-slider,
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .slide {
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .banner-subtitle {
+    font-size: 1rem;
+  }
+
+  .brand-logos {
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+  }
+
+  .brand-logo {
+    width: 50px;
+  }
+
+  .shop-now-bt {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .tagline {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-right {
+    height: 450px;
+  }
+
+  .slide {
+    width: 95%;
+    height: 95%;
+    left: 2.5%;
+    top: 2.5%;
+  }
+
+  .jumia-black-friday-banner {
+    min-height: 80vh;
+  }
+
+  .jumia-logo {
+    font-size: 2rem;
+  }
+
+  .jumia-logo::after {
+    font-size: 1.5rem;
+  }
+
+  .banner-title {
+    font-size: 1.8rem;
+  }
+
+  .brand-logos {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand-logo {
+    width: 60px;
+  }
+
+  .tagline {
+    font-size: 1.6rem;
+  }
+
+  .shop-now-bt {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
 
 
 
@@ -4499,7 +4465,7 @@ hr{
     <div class="banner-content">
         <!-- Left Side: Text & Logo -->
         <div class="banner-left">
-            <div class="jumia-logo">ROEFIX<span>★</span></div>
+            <div class="jumia-logo">ROEFIXUG<span>★</span></div>
             <div class="tagline">Shop Big,<br>Enjoy Quality!</div>
             <div class="subtext">
                 Become our Top Spender and enjoy discounts on
@@ -4509,14 +4475,19 @@ hr{
                 <strong>Clothes</strong> and more!
             </div>
             <!-- Shop Now Button -->
-            <a href="tel:+256777891441" class="shop-now-bt">ORDER NOW →</a>
+           <a href="tel:+256777891441" class="shop-now-bt">
+            ORDER NOW
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+</a>
         </div>
 
         <!-- Right Side: Auto-Rotating Image Slider -->
         <div class="banner-right">
             <div class="image-slider">
-                <!-- Add 5 high-quality banner images -->
-                <img src="Images/fashion-shop-categories4-1-1536x1488.jpg" alt="Promo 1" class="slide active" />
+               
+                <img src="Images/fashion-shop-categories4-1-1536x1488.jpg" alt="Promo 1" class="slide active"  />
                 <img src="Images/YellowAirForce.png" alt="Promo 2" class="slide" />
                 <img src="Images/pullovers2.png" alt="Promo 3" class="slide" />
                 <img src="Images/LenovoX1Yoga-removebg-preview.png" alt="Promo 4" class="slide" />

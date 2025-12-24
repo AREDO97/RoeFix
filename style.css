@@ -47,7 +47,7 @@
     font-size: 16px;
     color: #555;
     margin-bottom: 14px;
-    font-weight:300
+    font-weight:300;
 }
 
 .price-action {
@@ -58,7 +58,7 @@
 }
 
 .special-price {
-    font-size: 25px;
+    font-size: 20px;
     color: #333;
     display: flex;
     align-items: center;
@@ -96,7 +96,7 @@
     align-items: flex-start;
     min-width: 500px;
     height: 500px;
-    /* Fixed height for desktop */
+    
 }
 
 .image-slider {
@@ -133,6 +133,15 @@
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+    .hero-section {
+            background: #F7F2EA;
+            padding: 20px 10px;
+            position: relative;
+            overflow: hidden;
+            justify-content: flex-start;
+            
+    }
+    
     .hero-container {
         flex-direction: column;
         text-align: left;
@@ -146,10 +155,9 @@
     .hero-image-wrapper {
         order: 2;
         margin-top: 20px;
-        
         width: 100%;
         height: 300px;
-        max-width: 500px;
+       
        
     }
 
@@ -199,7 +207,7 @@
 /* Tablet specific fixes */
 @media (min-width: 769px) and (max-width: 1024px) {
     .hero-image-wrapper {
-        height: 400px;
+        height: 500px;
         min-width: 400px;
     }
 

@@ -28,6 +28,28 @@
           padding: 10px 5px;
       }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       .header {
           background: white;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -1516,7 +1538,6 @@
       /* ===== SCROLLABLE CONTAINER ===== */
       .laptop-scroll-container {
           display: flex;
-
           padding: 10px 0 10px 10px;
           overflow-x: auto;
           scroll-behavior: smooth;
@@ -1531,8 +1552,8 @@
 
       /* ===== PRODUCT CARD ===== */
       .laptop-product-card {
-          min-width: calc((100% - 96px) / 6);
-          /* 6 cards with 16px gap */
+          min-width: calc((100% - 96px) / 5);
+          
           flex: 0 0 auto;
           background: white;
           border-radius: 4px;
@@ -3170,7 +3191,7 @@
       /* ===== IMAGE ===== */
       .sec3-image {
           width: 100%;
-          height: 140px;
+          height: 150px;
           object-fit: cover;
           transition: transform 0.3s ease;
       }
@@ -4394,3 +4415,154 @@
               line-height: 1.4;
           }
       }
+
+
+
+          /* Art Spotlight Banner */
+          .art-spotlight-shell {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-between;
+              padding: 40px 60px;
+              background: #ffffff;
+              position: relative;
+              gap: 30px;
+              /* Initially hidden for animation */
+              opacity: 0;
+              transform: translateX(50px);
+              transition: opacity 0.8s ease, transform 0.8s ease;
+          }
+    
+          /* Trigger animation when in view */
+          .art-spotlight-shell.animate-in {
+              opacity: 1;
+              transform: translateX(0);
+          }
+    
+          .art-spotlight-text {
+              flex: 1 1 300px;
+              max-width: 500px;
+          }
+    
+          .art-spotlight-text h4 {
+              color: #e74c3c;
+              font-size: 1.1rem;
+              margin-bottom: 8px;
+              font-weight: 600;
+          }
+    
+          .art-spotlight-text h2 {
+              font-size: 3rem;
+              margin: 10px 0;
+              color: #2c3e50;
+              line-height: 1;
+          }
+    
+          .art-spotlight-text p {
+              margin: 8px 0;
+              color: #555;
+              font-size: 1.05rem;
+              line-height: 1.5;
+          }
+    
+          .art-spotlight-btn {
+              margin-top: 20px;
+              padding: 12px 28px;
+              background: #e74c3c;
+              color: white;
+              border: none;
+              border-radius: 4px;
+              font-size: 1.1rem;
+              font-weight: 600;
+              cursor: pointer;
+              transition: background 0.3s ease;
+          }
+    
+          .art-spotlight-btn:hover {
+              background: #c0392b;
+          }
+    
+          .art-spotlight-image {
+              flex: 1 1 300px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+    
+          .art-spotlight-pic {
+              max-width: 100%;
+              height: auto;
+              border-radius: 8px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+          }
+    
+          /* Responsive Adjustments */
+          @media (max-width: 992px) {
+              .art-spotlight-shell {
+                  padding: 30px 40px;
+              }
+    
+              .art-spotlight-text h2 {
+                  font-size: 2.4rem;
+              }
+          }
+    
+          @media (max-width: 768px) {
+              .art-spotlight-shell {
+                  flex-direction: column;
+                  text-align: center;
+              }
+    
+              .art-spotlight-text,
+              .art-spotlight-image {
+                  width: 100%;
+                  max-width: none;
+              }
+    
+              .art-spotlight-text h2 {
+                  font-size: 2rem;
+              }
+    
+              .art-spotlight-btn {
+                  margin: 20px auto 0;
+                  display: block;
+                  width: fit-content;
+              }
+          }
+    
+          @media (max-width: 480px) {
+              .art-spotlight-shell {
+                  padding: 20px;
+              }
+    
+              .art-spotlight-text h2 {
+                  font-size: 1.8rem;
+              }
+    
+              .art-spotlight-text p {
+                  font-size: 1rem;
+              }
+          }
+    
+          /* WhatsApp Float (optional rename) */
+          .art-whatsapp-float {
+              position: fixed;
+              bottom: 25px;
+              right: 25px;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              background: #25d366;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+              z-index: 1000;
+          }
+    
+          .art-whatsapp-float img {
+              width: 36px;
+              height: 36px;
+          }
